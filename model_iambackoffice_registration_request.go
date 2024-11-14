@@ -26,7 +26,10 @@ type IambackofficeRegistrationRequest struct {
 	SkipVerification *bool `json:"skipVerification,omitempty"`
 	User *IambackofficeUser `json:"user,omitempty"`
 	TenantId *string `json:"tenantId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeRegistrationRequest IambackofficeRegistrationRequest
 
 // NewIambackofficeRegistrationRequest instantiates a new IambackofficeRegistrationRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -63,8 +66,8 @@ func (o *IambackofficeRegistrationRequest) GetRegistrationOk() (*IambackofficeUs
 	return o.Registration, true
 }
 
-// HasRegistration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasRegistration() bool {
+// &#39;Has&#39;Registration returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;Registration() bool {
 	if o != nil && !IsNil(o.Registration) {
 		return true
 	}
@@ -95,8 +98,8 @@ func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmailOk() (*bool, b
 	return o.SendSetPasswordEmail, true
 }
 
-// HasSendSetPasswordEmail returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSendSetPasswordEmail() bool {
+// &#39;Has&#39;SendSetPasswordEmail returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SendSetPasswordEmail() bool {
 	if o != nil && !IsNil(o.SendSetPasswordEmail) {
 		return true
 	}
@@ -127,8 +130,8 @@ func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerificationOk() (
 	return o.SkipRegistrationVerification, true
 }
 
-// HasSkipRegistrationVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSkipRegistrationVerification() bool {
+// &#39;Has&#39;SkipRegistrationVerification returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SkipRegistrationVerification() bool {
 	if o != nil && !IsNil(o.SkipRegistrationVerification) {
 		return true
 	}
@@ -159,8 +162,8 @@ func (o *IambackofficeRegistrationRequest) GetSkipVerificationOk() (*bool, bool)
 	return o.SkipVerification, true
 }
 
-// HasSkipVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSkipVerification() bool {
+// &#39;Has&#39;SkipVerification returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SkipVerification() bool {
 	if o != nil && !IsNil(o.SkipVerification) {
 		return true
 	}
@@ -191,8 +194,8 @@ func (o *IambackofficeRegistrationRequest) GetUserOk() (*IambackofficeUser, bool
 	return o.User, true
 }
 
-// HasUser returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasUser() bool {
+// &#39;Has&#39;User returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;User() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}
@@ -223,8 +226,8 @@ func (o *IambackofficeRegistrationRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -265,9 +268,58 @@ func (o IambackofficeRegistrationRequest) ToMap() (map[string]interface{}, error
 	if !IsNil(o.TenantId) {
 		toSerialize["tenantId"] = o.TenantId
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeRegistrationRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeRegistrationRequest := _IambackofficeRegistrationRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeRegistrationRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeRegistrationRequest(varIambackofficeRegistrationRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "registration")
+		delete(additionalProperties, "sendSetPasswordEmail")
+		delete(additionalProperties, "skipRegistrationVerification")
+		delete(additionalProperties, "skipVerification")
+		delete(additionalProperties, "user")
+		delete(additionalProperties, "tenantId")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeRegistrationRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeRegistrationRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeRegistrationRequest struct {
 	value *IambackofficeRegistrationRequest
 	isSet bool

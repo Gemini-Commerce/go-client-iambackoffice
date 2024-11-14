@@ -27,7 +27,10 @@ type IambackofficeLoginRequest struct {
 	NoTokens *bool `json:"noTokens,omitempty"`
 	Password *string `json:"password,omitempty"`
 	TwoFactorTrustId *string `json:"twoFactorTrustId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeLoginRequest IambackofficeLoginRequest
 
 // NewIambackofficeLoginRequest instantiates a new IambackofficeLoginRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -64,8 +67,8 @@ func (o *IambackofficeLoginRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -96,8 +99,8 @@ func (o *IambackofficeLoginRequest) GetIpAddressOk() (*string, bool) {
 	return o.IpAddress, true
 }
 
-// HasIpAddress returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasIpAddress() bool {
+// &#39;Has&#39;IpAddress returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;IpAddress() bool {
 	if o != nil && !IsNil(o.IpAddress) {
 		return true
 	}
@@ -128,8 +131,8 @@ func (o *IambackofficeLoginRequest) GetLoginIdOk() (*string, bool) {
 	return o.LoginId, true
 }
 
-// HasLoginId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasLoginId() bool {
+// &#39;Has&#39;LoginId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;LoginId() bool {
 	if o != nil && !IsNil(o.LoginId) {
 		return true
 	}
@@ -160,8 +163,8 @@ func (o *IambackofficeLoginRequest) GetMetaDataOk() (*IambackofficeMetaData, boo
 	return o.MetaData, true
 }
 
-// HasMetaData returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasMetaData() bool {
+// &#39;Has&#39;MetaData returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;MetaData() bool {
 	if o != nil && !IsNil(o.MetaData) {
 		return true
 	}
@@ -192,8 +195,8 @@ func (o *IambackofficeLoginRequest) GetNoTokensOk() (*bool, bool) {
 	return o.NoTokens, true
 }
 
-// HasNoTokens returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasNoTokens() bool {
+// &#39;Has&#39;NoTokens returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;NoTokens() bool {
 	if o != nil && !IsNil(o.NoTokens) {
 		return true
 	}
@@ -224,8 +227,8 @@ func (o *IambackofficeLoginRequest) GetPasswordOk() (*string, bool) {
 	return o.Password, true
 }
 
-// HasPassword returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasPassword() bool {
+// &#39;Has&#39;Password returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;Password() bool {
 	if o != nil && !IsNil(o.Password) {
 		return true
 	}
@@ -256,8 +259,8 @@ func (o *IambackofficeLoginRequest) GetTwoFactorTrustIdOk() (*string, bool) {
 	return o.TwoFactorTrustId, true
 }
 
-// HasTwoFactorTrustId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) HasTwoFactorTrustId() bool {
+// &#39;Has&#39;TwoFactorTrustId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) &#39;Has&#39;TwoFactorTrustId() bool {
 	if o != nil && !IsNil(o.TwoFactorTrustId) {
 		return true
 	}
@@ -301,9 +304,59 @@ func (o IambackofficeLoginRequest) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.TwoFactorTrustId) {
 		toSerialize["twoFactorTrustId"] = o.TwoFactorTrustId
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeLoginRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeLoginRequest := _IambackofficeLoginRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeLoginRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeLoginRequest(varIambackofficeLoginRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "ipAddress")
+		delete(additionalProperties, "loginId")
+		delete(additionalProperties, "metaData")
+		delete(additionalProperties, "noTokens")
+		delete(additionalProperties, "password")
+		delete(additionalProperties, "twoFactorTrustId")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeLoginRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeLoginRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeLoginRequest struct {
 	value *IambackofficeLoginRequest
 	isSet bool

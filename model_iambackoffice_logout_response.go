@@ -21,7 +21,10 @@ var _ MappedNullable = &IambackofficeLogoutResponse{}
 // IambackofficeLogoutResponse struct for IambackofficeLogoutResponse
 type IambackofficeLogoutResponse struct {
 	Success *bool `json:"success,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeLogoutResponse IambackofficeLogoutResponse
 
 // NewIambackofficeLogoutResponse instantiates a new IambackofficeLogoutResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *IambackofficeLogoutResponse) GetSuccessOk() (*bool, bool) {
 	return o.Success, true
 }
 
-// HasSuccess returns a boolean if a field has been set.
-func (o *IambackofficeLogoutResponse) HasSuccess() bool {
+// &#39;Has&#39;Success returns a boolean if a field has been set.
+func (o *IambackofficeLogoutResponse) &#39;Has&#39;Success() bool {
 	if o != nil && !IsNil(o.Success) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o IambackofficeLogoutResponse) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Success) {
 		toSerialize["success"] = o.Success
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeLogoutResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeLogoutResponse := _IambackofficeLogoutResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeLogoutResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeLogoutResponse(varIambackofficeLogoutResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "success")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeLogoutResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeLogoutResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeLogoutResponse struct {
 	value *IambackofficeLogoutResponse
 	isSet bool

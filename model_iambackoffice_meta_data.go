@@ -21,7 +21,10 @@ var _ MappedNullable = &IambackofficeMetaData{}
 // IambackofficeMetaData struct for IambackofficeMetaData
 type IambackofficeMetaData struct {
 	Device *IambackofficeDevice `json:"device,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeMetaData IambackofficeMetaData
 
 // NewIambackofficeMetaData instantiates a new IambackofficeMetaData object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *IambackofficeMetaData) GetDeviceOk() (*IambackofficeDevice, bool) {
 	return o.Device, true
 }
 
-// HasDevice returns a boolean if a field has been set.
-func (o *IambackofficeMetaData) HasDevice() bool {
+// &#39;Has&#39;Device returns a boolean if a field has been set.
+func (o *IambackofficeMetaData) &#39;Has&#39;Device() bool {
 	if o != nil && !IsNil(o.Device) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o IambackofficeMetaData) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Device) {
 		toSerialize["device"] = o.Device
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeMetaData) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeMetaData := _IambackofficeMetaData{}
+
+	err = json.Unmarshal(data, &varIambackofficeMetaData)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeMetaData(varIambackofficeMetaData)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "device")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeMetaData) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeMetaData) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeMetaData struct {
 	value *IambackofficeMetaData
 	isSet bool

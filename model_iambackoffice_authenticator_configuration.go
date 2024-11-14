@@ -23,7 +23,10 @@ type IambackofficeAuthenticatorConfiguration struct {
 	Algorithm *string `json:"algorithm,omitempty"`
 	CodeLength *int32 `json:"codeLength,omitempty"`
 	TimeStep *int32 `json:"timeStep,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeAuthenticatorConfiguration IambackofficeAuthenticatorConfiguration
 
 // NewIambackofficeAuthenticatorConfiguration instantiates a new IambackofficeAuthenticatorConfiguration object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetAlgorithmOk() (*string, boo
 	return o.Algorithm, true
 }
 
-// HasAlgorithm returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) HasAlgorithm() bool {
+// &#39;Has&#39;Algorithm returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;Algorithm() bool {
 	if o != nil && !IsNil(o.Algorithm) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetCodeLengthOk() (*int32, boo
 	return o.CodeLength, true
 }
 
-// HasCodeLength returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) HasCodeLength() bool {
+// &#39;Has&#39;CodeLength returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;CodeLength() bool {
 	if o != nil && !IsNil(o.CodeLength) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetTimeStepOk() (*int32, bool)
 	return o.TimeStep, true
 }
 
-// HasTimeStep returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) HasTimeStep() bool {
+// &#39;Has&#39;TimeStep returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;TimeStep() bool {
 	if o != nil && !IsNil(o.TimeStep) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeAuthenticatorConfiguration) ToMap() (map[string]interface{}
 	if !IsNil(o.TimeStep) {
 		toSerialize["timeStep"] = o.TimeStep
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeAuthenticatorConfiguration) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeAuthenticatorConfiguration := _IambackofficeAuthenticatorConfiguration{}
+
+	err = json.Unmarshal(data, &varIambackofficeAuthenticatorConfiguration)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeAuthenticatorConfiguration(varIambackofficeAuthenticatorConfiguration)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "algorithm")
+		delete(additionalProperties, "codeLength")
+		delete(additionalProperties, "timeStep")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeAuthenticatorConfiguration) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeAuthenticatorConfiguration) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeAuthenticatorConfiguration struct {
 	value *IambackofficeAuthenticatorConfiguration
 	isSet bool

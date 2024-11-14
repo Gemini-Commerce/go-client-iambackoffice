@@ -26,7 +26,10 @@ type IambackofficeTwoFactorMethod struct {
 	Method *string `json:"method,omitempty"`
 	MobilePhone *string `json:"mobilePhone,omitempty"`
 	Secret *string `json:"secret,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeTwoFactorMethod IambackofficeTwoFactorMethod
 
 // NewIambackofficeTwoFactorMethod instantiates a new IambackofficeTwoFactorMethod object
 // This constructor will assign default values to properties that have it defined,
@@ -63,8 +66,8 @@ func (o *IambackofficeTwoFactorMethod) GetAuthenticatorOk() (*IambackofficeAuthe
 	return o.Authenticator, true
 }
 
-// HasAuthenticator returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasAuthenticator() bool {
+// &#39;Has&#39;Authenticator returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Authenticator() bool {
 	if o != nil && !IsNil(o.Authenticator) {
 		return true
 	}
@@ -95,8 +98,8 @@ func (o *IambackofficeTwoFactorMethod) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// HasEmail returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasEmail() bool {
+// &#39;Has&#39;Email returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Email() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -127,8 +130,8 @@ func (o *IambackofficeTwoFactorMethod) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasId() bool {
+// &#39;Has&#39;Id returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Id() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -159,8 +162,8 @@ func (o *IambackofficeTwoFactorMethod) GetMethodOk() (*string, bool) {
 	return o.Method, true
 }
 
-// HasMethod returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasMethod() bool {
+// &#39;Has&#39;Method returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Method() bool {
 	if o != nil && !IsNil(o.Method) {
 		return true
 	}
@@ -191,8 +194,8 @@ func (o *IambackofficeTwoFactorMethod) GetMobilePhoneOk() (*string, bool) {
 	return o.MobilePhone, true
 }
 
-// HasMobilePhone returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasMobilePhone() bool {
+// &#39;Has&#39;MobilePhone returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;MobilePhone() bool {
 	if o != nil && !IsNil(o.MobilePhone) {
 		return true
 	}
@@ -223,8 +226,8 @@ func (o *IambackofficeTwoFactorMethod) GetSecretOk() (*string, bool) {
 	return o.Secret, true
 }
 
-// HasSecret returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) HasSecret() bool {
+// &#39;Has&#39;Secret returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Secret() bool {
 	if o != nil && !IsNil(o.Secret) {
 		return true
 	}
@@ -265,9 +268,58 @@ func (o IambackofficeTwoFactorMethod) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Secret) {
 		toSerialize["secret"] = o.Secret
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeTwoFactorMethod) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeTwoFactorMethod := _IambackofficeTwoFactorMethod{}
+
+	err = json.Unmarshal(data, &varIambackofficeTwoFactorMethod)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeTwoFactorMethod(varIambackofficeTwoFactorMethod)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "authenticator")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "method")
+		delete(additionalProperties, "mobilePhone")
+		delete(additionalProperties, "secret")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeTwoFactorMethod) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeTwoFactorMethod) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeTwoFactorMethod struct {
 	value *IambackofficeTwoFactorMethod
 	isSet bool

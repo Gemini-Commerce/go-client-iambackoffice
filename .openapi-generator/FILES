@@ -76,5 +76,4 @@ model_protobuf_any.go
 model_rpc_status.go
 model_search_groups_request_filters.go
 response.go
-test/api_iam_backoffice_test.go
 utils.go

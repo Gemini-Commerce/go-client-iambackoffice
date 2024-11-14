@@ -23,7 +23,10 @@ type IambackofficeAssignUserToGroupRequest struct {
 	TenantId *string `json:"tenantId,omitempty"`
 	UserId *string `json:"userId,omitempty"`
 	GroupId *string `json:"groupId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeAssignUserToGroupRequest IambackofficeAssignUserToGroupRequest
 
 // NewIambackofficeAssignUserToGroupRequest instantiates a new IambackofficeAssignUserToGroupRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetTenantIdOk() (*string, bool) 
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// HasUserId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) HasUserId() bool {
+// &#39;Has&#39;UserId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;UserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetGroupIdOk() (*string, bool) {
 	return o.GroupId, true
 }
 
-// HasGroupId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) HasGroupId() bool {
+// &#39;Has&#39;GroupId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;GroupId() bool {
 	if o != nil && !IsNil(o.GroupId) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeAssignUserToGroupRequest) ToMap() (map[string]interface{}, 
 	if !IsNil(o.GroupId) {
 		toSerialize["groupId"] = o.GroupId
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeAssignUserToGroupRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeAssignUserToGroupRequest := _IambackofficeAssignUserToGroupRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeAssignUserToGroupRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeAssignUserToGroupRequest(varIambackofficeAssignUserToGroupRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "userId")
+		delete(additionalProperties, "groupId")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeAssignUserToGroupRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeAssignUserToGroupRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeAssignUserToGroupRequest struct {
 	value *IambackofficeAssignUserToGroupRequest
 	isSet bool

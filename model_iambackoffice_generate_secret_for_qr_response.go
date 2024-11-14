@@ -21,7 +21,10 @@ var _ MappedNullable = &IambackofficeGenerateSecretForQRResponse{}
 // IambackofficeGenerateSecretForQRResponse struct for IambackofficeGenerateSecretForQRResponse
 type IambackofficeGenerateSecretForQRResponse struct {
 	Secret *string `json:"secret,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeGenerateSecretForQRResponse IambackofficeGenerateSecretForQRResponse
 
 // NewIambackofficeGenerateSecretForQRResponse instantiates a new IambackofficeGenerateSecretForQRResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *IambackofficeGenerateSecretForQRResponse) GetSecretOk() (*string, bool)
 	return o.Secret, true
 }
 
-// HasSecret returns a boolean if a field has been set.
-func (o *IambackofficeGenerateSecretForQRResponse) HasSecret() bool {
+// &#39;Has&#39;Secret returns a boolean if a field has been set.
+func (o *IambackofficeGenerateSecretForQRResponse) &#39;Has&#39;Secret() bool {
 	if o != nil && !IsNil(o.Secret) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o IambackofficeGenerateSecretForQRResponse) ToMap() (map[string]interface{
 	if !IsNil(o.Secret) {
 		toSerialize["secret"] = o.Secret
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeGenerateSecretForQRResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeGenerateSecretForQRResponse := _IambackofficeGenerateSecretForQRResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeGenerateSecretForQRResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeGenerateSecretForQRResponse(varIambackofficeGenerateSecretForQRResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "secret")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeGenerateSecretForQRResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeGenerateSecretForQRResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeGenerateSecretForQRResponse struct {
 	value *IambackofficeGenerateSecretForQRResponse
 	isSet bool

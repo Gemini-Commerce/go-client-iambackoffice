@@ -23,7 +23,10 @@ type IambackofficeRegistrationResponse struct {
 	Tokens *ProtobufAny `json:"tokens,omitempty"`
 	Registration *IambackofficeUserRegistration `json:"registration,omitempty"`
 	User *IambackofficeUser `json:"user,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeRegistrationResponse IambackofficeRegistrationResponse
 
 // NewIambackofficeRegistrationResponse instantiates a new IambackofficeRegistrationResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeRegistrationResponse) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// HasTokens returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasTokens() bool {
+// &#39;Has&#39;Tokens returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) &#39;Has&#39;Tokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeRegistrationResponse) GetRegistrationOk() (*IambackofficeU
 	return o.Registration, true
 }
 
-// HasRegistration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasRegistration() bool {
+// &#39;Has&#39;Registration returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) &#39;Has&#39;Registration() bool {
 	if o != nil && !IsNil(o.Registration) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeRegistrationResponse) GetUserOk() (*IambackofficeUser, boo
 	return o.User, true
 }
 
-// HasUser returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasUser() bool {
+// &#39;Has&#39;User returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) &#39;Has&#39;User() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeRegistrationResponse) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.User) {
 		toSerialize["user"] = o.User
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeRegistrationResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeRegistrationResponse := _IambackofficeRegistrationResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeRegistrationResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeRegistrationResponse(varIambackofficeRegistrationResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tokens")
+		delete(additionalProperties, "registration")
+		delete(additionalProperties, "user")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeRegistrationResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeRegistrationResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeRegistrationResponse struct {
 	value *IambackofficeRegistrationResponse
 	isSet bool

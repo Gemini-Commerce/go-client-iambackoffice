@@ -21,7 +21,10 @@ var _ MappedNullable = &IambackofficeSearchGroupsResponse{}
 // IambackofficeSearchGroupsResponse struct for IambackofficeSearchGroupsResponse
 type IambackofficeSearchGroupsResponse struct {
 	Groups []IambackofficeGroup `json:"groups,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeSearchGroupsResponse IambackofficeSearchGroupsResponse
 
 // NewIambackofficeSearchGroupsResponse instantiates a new IambackofficeSearchGroupsResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *IambackofficeSearchGroupsResponse) GetGroupsOk() ([]IambackofficeGroup,
 	return o.Groups, true
 }
 
-// HasGroups returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsResponse) HasGroups() bool {
+// &#39;Has&#39;Groups returns a boolean if a field has been set.
+func (o *IambackofficeSearchGroupsResponse) &#39;Has&#39;Groups() bool {
 	if o != nil && !IsNil(o.Groups) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o IambackofficeSearchGroupsResponse) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.Groups) {
 		toSerialize["groups"] = o.Groups
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeSearchGroupsResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeSearchGroupsResponse := _IambackofficeSearchGroupsResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeSearchGroupsResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeSearchGroupsResponse(varIambackofficeSearchGroupsResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "groups")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeSearchGroupsResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeSearchGroupsResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeSearchGroupsResponse struct {
 	value *IambackofficeSearchGroupsResponse
 	isSet bool

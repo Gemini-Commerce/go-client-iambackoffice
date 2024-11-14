@@ -43,7 +43,10 @@ type IambackofficeUser struct {
 	TwoFactor *IambackofficeUserTwoFactorConfiguration `json:"twoFactor,omitempty"`
 	Username *string `json:"username,omitempty"`
 	Verified *bool `json:"verified,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeUser IambackofficeUser
 
 // NewIambackofficeUser instantiates a new IambackofficeUser object
 // This constructor will assign default values to properties that have it defined,
@@ -80,8 +83,8 @@ func (o *IambackofficeUser) GetActiveOk() (*bool, bool) {
 	return o.Active, true
 }
 
-// HasActive returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasActive() bool {
+// &#39;Has&#39;Active returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Active() bool {
 	if o != nil && !IsNil(o.Active) {
 		return true
 	}
@@ -112,8 +115,8 @@ func (o *IambackofficeUser) GetBirthDateOk() (*string, bool) {
 	return o.BirthDate, true
 }
 
-// HasBirthDate returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasBirthDate() bool {
+// &#39;Has&#39;BirthDate returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;BirthDate() bool {
 	if o != nil && !IsNil(o.BirthDate) {
 		return true
 	}
@@ -144,8 +147,8 @@ func (o *IambackofficeUser) GetDataOk() (*map[string]string, bool) {
 	return o.Data, true
 }
 
-// HasData returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasData() bool {
+// &#39;Has&#39;Data returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Data() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}
@@ -176,8 +179,8 @@ func (o *IambackofficeUser) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// HasEmail returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasEmail() bool {
+// &#39;Has&#39;Email returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Email() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -208,8 +211,8 @@ func (o *IambackofficeUser) GetFirstNameOk() (*string, bool) {
 	return o.FirstName, true
 }
 
-// HasFirstName returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasFirstName() bool {
+// &#39;Has&#39;FirstName returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;FirstName() bool {
 	if o != nil && !IsNil(o.FirstName) {
 		return true
 	}
@@ -240,8 +243,8 @@ func (o *IambackofficeUser) GetFullNameOk() (*string, bool) {
 	return o.FullName, true
 }
 
-// HasFullName returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasFullName() bool {
+// &#39;Has&#39;FullName returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;FullName() bool {
 	if o != nil && !IsNil(o.FullName) {
 		return true
 	}
@@ -272,8 +275,8 @@ func (o *IambackofficeUser) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasId() bool {
+// &#39;Has&#39;Id returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Id() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -304,8 +307,8 @@ func (o *IambackofficeUser) GetImageUrlOk() (*string, bool) {
 	return o.ImageUrl, true
 }
 
-// HasImageUrl returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasImageUrl() bool {
+// &#39;Has&#39;ImageUrl returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;ImageUrl() bool {
 	if o != nil && !IsNil(o.ImageUrl) {
 		return true
 	}
@@ -336,8 +339,8 @@ func (o *IambackofficeUser) GetInsertInstantOk() (*string, bool) {
 	return o.InsertInstant, true
 }
 
-// HasInsertInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasInsertInstant() bool {
+// &#39;Has&#39;InsertInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;InsertInstant() bool {
 	if o != nil && !IsNil(o.InsertInstant) {
 		return true
 	}
@@ -368,8 +371,8 @@ func (o *IambackofficeUser) GetLastLoginInstantOk() (*string, bool) {
 	return o.LastLoginInstant, true
 }
 
-// HasLastLoginInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasLastLoginInstant() bool {
+// &#39;Has&#39;LastLoginInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;LastLoginInstant() bool {
 	if o != nil && !IsNil(o.LastLoginInstant) {
 		return true
 	}
@@ -400,8 +403,8 @@ func (o *IambackofficeUser) GetLastNameOk() (*string, bool) {
 	return o.LastName, true
 }
 
-// HasLastName returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasLastName() bool {
+// &#39;Has&#39;LastName returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;LastName() bool {
 	if o != nil && !IsNil(o.LastName) {
 		return true
 	}
@@ -432,8 +435,8 @@ func (o *IambackofficeUser) GetLastUpdateInstantOk() (*string, bool) {
 	return o.LastUpdateInstant, true
 }
 
-// HasLastUpdateInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasLastUpdateInstant() bool {
+// &#39;Has&#39;LastUpdateInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;LastUpdateInstant() bool {
 	if o != nil && !IsNil(o.LastUpdateInstant) {
 		return true
 	}
@@ -464,8 +467,8 @@ func (o *IambackofficeUser) GetMiddleNameOk() (*string, bool) {
 	return o.MiddleName, true
 }
 
-// HasMiddleName returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasMiddleName() bool {
+// &#39;Has&#39;MiddleName returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;MiddleName() bool {
 	if o != nil && !IsNil(o.MiddleName) {
 		return true
 	}
@@ -496,8 +499,8 @@ func (o *IambackofficeUser) GetMobilePhoneOk() (*string, bool) {
 	return o.MobilePhone, true
 }
 
-// HasMobilePhone returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasMobilePhone() bool {
+// &#39;Has&#39;MobilePhone returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;MobilePhone() bool {
 	if o != nil && !IsNil(o.MobilePhone) {
 		return true
 	}
@@ -528,8 +531,8 @@ func (o *IambackofficeUser) GetPasswordOk() (*string, bool) {
 	return o.Password, true
 }
 
-// HasPassword returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasPassword() bool {
+// &#39;Has&#39;Password returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Password() bool {
 	if o != nil && !IsNil(o.Password) {
 		return true
 	}
@@ -560,8 +563,8 @@ func (o *IambackofficeUser) GetPasswordChangeRequiredOk() (*bool, bool) {
 	return o.PasswordChangeRequired, true
 }
 
-// HasPasswordChangeRequired returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasPasswordChangeRequired() bool {
+// &#39;Has&#39;PasswordChangeRequired returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;PasswordChangeRequired() bool {
 	if o != nil && !IsNil(o.PasswordChangeRequired) {
 		return true
 	}
@@ -592,8 +595,8 @@ func (o *IambackofficeUser) GetPasswordLastUpdateInstantOk() (*string, bool) {
 	return o.PasswordLastUpdateInstant, true
 }
 
-// HasPasswordLastUpdateInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasPasswordLastUpdateInstant() bool {
+// &#39;Has&#39;PasswordLastUpdateInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;PasswordLastUpdateInstant() bool {
 	if o != nil && !IsNil(o.PasswordLastUpdateInstant) {
 		return true
 	}
@@ -624,8 +627,8 @@ func (o *IambackofficeUser) GetPreferredLanguagesOk() ([]string, bool) {
 	return o.PreferredLanguages, true
 }
 
-// HasPreferredLanguages returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasPreferredLanguages() bool {
+// &#39;Has&#39;PreferredLanguages returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;PreferredLanguages() bool {
 	if o != nil && !IsNil(o.PreferredLanguages) {
 		return true
 	}
@@ -656,8 +659,8 @@ func (o *IambackofficeUser) GetRegistrationsOk() ([]IambackofficeUserRegistratio
 	return o.Registrations, true
 }
 
-// HasRegistrations returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasRegistrations() bool {
+// &#39;Has&#39;Registrations returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Registrations() bool {
 	if o != nil && !IsNil(o.Registrations) {
 		return true
 	}
@@ -688,8 +691,8 @@ func (o *IambackofficeUser) GetTimezoneOk() (*string, bool) {
 	return o.Timezone, true
 }
 
-// HasTimezone returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasTimezone() bool {
+// &#39;Has&#39;Timezone returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Timezone() bool {
 	if o != nil && !IsNil(o.Timezone) {
 		return true
 	}
@@ -720,8 +723,8 @@ func (o *IambackofficeUser) GetTwoFactorOk() (*IambackofficeUserTwoFactorConfigu
 	return o.TwoFactor, true
 }
 
-// HasTwoFactor returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasTwoFactor() bool {
+// &#39;Has&#39;TwoFactor returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;TwoFactor() bool {
 	if o != nil && !IsNil(o.TwoFactor) {
 		return true
 	}
@@ -752,8 +755,8 @@ func (o *IambackofficeUser) GetUsernameOk() (*string, bool) {
 	return o.Username, true
 }
 
-// HasUsername returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasUsername() bool {
+// &#39;Has&#39;Username returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Username() bool {
 	if o != nil && !IsNil(o.Username) {
 		return true
 	}
@@ -784,8 +787,8 @@ func (o *IambackofficeUser) GetVerifiedOk() (*bool, bool) {
 	return o.Verified, true
 }
 
-// HasVerified returns a boolean if a field has been set.
-func (o *IambackofficeUser) HasVerified() bool {
+// &#39;Has&#39;Verified returns a boolean if a field has been set.
+func (o *IambackofficeUser) &#39;Has&#39;Verified() bool {
 	if o != nil && !IsNil(o.Verified) {
 		return true
 	}
@@ -877,9 +880,75 @@ func (o IambackofficeUser) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Verified) {
 		toSerialize["verified"] = o.Verified
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeUser) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeUser := _IambackofficeUser{}
+
+	err = json.Unmarshal(data, &varIambackofficeUser)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeUser(varIambackofficeUser)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "active")
+		delete(additionalProperties, "birthDate")
+		delete(additionalProperties, "data")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "firstName")
+		delete(additionalProperties, "fullName")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "imageUrl")
+		delete(additionalProperties, "insertInstant")
+		delete(additionalProperties, "lastLoginInstant")
+		delete(additionalProperties, "lastName")
+		delete(additionalProperties, "lastUpdateInstant")
+		delete(additionalProperties, "middleName")
+		delete(additionalProperties, "mobilePhone")
+		delete(additionalProperties, "password")
+		delete(additionalProperties, "passwordChangeRequired")
+		delete(additionalProperties, "passwordLastUpdateInstant")
+		delete(additionalProperties, "preferredLanguages")
+		delete(additionalProperties, "registrations")
+		delete(additionalProperties, "timezone")
+		delete(additionalProperties, "twoFactor")
+		delete(additionalProperties, "username")
+		delete(additionalProperties, "verified")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeUser) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeUser) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeUser struct {
 	value *IambackofficeUser
 	isSet bool

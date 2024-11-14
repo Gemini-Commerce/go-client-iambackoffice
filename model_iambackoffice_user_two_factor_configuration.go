@@ -22,7 +22,10 @@ var _ MappedNullable = &IambackofficeUserTwoFactorConfiguration{}
 type IambackofficeUserTwoFactorConfiguration struct {
 	Methods []IambackofficeTwoFactorMethod `json:"methods,omitempty"`
 	RecoveryCodes []string `json:"recoveryCodes,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeUserTwoFactorConfiguration IambackofficeUserTwoFactorConfiguration
 
 // NewIambackofficeUserTwoFactorConfiguration instantiates a new IambackofficeUserTwoFactorConfiguration object
 // This constructor will assign default values to properties that have it defined,
@@ -59,8 +62,8 @@ func (o *IambackofficeUserTwoFactorConfiguration) GetMethodsOk() ([]Iambackoffic
 	return o.Methods, true
 }
 
-// HasMethods returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) HasMethods() bool {
+// &#39;Has&#39;Methods returns a boolean if a field has been set.
+func (o *IambackofficeUserTwoFactorConfiguration) &#39;Has&#39;Methods() bool {
 	if o != nil && !IsNil(o.Methods) {
 		return true
 	}
@@ -91,8 +94,8 @@ func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodesOk() ([]string
 	return o.RecoveryCodes, true
 }
 
-// HasRecoveryCodes returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) HasRecoveryCodes() bool {
+// &#39;Has&#39;RecoveryCodes returns a boolean if a field has been set.
+func (o *IambackofficeUserTwoFactorConfiguration) &#39;Has&#39;RecoveryCodes() bool {
 	if o != nil && !IsNil(o.RecoveryCodes) {
 		return true
 	}
@@ -121,9 +124,54 @@ func (o IambackofficeUserTwoFactorConfiguration) ToMap() (map[string]interface{}
 	if !IsNil(o.RecoveryCodes) {
 		toSerialize["recoveryCodes"] = o.RecoveryCodes
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeUserTwoFactorConfiguration) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeUserTwoFactorConfiguration := _IambackofficeUserTwoFactorConfiguration{}
+
+	err = json.Unmarshal(data, &varIambackofficeUserTwoFactorConfiguration)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeUserTwoFactorConfiguration(varIambackofficeUserTwoFactorConfiguration)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "methods")
+		delete(additionalProperties, "recoveryCodes")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeUserTwoFactorConfiguration) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeUserTwoFactorConfiguration) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeUserTwoFactorConfiguration struct {
 	value *IambackofficeUserTwoFactorConfiguration
 	isSet bool

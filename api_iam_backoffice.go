@@ -23,18 +23,18 @@ import (
 // IamBackofficeAPIService IamBackofficeAPI service
 type IamBackofficeAPIService service
 
-type IamBackofficeAPIIamBackofficeAssignRolesRequest struct {
+type ApiIamBackofficeAssignRolesRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeAssignRolesRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeAssignRolesRequest) Body(body IambackofficeAssignRolesRequest) IamBackofficeAPIIamBackofficeAssignRolesRequest {
+func (r ApiIamBackofficeAssignRolesRequest) Body(body IambackofficeAssignRolesRequest) ApiIamBackofficeAssignRolesRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeAssignRolesRequest) Execute() (*IambackofficeAssignRolesResponse, *http.Response, error) {
+func (r ApiIamBackofficeAssignRolesRequest) Execute() (*IambackofficeAssignRolesResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeAssignRolesExecute(r)
 }
 
@@ -42,10 +42,10 @@ func (r IamBackofficeAPIIamBackofficeAssignRolesRequest) Execute() (*Iambackoffi
 IamBackofficeAssignRoles AUTHZ
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeAssignRolesRequest
+ @return ApiIamBackofficeAssignRolesRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeAssignRoles(ctx context.Context) IamBackofficeAPIIamBackofficeAssignRolesRequest {
-	return IamBackofficeAPIIamBackofficeAssignRolesRequest{
+func (a *IamBackofficeAPIService) IamBackofficeAssignRoles(ctx context.Context) ApiIamBackofficeAssignRolesRequest {
+	return ApiIamBackofficeAssignRolesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -53,7 +53,7 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignRoles(ctx context.Context) 
 
 // Execute executes the request
 //  @return IambackofficeAssignRolesResponse
-func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r IamBackofficeAPIIamBackofficeAssignRolesRequest) (*IambackofficeAssignRolesResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r ApiIamBackofficeAssignRolesRequest) (*IambackofficeAssignRolesResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -139,18 +139,18 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r IamBackoffic
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeAssignUserToGroupRequest struct {
+type ApiIamBackofficeAssignUserToGroupRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeAssignUserToGroupRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeAssignUserToGroupRequest) Body(body IambackofficeAssignUserToGroupRequest) IamBackofficeAPIIamBackofficeAssignUserToGroupRequest {
+func (r ApiIamBackofficeAssignUserToGroupRequest) Body(body IambackofficeAssignUserToGroupRequest) ApiIamBackofficeAssignUserToGroupRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeAssignUserToGroupRequest) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiIamBackofficeAssignUserToGroupRequest) Execute() (map[string]interface{}, *http.Response, error) {
 	return r.ApiService.IamBackofficeAssignUserToGroupExecute(r)
 }
 
@@ -158,10 +158,10 @@ func (r IamBackofficeAPIIamBackofficeAssignUserToGroupRequest) Execute() (map[st
 IamBackofficeAssignUserToGroup Method for IamBackofficeAssignUserToGroup
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeAssignUserToGroupRequest
+ @return ApiIamBackofficeAssignUserToGroupRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroup(ctx context.Context) IamBackofficeAPIIamBackofficeAssignUserToGroupRequest {
-	return IamBackofficeAPIIamBackofficeAssignUserToGroupRequest{
+func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroup(ctx context.Context) ApiIamBackofficeAssignUserToGroupRequest {
+	return ApiIamBackofficeAssignUserToGroupRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -169,7 +169,7 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroup(ctx context.Con
 
 // Execute executes the request
 //  @return map[string]interface{}
-func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r IamBackofficeAPIIamBackofficeAssignUserToGroupRequest) (map[string]interface{}, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r ApiIamBackofficeAssignUserToGroupRequest) (map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -255,18 +255,18 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r IamBac
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeCreateGroupRequest struct {
+type ApiIamBackofficeCreateGroupRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeCreateGroupRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeCreateGroupRequest) Body(body IambackofficeCreateGroupRequest) IamBackofficeAPIIamBackofficeCreateGroupRequest {
+func (r ApiIamBackofficeCreateGroupRequest) Body(body IambackofficeCreateGroupRequest) ApiIamBackofficeCreateGroupRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeCreateGroupRequest) Execute() (*IambackofficeCreateGroupResponse, *http.Response, error) {
+func (r ApiIamBackofficeCreateGroupRequest) Execute() (*IambackofficeCreateGroupResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeCreateGroupExecute(r)
 }
 
@@ -274,10 +274,10 @@ func (r IamBackofficeAPIIamBackofficeCreateGroupRequest) Execute() (*Iambackoffi
 IamBackofficeCreateGroup GROUPS
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeCreateGroupRequest
+ @return ApiIamBackofficeCreateGroupRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeCreateGroup(ctx context.Context) IamBackofficeAPIIamBackofficeCreateGroupRequest {
-	return IamBackofficeAPIIamBackofficeCreateGroupRequest{
+func (a *IamBackofficeAPIService) IamBackofficeCreateGroup(ctx context.Context) ApiIamBackofficeCreateGroupRequest {
+	return ApiIamBackofficeCreateGroupRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -285,7 +285,7 @@ func (a *IamBackofficeAPIService) IamBackofficeCreateGroup(ctx context.Context) 
 
 // Execute executes the request
 //  @return IambackofficeCreateGroupResponse
-func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r IamBackofficeAPIIamBackofficeCreateGroupRequest) (*IambackofficeCreateGroupResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r ApiIamBackofficeCreateGroupRequest) (*IambackofficeCreateGroupResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -371,18 +371,18 @@ func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r IamBackoffic
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeDisableUserMfaRequest struct {
+type ApiIamBackofficeDisableUserMfaRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeDisableUserMfaRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeDisableUserMfaRequest) Body(body IambackofficeDisableUserMfaRequest) IamBackofficeAPIIamBackofficeDisableUserMfaRequest {
+func (r ApiIamBackofficeDisableUserMfaRequest) Body(body IambackofficeDisableUserMfaRequest) ApiIamBackofficeDisableUserMfaRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeDisableUserMfaRequest) Execute() (*IambackofficeUserMfaResponse, *http.Response, error) {
+func (r ApiIamBackofficeDisableUserMfaRequest) Execute() (*IambackofficeUserMfaResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeDisableUserMfaExecute(r)
 }
 
@@ -390,10 +390,10 @@ func (r IamBackofficeAPIIamBackofficeDisableUserMfaRequest) Execute() (*Iambacko
 IamBackofficeDisableUserMfa Method for IamBackofficeDisableUserMfa
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeDisableUserMfaRequest
+ @return ApiIamBackofficeDisableUserMfaRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfa(ctx context.Context) IamBackofficeAPIIamBackofficeDisableUserMfaRequest {
-	return IamBackofficeAPIIamBackofficeDisableUserMfaRequest{
+func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfa(ctx context.Context) ApiIamBackofficeDisableUserMfaRequest {
+	return ApiIamBackofficeDisableUserMfaRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -401,7 +401,7 @@ func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfa(ctx context.Contex
 
 // Execute executes the request
 //  @return IambackofficeUserMfaResponse
-func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r IamBackofficeAPIIamBackofficeDisableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r ApiIamBackofficeDisableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -487,18 +487,18 @@ func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r IamBackof
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeEnableUserMfaRequest struct {
+type ApiIamBackofficeEnableUserMfaRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeEnableUserMfaRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeEnableUserMfaRequest) Body(body IambackofficeEnableUserMfaRequest) IamBackofficeAPIIamBackofficeEnableUserMfaRequest {
+func (r ApiIamBackofficeEnableUserMfaRequest) Body(body IambackofficeEnableUserMfaRequest) ApiIamBackofficeEnableUserMfaRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeEnableUserMfaRequest) Execute() (*IambackofficeUserMfaResponse, *http.Response, error) {
+func (r ApiIamBackofficeEnableUserMfaRequest) Execute() (*IambackofficeUserMfaResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeEnableUserMfaExecute(r)
 }
 
@@ -506,10 +506,10 @@ func (r IamBackofficeAPIIamBackofficeEnableUserMfaRequest) Execute() (*Iambackof
 IamBackofficeEnableUserMfa Method for IamBackofficeEnableUserMfa
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeEnableUserMfaRequest
+ @return ApiIamBackofficeEnableUserMfaRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfa(ctx context.Context) IamBackofficeAPIIamBackofficeEnableUserMfaRequest {
-	return IamBackofficeAPIIamBackofficeEnableUserMfaRequest{
+func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfa(ctx context.Context) ApiIamBackofficeEnableUserMfaRequest {
+	return ApiIamBackofficeEnableUserMfaRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -517,7 +517,7 @@ func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfa(ctx context.Context
 
 // Execute executes the request
 //  @return IambackofficeUserMfaResponse
-func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r IamBackofficeAPIIamBackofficeEnableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r ApiIamBackofficeEnableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -603,18 +603,18 @@ func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r IamBackoff
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest struct {
+type ApiIamBackofficeGenerateSecretForQRRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *map[string]interface{}
 }
 
-func (r IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest) Body(body map[string]interface{}) IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest {
+func (r ApiIamBackofficeGenerateSecretForQRRequest) Body(body map[string]interface{}) ApiIamBackofficeGenerateSecretForQRRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest) Execute() (*IambackofficeGenerateSecretForQRResponse, *http.Response, error) {
+func (r ApiIamBackofficeGenerateSecretForQRRequest) Execute() (*IambackofficeGenerateSecretForQRResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeGenerateSecretForQRExecute(r)
 }
 
@@ -622,10 +622,10 @@ func (r IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest) Execute() (*Iam
 IamBackofficeGenerateSecretForQR MFA
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest
+ @return ApiIamBackofficeGenerateSecretForQRRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQR(ctx context.Context) IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest {
-	return IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest{
+func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQR(ctx context.Context) ApiIamBackofficeGenerateSecretForQRRequest {
+	return ApiIamBackofficeGenerateSecretForQRRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -633,7 +633,7 @@ func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQR(ctx context.C
 
 // Execute executes the request
 //  @return IambackofficeGenerateSecretForQRResponse
-func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r IamBackofficeAPIIamBackofficeGenerateSecretForQRRequest) (*IambackofficeGenerateSecretForQRResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r ApiIamBackofficeGenerateSecretForQRRequest) (*IambackofficeGenerateSecretForQRResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -719,18 +719,18 @@ func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r IamB
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeGetUserRequest struct {
+type ApiIamBackofficeGetUserRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeGetUserRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeGetUserRequest) Body(body IambackofficeGetUserRequest) IamBackofficeAPIIamBackofficeGetUserRequest {
+func (r ApiIamBackofficeGetUserRequest) Body(body IambackofficeGetUserRequest) ApiIamBackofficeGetUserRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeGetUserRequest) Execute() (*IambackofficeGetUserResponse, *http.Response, error) {
+func (r ApiIamBackofficeGetUserRequest) Execute() (*IambackofficeGetUserResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeGetUserExecute(r)
 }
 
@@ -738,10 +738,10 @@ func (r IamBackofficeAPIIamBackofficeGetUserRequest) Execute() (*IambackofficeGe
 IamBackofficeGetUser USER
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeGetUserRequest
+ @return ApiIamBackofficeGetUserRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeGetUser(ctx context.Context) IamBackofficeAPIIamBackofficeGetUserRequest {
-	return IamBackofficeAPIIamBackofficeGetUserRequest{
+func (a *IamBackofficeAPIService) IamBackofficeGetUser(ctx context.Context) ApiIamBackofficeGetUserRequest {
+	return ApiIamBackofficeGetUserRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -749,7 +749,7 @@ func (a *IamBackofficeAPIService) IamBackofficeGetUser(ctx context.Context) IamB
 
 // Execute executes the request
 //  @return IambackofficeGetUserResponse
-func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r IamBackofficeAPIIamBackofficeGetUserRequest) (*IambackofficeGetUserResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r ApiIamBackofficeGetUserRequest) (*IambackofficeGetUserResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -835,18 +835,18 @@ func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r IamBackofficeAPI
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeLoginRequest struct {
+type ApiIamBackofficeLoginRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeLoginRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeLoginRequest) Body(body IambackofficeLoginRequest) IamBackofficeAPIIamBackofficeLoginRequest {
+func (r ApiIamBackofficeLoginRequest) Body(body IambackofficeLoginRequest) ApiIamBackofficeLoginRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeLoginRequest) Execute() (*IambackofficeLoginResponse, *http.Response, error) {
+func (r ApiIamBackofficeLoginRequest) Execute() (*IambackofficeLoginResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeLoginExecute(r)
 }
 
@@ -854,10 +854,10 @@ func (r IamBackofficeAPIIamBackofficeLoginRequest) Execute() (*IambackofficeLogi
 IamBackofficeLogin LOGIN
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeLoginRequest
+ @return ApiIamBackofficeLoginRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeLogin(ctx context.Context) IamBackofficeAPIIamBackofficeLoginRequest {
-	return IamBackofficeAPIIamBackofficeLoginRequest{
+func (a *IamBackofficeAPIService) IamBackofficeLogin(ctx context.Context) ApiIamBackofficeLoginRequest {
+	return ApiIamBackofficeLoginRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -865,7 +865,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLogin(ctx context.Context) IamBac
 
 // Execute executes the request
 //  @return IambackofficeLoginResponse
-func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r IamBackofficeAPIIamBackofficeLoginRequest) (*IambackofficeLoginResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r ApiIamBackofficeLoginRequest) (*IambackofficeLoginResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -951,18 +951,18 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r IamBackofficeAPIIa
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeLoginMfaRequest struct {
+type ApiIamBackofficeLoginMfaRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeLoginMfaRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeLoginMfaRequest) Body(body IambackofficeLoginMfaRequest) IamBackofficeAPIIamBackofficeLoginMfaRequest {
+func (r ApiIamBackofficeLoginMfaRequest) Body(body IambackofficeLoginMfaRequest) ApiIamBackofficeLoginMfaRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeLoginMfaRequest) Execute() (*IambackofficeLoginResponse, *http.Response, error) {
+func (r ApiIamBackofficeLoginMfaRequest) Execute() (*IambackofficeLoginResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeLoginMfaExecute(r)
 }
 
@@ -970,10 +970,10 @@ func (r IamBackofficeAPIIamBackofficeLoginMfaRequest) Execute() (*IambackofficeL
 IamBackofficeLoginMfa LOGIN MFA
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeLoginMfaRequest
+ @return ApiIamBackofficeLoginMfaRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeLoginMfa(ctx context.Context) IamBackofficeAPIIamBackofficeLoginMfaRequest {
-	return IamBackofficeAPIIamBackofficeLoginMfaRequest{
+func (a *IamBackofficeAPIService) IamBackofficeLoginMfa(ctx context.Context) ApiIamBackofficeLoginMfaRequest {
+	return ApiIamBackofficeLoginMfaRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -981,7 +981,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginMfa(ctx context.Context) Iam
 
 // Execute executes the request
 //  @return IambackofficeLoginResponse
-func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r IamBackofficeAPIIamBackofficeLoginMfaRequest) (*IambackofficeLoginResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r ApiIamBackofficeLoginMfaRequest) (*IambackofficeLoginResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1067,18 +1067,18 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r IamBackofficeAP
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeLogoutRequest struct {
+type ApiIamBackofficeLogoutRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeLogoutRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeLogoutRequest) Body(body IambackofficeLogoutRequest) IamBackofficeAPIIamBackofficeLogoutRequest {
+func (r ApiIamBackofficeLogoutRequest) Body(body IambackofficeLogoutRequest) ApiIamBackofficeLogoutRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeLogoutRequest) Execute() (*IambackofficeLogoutResponse, *http.Response, error) {
+func (r ApiIamBackofficeLogoutRequest) Execute() (*IambackofficeLogoutResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeLogoutExecute(r)
 }
 
@@ -1086,10 +1086,10 @@ func (r IamBackofficeAPIIamBackofficeLogoutRequest) Execute() (*IambackofficeLog
 IamBackofficeLogout Method for IamBackofficeLogout
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeLogoutRequest
+ @return ApiIamBackofficeLogoutRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeLogout(ctx context.Context) IamBackofficeAPIIamBackofficeLogoutRequest {
-	return IamBackofficeAPIIamBackofficeLogoutRequest{
+func (a *IamBackofficeAPIService) IamBackofficeLogout(ctx context.Context) ApiIamBackofficeLogoutRequest {
+	return ApiIamBackofficeLogoutRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1097,7 +1097,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLogout(ctx context.Context) IamBa
 
 // Execute executes the request
 //  @return IambackofficeLogoutResponse
-func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r IamBackofficeAPIIamBackofficeLogoutRequest) (*IambackofficeLogoutResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r ApiIamBackofficeLogoutRequest) (*IambackofficeLogoutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1183,18 +1183,18 @@ func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r IamBackofficeAPII
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeRegisterRequest struct {
+type ApiIamBackofficeRegisterRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeRegistrationRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeRegisterRequest) Body(body IambackofficeRegistrationRequest) IamBackofficeAPIIamBackofficeRegisterRequest {
+func (r ApiIamBackofficeRegisterRequest) Body(body IambackofficeRegistrationRequest) ApiIamBackofficeRegisterRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeRegisterRequest) Execute() (*IambackofficeRegistrationResponse, *http.Response, error) {
+func (r ApiIamBackofficeRegisterRequest) Execute() (*IambackofficeRegistrationResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeRegisterExecute(r)
 }
 
@@ -1202,10 +1202,10 @@ func (r IamBackofficeAPIIamBackofficeRegisterRequest) Execute() (*IambackofficeR
 IamBackofficeRegister REGISTRATION
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeRegisterRequest
+ @return ApiIamBackofficeRegisterRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeRegister(ctx context.Context) IamBackofficeAPIIamBackofficeRegisterRequest {
-	return IamBackofficeAPIIamBackofficeRegisterRequest{
+func (a *IamBackofficeAPIService) IamBackofficeRegister(ctx context.Context) ApiIamBackofficeRegisterRequest {
+	return ApiIamBackofficeRegisterRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1213,7 +1213,7 @@ func (a *IamBackofficeAPIService) IamBackofficeRegister(ctx context.Context) Iam
 
 // Execute executes the request
 //  @return IambackofficeRegistrationResponse
-func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r IamBackofficeAPIIamBackofficeRegisterRequest) (*IambackofficeRegistrationResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r ApiIamBackofficeRegisterRequest) (*IambackofficeRegistrationResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1299,18 +1299,18 @@ func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r IamBackofficeAP
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeSearchGroupsRequest struct {
+type ApiIamBackofficeSearchGroupsRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeSearchGroupsRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeSearchGroupsRequest) Body(body IambackofficeSearchGroupsRequest) IamBackofficeAPIIamBackofficeSearchGroupsRequest {
+func (r ApiIamBackofficeSearchGroupsRequest) Body(body IambackofficeSearchGroupsRequest) ApiIamBackofficeSearchGroupsRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeSearchGroupsRequest) Execute() (*IambackofficeSearchGroupsResponse, *http.Response, error) {
+func (r ApiIamBackofficeSearchGroupsRequest) Execute() (*IambackofficeSearchGroupsResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeSearchGroupsExecute(r)
 }
 
@@ -1318,10 +1318,10 @@ func (r IamBackofficeAPIIamBackofficeSearchGroupsRequest) Execute() (*Iambackoff
 IamBackofficeSearchGroups Method for IamBackofficeSearchGroups
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeSearchGroupsRequest
+ @return ApiIamBackofficeSearchGroupsRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeSearchGroups(ctx context.Context) IamBackofficeAPIIamBackofficeSearchGroupsRequest {
-	return IamBackofficeAPIIamBackofficeSearchGroupsRequest{
+func (a *IamBackofficeAPIService) IamBackofficeSearchGroups(ctx context.Context) ApiIamBackofficeSearchGroupsRequest {
+	return ApiIamBackofficeSearchGroupsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1329,7 +1329,7 @@ func (a *IamBackofficeAPIService) IamBackofficeSearchGroups(ctx context.Context)
 
 // Execute executes the request
 //  @return IambackofficeSearchGroupsResponse
-func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r IamBackofficeAPIIamBackofficeSearchGroupsRequest) (*IambackofficeSearchGroupsResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r ApiIamBackofficeSearchGroupsRequest) (*IambackofficeSearchGroupsResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1415,18 +1415,18 @@ func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r IamBackoffi
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type IamBackofficeAPIIamBackofficeUnassignRolesRequest struct {
+type ApiIamBackofficeUnassignRolesRequest struct {
 	ctx context.Context
 	ApiService *IamBackofficeAPIService
 	body *IambackofficeUnassignRolesRequest
 }
 
-func (r IamBackofficeAPIIamBackofficeUnassignRolesRequest) Body(body IambackofficeUnassignRolesRequest) IamBackofficeAPIIamBackofficeUnassignRolesRequest {
+func (r ApiIamBackofficeUnassignRolesRequest) Body(body IambackofficeUnassignRolesRequest) ApiIamBackofficeUnassignRolesRequest {
 	r.body = &body
 	return r
 }
 
-func (r IamBackofficeAPIIamBackofficeUnassignRolesRequest) Execute() (*IambackofficeUnassignRolesResponse, *http.Response, error) {
+func (r ApiIamBackofficeUnassignRolesRequest) Execute() (*IambackofficeUnassignRolesResponse, *http.Response, error) {
 	return r.ApiService.IamBackofficeUnassignRolesExecute(r)
 }
 
@@ -1434,10 +1434,10 @@ func (r IamBackofficeAPIIamBackofficeUnassignRolesRequest) Execute() (*Iambackof
 IamBackofficeUnassignRoles Method for IamBackofficeUnassignRoles
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return IamBackofficeAPIIamBackofficeUnassignRolesRequest
+ @return ApiIamBackofficeUnassignRolesRequest
 */
-func (a *IamBackofficeAPIService) IamBackofficeUnassignRoles(ctx context.Context) IamBackofficeAPIIamBackofficeUnassignRolesRequest {
-	return IamBackofficeAPIIamBackofficeUnassignRolesRequest{
+func (a *IamBackofficeAPIService) IamBackofficeUnassignRoles(ctx context.Context) ApiIamBackofficeUnassignRolesRequest {
+	return ApiIamBackofficeUnassignRolesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1445,7 +1445,7 @@ func (a *IamBackofficeAPIService) IamBackofficeUnassignRoles(ctx context.Context
 
 // Execute executes the request
 //  @return IambackofficeUnassignRolesResponse
-func (a *IamBackofficeAPIService) IamBackofficeUnassignRolesExecute(r IamBackofficeAPIIamBackofficeUnassignRolesRequest) (*IambackofficeUnassignRolesResponse, *http.Response, error) {
+func (a *IamBackofficeAPIService) IamBackofficeUnassignRolesExecute(r ApiIamBackofficeUnassignRolesRequest) (*IambackofficeUnassignRolesResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}

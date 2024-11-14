@@ -23,7 +23,10 @@ type IambackofficeUnassignRolesRequest struct {
 	LoginId *string `json:"loginId,omitempty"`
 	TenantId *string `json:"tenantId,omitempty"`
 	RoleCodes []string `json:"roleCodes,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeUnassignRolesRequest IambackofficeUnassignRolesRequest
 
 // NewIambackofficeUnassignRolesRequest instantiates a new IambackofficeUnassignRolesRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeUnassignRolesRequest) GetLoginIdOk() (*string, bool) {
 	return o.LoginId, true
 }
 
-// HasLoginId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasLoginId() bool {
+// &#39;Has&#39;LoginId returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;LoginId() bool {
 	if o != nil && !IsNil(o.LoginId) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeUnassignRolesRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeUnassignRolesRequest) GetRoleCodesOk() ([]string, bool) {
 	return o.RoleCodes, true
 }
 
-// HasRoleCodes returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasRoleCodes() bool {
+// &#39;Has&#39;RoleCodes returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;RoleCodes() bool {
 	if o != nil && !IsNil(o.RoleCodes) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeUnassignRolesRequest) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.RoleCodes) {
 		toSerialize["roleCodes"] = o.RoleCodes
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeUnassignRolesRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeUnassignRolesRequest := _IambackofficeUnassignRolesRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeUnassignRolesRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeUnassignRolesRequest(varIambackofficeUnassignRolesRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "loginId")
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "roleCodes")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeUnassignRolesRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeUnassignRolesRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeUnassignRolesRequest struct {
 	value *IambackofficeUnassignRolesRequest
 	isSet bool

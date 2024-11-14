@@ -25,7 +25,10 @@ type IambackofficeUserRegistration struct {
 	PreferredLanguages []string `json:"preferredLanguages,omitempty"`
 	Roles []string `json:"roles,omitempty"`
 	Timezone *string `json:"timezone,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeUserRegistration IambackofficeUserRegistration
 
 // NewIambackofficeUserRegistration instantiates a new IambackofficeUserRegistration object
 // This constructor will assign default values to properties that have it defined,
@@ -62,8 +65,8 @@ func (o *IambackofficeUserRegistration) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -94,8 +97,8 @@ func (o *IambackofficeUserRegistration) GetDataOk() (*map[string]string, bool) {
 	return o.Data, true
 }
 
-// HasData returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) HasData() bool {
+// &#39;Has&#39;Data returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) &#39;Has&#39;Data() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}
@@ -126,8 +129,8 @@ func (o *IambackofficeUserRegistration) GetPreferredLanguagesOk() ([]string, boo
 	return o.PreferredLanguages, true
 }
 
-// HasPreferredLanguages returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) HasPreferredLanguages() bool {
+// &#39;Has&#39;PreferredLanguages returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) &#39;Has&#39;PreferredLanguages() bool {
 	if o != nil && !IsNil(o.PreferredLanguages) {
 		return true
 	}
@@ -158,8 +161,8 @@ func (o *IambackofficeUserRegistration) GetRolesOk() ([]string, bool) {
 	return o.Roles, true
 }
 
-// HasRoles returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) HasRoles() bool {
+// &#39;Has&#39;Roles returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) &#39;Has&#39;Roles() bool {
 	if o != nil && !IsNil(o.Roles) {
 		return true
 	}
@@ -190,8 +193,8 @@ func (o *IambackofficeUserRegistration) GetTimezoneOk() (*string, bool) {
 	return o.Timezone, true
 }
 
-// HasTimezone returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) HasTimezone() bool {
+// &#39;Has&#39;Timezone returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) &#39;Has&#39;Timezone() bool {
 	if o != nil && !IsNil(o.Timezone) {
 		return true
 	}
@@ -229,9 +232,57 @@ func (o IambackofficeUserRegistration) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Timezone) {
 		toSerialize["timezone"] = o.Timezone
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeUserRegistration) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeUserRegistration := _IambackofficeUserRegistration{}
+
+	err = json.Unmarshal(data, &varIambackofficeUserRegistration)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeUserRegistration(varIambackofficeUserRegistration)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "data")
+		delete(additionalProperties, "preferredLanguages")
+		delete(additionalProperties, "roles")
+		delete(additionalProperties, "timezone")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeUserRegistration) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeUserRegistration) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeUserRegistration struct {
 	value *IambackofficeUserRegistration
 	isSet bool

@@ -22,7 +22,10 @@ var _ MappedNullable = &IambackofficeLogoutRequest{}
 type IambackofficeLogoutRequest struct {
 	Global *bool `json:"global,omitempty"`
 	Tokens *ProtobufAny `json:"tokens,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeLogoutRequest IambackofficeLogoutRequest
 
 // NewIambackofficeLogoutRequest instantiates a new IambackofficeLogoutRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -59,8 +62,8 @@ func (o *IambackofficeLogoutRequest) GetGlobalOk() (*bool, bool) {
 	return o.Global, true
 }
 
-// HasGlobal returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) HasGlobal() bool {
+// &#39;Has&#39;Global returns a boolean if a field has been set.
+func (o *IambackofficeLogoutRequest) &#39;Has&#39;Global() bool {
 	if o != nil && !IsNil(o.Global) {
 		return true
 	}
@@ -91,8 +94,8 @@ func (o *IambackofficeLogoutRequest) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// HasTokens returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) HasTokens() bool {
+// &#39;Has&#39;Tokens returns a boolean if a field has been set.
+func (o *IambackofficeLogoutRequest) &#39;Has&#39;Tokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}
@@ -121,9 +124,54 @@ func (o IambackofficeLogoutRequest) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Tokens) {
 		toSerialize["tokens"] = o.Tokens
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeLogoutRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeLogoutRequest := _IambackofficeLogoutRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeLogoutRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeLogoutRequest(varIambackofficeLogoutRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "global")
+		delete(additionalProperties, "tokens")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeLogoutRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeLogoutRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeLogoutRequest struct {
 	value *IambackofficeLogoutRequest
 	isSet bool

@@ -1,4 +1,4 @@
-# GeminiCommerce\Iambackoffice\IamBackofficeAPI
+# \IamBackofficeAPI
 
 All URIs are relative to *https://iambackoffice.api.gogemini.io*
 

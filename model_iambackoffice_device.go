@@ -23,7 +23,10 @@ type IambackofficeDevice struct {
 	Description *string `json:"description,omitempty"`
 	Name *string `json:"name,omitempty"`
 	DeviceType *string `json:"deviceType,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeDevice IambackofficeDevice
 
 // NewIambackofficeDevice instantiates a new IambackofficeDevice object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeDevice) GetDescriptionOk() (*string, bool) {
 	return o.Description, true
 }
 
-// HasDescription returns a boolean if a field has been set.
-func (o *IambackofficeDevice) HasDescription() bool {
+// &#39;Has&#39;Description returns a boolean if a field has been set.
+func (o *IambackofficeDevice) &#39;Has&#39;Description() bool {
 	if o != nil && !IsNil(o.Description) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeDevice) GetNameOk() (*string, bool) {
 	return o.Name, true
 }
 
-// HasName returns a boolean if a field has been set.
-func (o *IambackofficeDevice) HasName() bool {
+// &#39;Has&#39;Name returns a boolean if a field has been set.
+func (o *IambackofficeDevice) &#39;Has&#39;Name() bool {
 	if o != nil && !IsNil(o.Name) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeDevice) GetDeviceTypeOk() (*string, bool) {
 	return o.DeviceType, true
 }
 
-// HasDeviceType returns a boolean if a field has been set.
-func (o *IambackofficeDevice) HasDeviceType() bool {
+// &#39;Has&#39;DeviceType returns a boolean if a field has been set.
+func (o *IambackofficeDevice) &#39;Has&#39;DeviceType() bool {
 	if o != nil && !IsNil(o.DeviceType) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeDevice) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.DeviceType) {
 		toSerialize["deviceType"] = o.DeviceType
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeDevice) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeDevice := _IambackofficeDevice{}
+
+	err = json.Unmarshal(data, &varIambackofficeDevice)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeDevice(varIambackofficeDevice)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "description")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "deviceType")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeDevice) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeDevice) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeDevice struct {
 	value *IambackofficeDevice
 	isSet bool

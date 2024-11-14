@@ -21,7 +21,10 @@ var _ MappedNullable = &IambackofficeAssignRolesResponse{}
 // IambackofficeAssignRolesResponse struct for IambackofficeAssignRolesResponse
 type IambackofficeAssignRolesResponse struct {
 	RoleCodes []string `json:"roleCodes,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeAssignRolesResponse IambackofficeAssignRolesResponse
 
 // NewIambackofficeAssignRolesResponse instantiates a new IambackofficeAssignRolesResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *IambackofficeAssignRolesResponse) GetRoleCodesOk() ([]string, bool) {
 	return o.RoleCodes, true
 }
 
-// HasRoleCodes returns a boolean if a field has been set.
-func (o *IambackofficeAssignRolesResponse) HasRoleCodes() bool {
+// &#39;Has&#39;RoleCodes returns a boolean if a field has been set.
+func (o *IambackofficeAssignRolesResponse) &#39;Has&#39;RoleCodes() bool {
 	if o != nil && !IsNil(o.RoleCodes) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o IambackofficeAssignRolesResponse) ToMap() (map[string]interface{}, error
 	if !IsNil(o.RoleCodes) {
 		toSerialize["roleCodes"] = o.RoleCodes
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeAssignRolesResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeAssignRolesResponse := _IambackofficeAssignRolesResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeAssignRolesResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeAssignRolesResponse(varIambackofficeAssignRolesResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "roleCodes")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeAssignRolesResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeAssignRolesResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeAssignRolesResponse struct {
 	value *IambackofficeAssignRolesResponse
 	isSet bool

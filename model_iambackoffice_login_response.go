@@ -25,7 +25,10 @@ type IambackofficeLoginResponse struct {
 	Methods []IambackofficeTwoFactorMethod `json:"methods,omitempty"`
 	TwoFactorId *string `json:"twoFactorId,omitempty"`
 	TenantId *string `json:"tenantId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeLoginResponse IambackofficeLoginResponse
 
 // NewIambackofficeLoginResponse instantiates a new IambackofficeLoginResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -62,8 +65,8 @@ func (o *IambackofficeLoginResponse) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// HasTokens returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) HasTokens() bool {
+// &#39;Has&#39;Tokens returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) &#39;Has&#39;Tokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}
@@ -94,8 +97,8 @@ func (o *IambackofficeLoginResponse) GetUserOk() (*IambackofficeUser, bool) {
 	return o.User, true
 }
 
-// HasUser returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) HasUser() bool {
+// &#39;Has&#39;User returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) &#39;Has&#39;User() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}
@@ -126,8 +129,8 @@ func (o *IambackofficeLoginResponse) GetMethodsOk() ([]IambackofficeTwoFactorMet
 	return o.Methods, true
 }
 
-// HasMethods returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) HasMethods() bool {
+// &#39;Has&#39;Methods returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) &#39;Has&#39;Methods() bool {
 	if o != nil && !IsNil(o.Methods) {
 		return true
 	}
@@ -158,8 +161,8 @@ func (o *IambackofficeLoginResponse) GetTwoFactorIdOk() (*string, bool) {
 	return o.TwoFactorId, true
 }
 
-// HasTwoFactorId returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) HasTwoFactorId() bool {
+// &#39;Has&#39;TwoFactorId returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) &#39;Has&#39;TwoFactorId() bool {
 	if o != nil && !IsNil(o.TwoFactorId) {
 		return true
 	}
@@ -190,8 +193,8 @@ func (o *IambackofficeLoginResponse) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -229,9 +232,57 @@ func (o IambackofficeLoginResponse) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.TenantId) {
 		toSerialize["tenantId"] = o.TenantId
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeLoginResponse) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeLoginResponse := _IambackofficeLoginResponse{}
+
+	err = json.Unmarshal(data, &varIambackofficeLoginResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeLoginResponse(varIambackofficeLoginResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tokens")
+		delete(additionalProperties, "user")
+		delete(additionalProperties, "methods")
+		delete(additionalProperties, "twoFactorId")
+		delete(additionalProperties, "tenantId")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeLoginResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeLoginResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeLoginResponse struct {
 	value *IambackofficeLoginResponse
 	isSet bool

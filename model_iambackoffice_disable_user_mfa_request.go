@@ -23,7 +23,10 @@ type IambackofficeDisableUserMfaRequest struct {
 	UserId *string `json:"userId,omitempty"`
 	Code *string `json:"code,omitempty"`
 	MethodId *string `json:"methodId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeDisableUserMfaRequest IambackofficeDisableUserMfaRequest
 
 // NewIambackofficeDisableUserMfaRequest instantiates a new IambackofficeDisableUserMfaRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *IambackofficeDisableUserMfaRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// HasUserId returns a boolean if a field has been set.
-func (o *IambackofficeDisableUserMfaRequest) HasUserId() bool {
+// &#39;Has&#39;UserId returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) &#39;Has&#39;UserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *IambackofficeDisableUserMfaRequest) GetCodeOk() (*string, bool) {
 	return o.Code, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *IambackofficeDisableUserMfaRequest) HasCode() bool {
+// &#39;Has&#39;Code returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) &#39;Has&#39;Code() bool {
 	if o != nil && !IsNil(o.Code) {
 		return true
 	}
@@ -124,8 +127,8 @@ func (o *IambackofficeDisableUserMfaRequest) GetMethodIdOk() (*string, bool) {
 	return o.MethodId, true
 }
 
-// HasMethodId returns a boolean if a field has been set.
-func (o *IambackofficeDisableUserMfaRequest) HasMethodId() bool {
+// &#39;Has&#39;MethodId returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) &#39;Has&#39;MethodId() bool {
 	if o != nil && !IsNil(o.MethodId) {
 		return true
 	}
@@ -157,9 +160,55 @@ func (o IambackofficeDisableUserMfaRequest) ToMap() (map[string]interface{}, err
 	if !IsNil(o.MethodId) {
 		toSerialize["methodId"] = o.MethodId
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeDisableUserMfaRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeDisableUserMfaRequest := _IambackofficeDisableUserMfaRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeDisableUserMfaRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeDisableUserMfaRequest(varIambackofficeDisableUserMfaRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "userId")
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "methodId")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeDisableUserMfaRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeDisableUserMfaRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeDisableUserMfaRequest struct {
 	value *IambackofficeDisableUserMfaRequest
 	isSet bool

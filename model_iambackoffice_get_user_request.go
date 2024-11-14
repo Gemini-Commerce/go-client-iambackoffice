@@ -24,7 +24,10 @@ type IambackofficeGetUserRequest struct {
 	UserId *string `json:"userId,omitempty"`
 	Email *string `json:"email,omitempty"`
 	Username *string `json:"username,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _IambackofficeGetUserRequest IambackofficeGetUserRequest
 
 // NewIambackofficeGetUserRequest instantiates a new IambackofficeGetUserRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -61,8 +64,8 @@ func (o *IambackofficeGetUserRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -93,8 +96,8 @@ func (o *IambackofficeGetUserRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// HasUserId returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) HasUserId() bool {
+// &#39;Has&#39;UserId returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) &#39;Has&#39;UserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -125,8 +128,8 @@ func (o *IambackofficeGetUserRequest) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// HasEmail returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) HasEmail() bool {
+// &#39;Has&#39;Email returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) &#39;Has&#39;Email() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -157,8 +160,8 @@ func (o *IambackofficeGetUserRequest) GetUsernameOk() (*string, bool) {
 	return o.Username, true
 }
 
-// HasUsername returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) HasUsername() bool {
+// &#39;Has&#39;Username returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) &#39;Has&#39;Username() bool {
 	if o != nil && !IsNil(o.Username) {
 		return true
 	}
@@ -193,9 +196,56 @@ func (o IambackofficeGetUserRequest) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Username) {
 		toSerialize["username"] = o.Username
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *IambackofficeGetUserRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeGetUserRequest := _IambackofficeGetUserRequest{}
+
+	err = json.Unmarshal(data, &varIambackofficeGetUserRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = IambackofficeGetUserRequest(varIambackofficeGetUserRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "userId")
+		delete(additionalProperties, "email")
+		delete(additionalProperties, "username")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *IambackofficeGetUserRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *IambackofficeGetUserRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableIambackofficeGetUserRequest struct {
 	value *IambackofficeGetUserRequest
 	isSet bool
