@@ -63,8 +63,8 @@ func (o *IambackofficeUnassignRolesRequest) GetLoginIdOk() (*string, bool) {
 	return o.LoginId, true
 }
 
-// &#39;Has&#39;LoginId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;LoginId() bool {
+// HasLoginId returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) HasLoginId() bool {
 	if o != nil && !IsNil(o.LoginId) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeUnassignRolesRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeUnassignRolesRequest) GetRoleCodesOk() ([]string, bool) {
 	return o.RoleCodes, true
 }
 
-// &#39;Has&#39;RoleCodes returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) &#39;Has&#39;RoleCodes() bool {
+// HasRoleCodes returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesRequest) HasRoleCodes() bool {
 	if o != nil && !IsNil(o.RoleCodes) {
 		return true
 	}

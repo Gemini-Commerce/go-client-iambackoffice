@@ -66,8 +66,8 @@ func (o *IambackofficeRegistrationRequest) GetRegistrationOk() (*IambackofficeUs
 	return o.Registration, true
 }
 
-// &#39;Has&#39;Registration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;Registration() bool {
+// HasRegistration returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasRegistration() bool {
 	if o != nil && !IsNil(o.Registration) {
 		return true
 	}
@@ -98,8 +98,8 @@ func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmailOk() (*bool, b
 	return o.SendSetPasswordEmail, true
 }
 
-// &#39;Has&#39;SendSetPasswordEmail returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SendSetPasswordEmail() bool {
+// HasSendSetPasswordEmail returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasSendSetPasswordEmail() bool {
 	if o != nil && !IsNil(o.SendSetPasswordEmail) {
 		return true
 	}
@@ -130,8 +130,8 @@ func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerificationOk() (
 	return o.SkipRegistrationVerification, true
 }
 
-// &#39;Has&#39;SkipRegistrationVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SkipRegistrationVerification() bool {
+// HasSkipRegistrationVerification returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasSkipRegistrationVerification() bool {
 	if o != nil && !IsNil(o.SkipRegistrationVerification) {
 		return true
 	}
@@ -162,8 +162,8 @@ func (o *IambackofficeRegistrationRequest) GetSkipVerificationOk() (*bool, bool)
 	return o.SkipVerification, true
 }
 
-// &#39;Has&#39;SkipVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;SkipVerification() bool {
+// HasSkipVerification returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasSkipVerification() bool {
 	if o != nil && !IsNil(o.SkipVerification) {
 		return true
 	}
@@ -194,8 +194,8 @@ func (o *IambackofficeRegistrationRequest) GetUserOk() (*IambackofficeUser, bool
 	return o.User, true
 }
 
-// &#39;Has&#39;User returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;User() bool {
+// HasUser returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasUser() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}
@@ -226,8 +226,8 @@ func (o *IambackofficeRegistrationRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}

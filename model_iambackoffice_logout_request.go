@@ -62,8 +62,8 @@ func (o *IambackofficeLogoutRequest) GetGlobalOk() (*bool, bool) {
 	return o.Global, true
 }
 
-// &#39;Has&#39;Global returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) &#39;Has&#39;Global() bool {
+// HasGlobal returns a boolean if a field has been set.
+func (o *IambackofficeLogoutRequest) HasGlobal() bool {
 	if o != nil && !IsNil(o.Global) {
 		return true
 	}
@@ -94,8 +94,8 @@ func (o *IambackofficeLogoutRequest) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// &#39;Has&#39;Tokens returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) &#39;Has&#39;Tokens() bool {
+// HasTokens returns a boolean if a field has been set.
+func (o *IambackofficeLogoutRequest) HasTokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}

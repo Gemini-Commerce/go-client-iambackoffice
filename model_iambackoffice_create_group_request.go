@@ -63,8 +63,8 @@ func (o *IambackofficeCreateGroupRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeCreateGroupRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeCreateGroupRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeCreateGroupRequest) GetNameOk() (*string, bool) {
 	return o.Name, true
 }
 
-// &#39;Has&#39;Name returns a boolean if a field has been set.
-func (o *IambackofficeCreateGroupRequest) &#39;Has&#39;Name() bool {
+// HasName returns a boolean if a field has been set.
+func (o *IambackofficeCreateGroupRequest) HasName() bool {
 	if o != nil && !IsNil(o.Name) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeCreateGroupRequest) GetDataOk() (*map[string]string, bool)
 	return o.Data, true
 }
 
-// &#39;Has&#39;Data returns a boolean if a field has been set.
-func (o *IambackofficeCreateGroupRequest) &#39;Has&#39;Data() bool {
+// HasData returns a boolean if a field has been set.
+func (o *IambackofficeCreateGroupRequest) HasData() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}

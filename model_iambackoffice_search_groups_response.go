@@ -61,8 +61,8 @@ func (o *IambackofficeSearchGroupsResponse) GetGroupsOk() ([]IambackofficeGroup,
 	return o.Groups, true
 }
 
-// &#39;Has&#39;Groups returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsResponse) &#39;Has&#39;Groups() bool {
+// HasGroups returns a boolean if a field has been set.
+func (o *IambackofficeSearchGroupsResponse) HasGroups() bool {
 	if o != nil && !IsNil(o.Groups) {
 		return true
 	}

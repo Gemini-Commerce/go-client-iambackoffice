@@ -61,8 +61,8 @@ func (o *IambackofficeGenerateSecretForQRResponse) GetSecretOk() (*string, bool)
 	return o.Secret, true
 }
 
-// &#39;Has&#39;Secret returns a boolean if a field has been set.
-func (o *IambackofficeGenerateSecretForQRResponse) &#39;Has&#39;Secret() bool {
+// HasSecret returns a boolean if a field has been set.
+func (o *IambackofficeGenerateSecretForQRResponse) HasSecret() bool {
 	if o != nil && !IsNil(o.Secret) {
 		return true
 	}

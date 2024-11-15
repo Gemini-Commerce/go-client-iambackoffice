@@ -67,8 +67,8 @@ func (o *IambackofficeLoginRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -99,8 +99,8 @@ func (o *IambackofficeLoginRequest) GetIpAddressOk() (*string, bool) {
 	return o.IpAddress, true
 }
 
-// &#39;Has&#39;IpAddress returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;IpAddress() bool {
+// HasIpAddress returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasIpAddress() bool {
 	if o != nil && !IsNil(o.IpAddress) {
 		return true
 	}
@@ -131,8 +131,8 @@ func (o *IambackofficeLoginRequest) GetLoginIdOk() (*string, bool) {
 	return o.LoginId, true
 }
 
-// &#39;Has&#39;LoginId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;LoginId() bool {
+// HasLoginId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasLoginId() bool {
 	if o != nil && !IsNil(o.LoginId) {
 		return true
 	}
@@ -163,8 +163,8 @@ func (o *IambackofficeLoginRequest) GetMetaDataOk() (*IambackofficeMetaData, boo
 	return o.MetaData, true
 }
 
-// &#39;Has&#39;MetaData returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;MetaData() bool {
+// HasMetaData returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasMetaData() bool {
 	if o != nil && !IsNil(o.MetaData) {
 		return true
 	}
@@ -195,8 +195,8 @@ func (o *IambackofficeLoginRequest) GetNoTokensOk() (*bool, bool) {
 	return o.NoTokens, true
 }
 
-// &#39;Has&#39;NoTokens returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;NoTokens() bool {
+// HasNoTokens returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasNoTokens() bool {
 	if o != nil && !IsNil(o.NoTokens) {
 		return true
 	}
@@ -227,8 +227,8 @@ func (o *IambackofficeLoginRequest) GetPasswordOk() (*string, bool) {
 	return o.Password, true
 }
 
-// &#39;Has&#39;Password returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;Password() bool {
+// HasPassword returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasPassword() bool {
 	if o != nil && !IsNil(o.Password) {
 		return true
 	}
@@ -259,8 +259,8 @@ func (o *IambackofficeLoginRequest) GetTwoFactorTrustIdOk() (*string, bool) {
 	return o.TwoFactorTrustId, true
 }
 
-// &#39;Has&#39;TwoFactorTrustId returns a boolean if a field has been set.
-func (o *IambackofficeLoginRequest) &#39;Has&#39;TwoFactorTrustId() bool {
+// HasTwoFactorTrustId returns a boolean if a field has been set.
+func (o *IambackofficeLoginRequest) HasTwoFactorTrustId() bool {
 	if o != nil && !IsNil(o.TwoFactorTrustId) {
 		return true
 	}

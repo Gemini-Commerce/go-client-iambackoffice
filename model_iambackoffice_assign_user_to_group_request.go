@@ -63,8 +63,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetTenantIdOk() (*string, bool) 
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// &#39;Has&#39;UserId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;UserId() bool {
+// HasUserId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) HasUserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeAssignUserToGroupRequest) GetGroupIdOk() (*string, bool) {
 	return o.GroupId, true
 }
 
-// &#39;Has&#39;GroupId returns a boolean if a field has been set.
-func (o *IambackofficeAssignUserToGroupRequest) &#39;Has&#39;GroupId() bool {
+// HasGroupId returns a boolean if a field has been set.
+func (o *IambackofficeAssignUserToGroupRequest) HasGroupId() bool {
 	if o != nil && !IsNil(o.GroupId) {
 		return true
 	}

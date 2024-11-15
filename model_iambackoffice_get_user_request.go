@@ -64,8 +64,8 @@ func (o *IambackofficeGetUserRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -96,8 +96,8 @@ func (o *IambackofficeGetUserRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// &#39;Has&#39;UserId returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) &#39;Has&#39;UserId() bool {
+// HasUserId returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) HasUserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -128,8 +128,8 @@ func (o *IambackofficeGetUserRequest) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// &#39;Has&#39;Email returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) &#39;Has&#39;Email() bool {
+// HasEmail returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) HasEmail() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -160,8 +160,8 @@ func (o *IambackofficeGetUserRequest) GetUsernameOk() (*string, bool) {
 	return o.Username, true
 }
 
-// &#39;Has&#39;Username returns a boolean if a field has been set.
-func (o *IambackofficeGetUserRequest) &#39;Has&#39;Username() bool {
+// HasUsername returns a boolean if a field has been set.
+func (o *IambackofficeGetUserRequest) HasUsername() bool {
 	if o != nil && !IsNil(o.Username) {
 		return true
 	}

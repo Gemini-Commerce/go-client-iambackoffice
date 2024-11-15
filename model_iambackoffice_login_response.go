@@ -65,8 +65,8 @@ func (o *IambackofficeLoginResponse) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// &#39;Has&#39;Tokens returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) &#39;Has&#39;Tokens() bool {
+// HasTokens returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) HasTokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}
@@ -97,8 +97,8 @@ func (o *IambackofficeLoginResponse) GetUserOk() (*IambackofficeUser, bool) {
 	return o.User, true
 }
 
-// &#39;Has&#39;User returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) &#39;Has&#39;User() bool {
+// HasUser returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) HasUser() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}
@@ -129,8 +129,8 @@ func (o *IambackofficeLoginResponse) GetMethodsOk() ([]IambackofficeTwoFactorMet
 	return o.Methods, true
 }
 
-// &#39;Has&#39;Methods returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) &#39;Has&#39;Methods() bool {
+// HasMethods returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) HasMethods() bool {
 	if o != nil && !IsNil(o.Methods) {
 		return true
 	}
@@ -161,8 +161,8 @@ func (o *IambackofficeLoginResponse) GetTwoFactorIdOk() (*string, bool) {
 	return o.TwoFactorId, true
 }
 
-// &#39;Has&#39;TwoFactorId returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) &#39;Has&#39;TwoFactorId() bool {
+// HasTwoFactorId returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) HasTwoFactorId() bool {
 	if o != nil && !IsNil(o.TwoFactorId) {
 		return true
 	}
@@ -193,8 +193,8 @@ func (o *IambackofficeLoginResponse) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeLoginResponse) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeLoginResponse) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}

@@ -61,8 +61,8 @@ func (o *SearchGroupsRequestFilters) GetDataOk() (*map[string]string, bool) {
 	return o.Data, true
 }
 
-// &#39;Has&#39;Data returns a boolean if a field has been set.
-func (o *SearchGroupsRequestFilters) &#39;Has&#39;Data() bool {
+// HasData returns a boolean if a field has been set.
+func (o *SearchGroupsRequestFilters) HasData() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}

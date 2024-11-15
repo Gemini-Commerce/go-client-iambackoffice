@@ -65,8 +65,8 @@ func (o *IambackofficeUserRegistration) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -97,8 +97,8 @@ func (o *IambackofficeUserRegistration) GetDataOk() (*map[string]string, bool) {
 	return o.Data, true
 }
 
-// &#39;Has&#39;Data returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) &#39;Has&#39;Data() bool {
+// HasData returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) HasData() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}
@@ -129,8 +129,8 @@ func (o *IambackofficeUserRegistration) GetPreferredLanguagesOk() ([]string, boo
 	return o.PreferredLanguages, true
 }
 
-// &#39;Has&#39;PreferredLanguages returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) &#39;Has&#39;PreferredLanguages() bool {
+// HasPreferredLanguages returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) HasPreferredLanguages() bool {
 	if o != nil && !IsNil(o.PreferredLanguages) {
 		return true
 	}
@@ -161,8 +161,8 @@ func (o *IambackofficeUserRegistration) GetRolesOk() ([]string, bool) {
 	return o.Roles, true
 }
 
-// &#39;Has&#39;Roles returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) &#39;Has&#39;Roles() bool {
+// HasRoles returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) HasRoles() bool {
 	if o != nil && !IsNil(o.Roles) {
 		return true
 	}
@@ -193,8 +193,8 @@ func (o *IambackofficeUserRegistration) GetTimezoneOk() (*string, bool) {
 	return o.Timezone, true
 }
 
-// &#39;Has&#39;Timezone returns a boolean if a field has been set.
-func (o *IambackofficeUserRegistration) &#39;Has&#39;Timezone() bool {
+// HasTimezone returns a boolean if a field has been set.
+func (o *IambackofficeUserRegistration) HasTimezone() bool {
 	if o != nil && !IsNil(o.Timezone) {
 		return true
 	}

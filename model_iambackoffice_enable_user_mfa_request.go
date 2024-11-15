@@ -63,8 +63,8 @@ func (o *IambackofficeEnableUserMfaRequest) GetUserIdOk() (*string, bool) {
 	return o.UserId, true
 }
 
-// &#39;Has&#39;UserId returns a boolean if a field has been set.
-func (o *IambackofficeEnableUserMfaRequest) &#39;Has&#39;UserId() bool {
+// HasUserId returns a boolean if a field has been set.
+func (o *IambackofficeEnableUserMfaRequest) HasUserId() bool {
 	if o != nil && !IsNil(o.UserId) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeEnableUserMfaRequest) GetSecretOk() (*string, bool) {
 	return o.Secret, true
 }
 
-// &#39;Has&#39;Secret returns a boolean if a field has been set.
-func (o *IambackofficeEnableUserMfaRequest) &#39;Has&#39;Secret() bool {
+// HasSecret returns a boolean if a field has been set.
+func (o *IambackofficeEnableUserMfaRequest) HasSecret() bool {
 	if o != nil && !IsNil(o.Secret) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeEnableUserMfaRequest) GetCodeOk() (*string, bool) {
 	return o.Code, true
 }
 
-// &#39;Has&#39;Code returns a boolean if a field has been set.
-func (o *IambackofficeEnableUserMfaRequest) &#39;Has&#39;Code() bool {
+// HasCode returns a boolean if a field has been set.
+func (o *IambackofficeEnableUserMfaRequest) HasCode() bool {
 	if o != nil && !IsNil(o.Code) {
 		return true
 	}

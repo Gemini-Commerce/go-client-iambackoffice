@@ -63,8 +63,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetAlgorithmOk() (*string, boo
 	return o.Algorithm, true
 }
 
-// &#39;Has&#39;Algorithm returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;Algorithm() bool {
+// HasAlgorithm returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) HasAlgorithm() bool {
 	if o != nil && !IsNil(o.Algorithm) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetCodeLengthOk() (*int32, boo
 	return o.CodeLength, true
 }
 
-// &#39;Has&#39;CodeLength returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;CodeLength() bool {
+// HasCodeLength returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) HasCodeLength() bool {
 	if o != nil && !IsNil(o.CodeLength) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeAuthenticatorConfiguration) GetTimeStepOk() (*int32, bool)
 	return o.TimeStep, true
 }
 
-// &#39;Has&#39;TimeStep returns a boolean if a field has been set.
-func (o *IambackofficeAuthenticatorConfiguration) &#39;Has&#39;TimeStep() bool {
+// HasTimeStep returns a boolean if a field has been set.
+func (o *IambackofficeAuthenticatorConfiguration) HasTimeStep() bool {
 	if o != nil && !IsNil(o.TimeStep) {
 		return true
 	}

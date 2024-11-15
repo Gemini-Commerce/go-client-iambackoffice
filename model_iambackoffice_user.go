@@ -83,8 +83,8 @@ func (o *IambackofficeUser) GetActiveOk() (*bool, bool) {
 	return o.Active, true
 }
 
-// &#39;Has&#39;Active returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Active() bool {
+// HasActive returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasActive() bool {
 	if o != nil && !IsNil(o.Active) {
 		return true
 	}
@@ -115,8 +115,8 @@ func (o *IambackofficeUser) GetBirthDateOk() (*string, bool) {
 	return o.BirthDate, true
 }
 
-// &#39;Has&#39;BirthDate returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;BirthDate() bool {
+// HasBirthDate returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasBirthDate() bool {
 	if o != nil && !IsNil(o.BirthDate) {
 		return true
 	}
@@ -147,8 +147,8 @@ func (o *IambackofficeUser) GetDataOk() (*map[string]string, bool) {
 	return o.Data, true
 }
 
-// &#39;Has&#39;Data returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Data() bool {
+// HasData returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasData() bool {
 	if o != nil && !IsNil(o.Data) {
 		return true
 	}
@@ -179,8 +179,8 @@ func (o *IambackofficeUser) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// &#39;Has&#39;Email returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Email() bool {
+// HasEmail returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasEmail() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -211,8 +211,8 @@ func (o *IambackofficeUser) GetFirstNameOk() (*string, bool) {
 	return o.FirstName, true
 }
 
-// &#39;Has&#39;FirstName returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;FirstName() bool {
+// HasFirstName returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasFirstName() bool {
 	if o != nil && !IsNil(o.FirstName) {
 		return true
 	}
@@ -243,8 +243,8 @@ func (o *IambackofficeUser) GetFullNameOk() (*string, bool) {
 	return o.FullName, true
 }
 
-// &#39;Has&#39;FullName returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;FullName() bool {
+// HasFullName returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasFullName() bool {
 	if o != nil && !IsNil(o.FullName) {
 		return true
 	}
@@ -275,8 +275,8 @@ func (o *IambackofficeUser) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// &#39;Has&#39;Id returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Id() bool {
+// HasId returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -307,8 +307,8 @@ func (o *IambackofficeUser) GetImageUrlOk() (*string, bool) {
 	return o.ImageUrl, true
 }
 
-// &#39;Has&#39;ImageUrl returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;ImageUrl() bool {
+// HasImageUrl returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasImageUrl() bool {
 	if o != nil && !IsNil(o.ImageUrl) {
 		return true
 	}
@@ -339,8 +339,8 @@ func (o *IambackofficeUser) GetInsertInstantOk() (*string, bool) {
 	return o.InsertInstant, true
 }
 
-// &#39;Has&#39;InsertInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;InsertInstant() bool {
+// HasInsertInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasInsertInstant() bool {
 	if o != nil && !IsNil(o.InsertInstant) {
 		return true
 	}
@@ -371,8 +371,8 @@ func (o *IambackofficeUser) GetLastLoginInstantOk() (*string, bool) {
 	return o.LastLoginInstant, true
 }
 
-// &#39;Has&#39;LastLoginInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;LastLoginInstant() bool {
+// HasLastLoginInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasLastLoginInstant() bool {
 	if o != nil && !IsNil(o.LastLoginInstant) {
 		return true
 	}
@@ -403,8 +403,8 @@ func (o *IambackofficeUser) GetLastNameOk() (*string, bool) {
 	return o.LastName, true
 }
 
-// &#39;Has&#39;LastName returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;LastName() bool {
+// HasLastName returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasLastName() bool {
 	if o != nil && !IsNil(o.LastName) {
 		return true
 	}
@@ -435,8 +435,8 @@ func (o *IambackofficeUser) GetLastUpdateInstantOk() (*string, bool) {
 	return o.LastUpdateInstant, true
 }
 
-// &#39;Has&#39;LastUpdateInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;LastUpdateInstant() bool {
+// HasLastUpdateInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasLastUpdateInstant() bool {
 	if o != nil && !IsNil(o.LastUpdateInstant) {
 		return true
 	}
@@ -467,8 +467,8 @@ func (o *IambackofficeUser) GetMiddleNameOk() (*string, bool) {
 	return o.MiddleName, true
 }
 
-// &#39;Has&#39;MiddleName returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;MiddleName() bool {
+// HasMiddleName returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasMiddleName() bool {
 	if o != nil && !IsNil(o.MiddleName) {
 		return true
 	}
@@ -499,8 +499,8 @@ func (o *IambackofficeUser) GetMobilePhoneOk() (*string, bool) {
 	return o.MobilePhone, true
 }
 
-// &#39;Has&#39;MobilePhone returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;MobilePhone() bool {
+// HasMobilePhone returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasMobilePhone() bool {
 	if o != nil && !IsNil(o.MobilePhone) {
 		return true
 	}
@@ -531,8 +531,8 @@ func (o *IambackofficeUser) GetPasswordOk() (*string, bool) {
 	return o.Password, true
 }
 
-// &#39;Has&#39;Password returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Password() bool {
+// HasPassword returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasPassword() bool {
 	if o != nil && !IsNil(o.Password) {
 		return true
 	}
@@ -563,8 +563,8 @@ func (o *IambackofficeUser) GetPasswordChangeRequiredOk() (*bool, bool) {
 	return o.PasswordChangeRequired, true
 }
 
-// &#39;Has&#39;PasswordChangeRequired returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;PasswordChangeRequired() bool {
+// HasPasswordChangeRequired returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasPasswordChangeRequired() bool {
 	if o != nil && !IsNil(o.PasswordChangeRequired) {
 		return true
 	}
@@ -595,8 +595,8 @@ func (o *IambackofficeUser) GetPasswordLastUpdateInstantOk() (*string, bool) {
 	return o.PasswordLastUpdateInstant, true
 }
 
-// &#39;Has&#39;PasswordLastUpdateInstant returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;PasswordLastUpdateInstant() bool {
+// HasPasswordLastUpdateInstant returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasPasswordLastUpdateInstant() bool {
 	if o != nil && !IsNil(o.PasswordLastUpdateInstant) {
 		return true
 	}
@@ -627,8 +627,8 @@ func (o *IambackofficeUser) GetPreferredLanguagesOk() ([]string, bool) {
 	return o.PreferredLanguages, true
 }
 
-// &#39;Has&#39;PreferredLanguages returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;PreferredLanguages() bool {
+// HasPreferredLanguages returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasPreferredLanguages() bool {
 	if o != nil && !IsNil(o.PreferredLanguages) {
 		return true
 	}
@@ -659,8 +659,8 @@ func (o *IambackofficeUser) GetRegistrationsOk() ([]IambackofficeUserRegistratio
 	return o.Registrations, true
 }
 
-// &#39;Has&#39;Registrations returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Registrations() bool {
+// HasRegistrations returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasRegistrations() bool {
 	if o != nil && !IsNil(o.Registrations) {
 		return true
 	}
@@ -691,8 +691,8 @@ func (o *IambackofficeUser) GetTimezoneOk() (*string, bool) {
 	return o.Timezone, true
 }
 
-// &#39;Has&#39;Timezone returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Timezone() bool {
+// HasTimezone returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasTimezone() bool {
 	if o != nil && !IsNil(o.Timezone) {
 		return true
 	}
@@ -723,8 +723,8 @@ func (o *IambackofficeUser) GetTwoFactorOk() (*IambackofficeUserTwoFactorConfigu
 	return o.TwoFactor, true
 }
 
-// &#39;Has&#39;TwoFactor returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;TwoFactor() bool {
+// HasTwoFactor returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasTwoFactor() bool {
 	if o != nil && !IsNil(o.TwoFactor) {
 		return true
 	}
@@ -755,8 +755,8 @@ func (o *IambackofficeUser) GetUsernameOk() (*string, bool) {
 	return o.Username, true
 }
 
-// &#39;Has&#39;Username returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Username() bool {
+// HasUsername returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasUsername() bool {
 	if o != nil && !IsNil(o.Username) {
 		return true
 	}
@@ -787,8 +787,8 @@ func (o *IambackofficeUser) GetVerifiedOk() (*bool, bool) {
 	return o.Verified, true
 }
 
-// &#39;Has&#39;Verified returns a boolean if a field has been set.
-func (o *IambackofficeUser) &#39;Has&#39;Verified() bool {
+// HasVerified returns a boolean if a field has been set.
+func (o *IambackofficeUser) HasVerified() bool {
 	if o != nil && !IsNil(o.Verified) {
 		return true
 	}

@@ -61,8 +61,8 @@ func (o *IambackofficeGetUserResponse) GetUserOk() (*IambackofficeUser, bool) {
 	return o.User, true
 }
 
-// &#39;Has&#39;User returns a boolean if a field has been set.
-func (o *IambackofficeGetUserResponse) &#39;Has&#39;User() bool {
+// HasUser returns a boolean if a field has been set.
+func (o *IambackofficeGetUserResponse) HasUser() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}

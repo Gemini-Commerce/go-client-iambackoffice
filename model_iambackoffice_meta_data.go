@@ -61,8 +61,8 @@ func (o *IambackofficeMetaData) GetDeviceOk() (*IambackofficeDevice, bool) {
 	return o.Device, true
 }
 
-// &#39;Has&#39;Device returns a boolean if a field has been set.
-func (o *IambackofficeMetaData) &#39;Has&#39;Device() bool {
+// HasDevice returns a boolean if a field has been set.
+func (o *IambackofficeMetaData) HasDevice() bool {
 	if o != nil && !IsNil(o.Device) {
 		return true
 	}

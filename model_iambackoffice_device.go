@@ -63,8 +63,8 @@ func (o *IambackofficeDevice) GetDescriptionOk() (*string, bool) {
 	return o.Description, true
 }
 
-// &#39;Has&#39;Description returns a boolean if a field has been set.
-func (o *IambackofficeDevice) &#39;Has&#39;Description() bool {
+// HasDescription returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasDescription() bool {
 	if o != nil && !IsNil(o.Description) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeDevice) GetNameOk() (*string, bool) {
 	return o.Name, true
 }
 
-// &#39;Has&#39;Name returns a boolean if a field has been set.
-func (o *IambackofficeDevice) &#39;Has&#39;Name() bool {
+// HasName returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasName() bool {
 	if o != nil && !IsNil(o.Name) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeDevice) GetDeviceTypeOk() (*string, bool) {
 	return o.DeviceType, true
 }
 
-// &#39;Has&#39;DeviceType returns a boolean if a field has been set.
-func (o *IambackofficeDevice) &#39;Has&#39;DeviceType() bool {
+// HasDeviceType returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasDeviceType() bool {
 	if o != nil && !IsNil(o.DeviceType) {
 		return true
 	}

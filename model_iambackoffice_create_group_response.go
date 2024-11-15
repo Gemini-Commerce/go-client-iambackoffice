@@ -61,8 +61,8 @@ func (o *IambackofficeCreateGroupResponse) GetGroupOk() (*IambackofficeGroup, bo
 	return o.Group, true
 }
 
-// &#39;Has&#39;Group returns a boolean if a field has been set.
-func (o *IambackofficeCreateGroupResponse) &#39;Has&#39;Group() bool {
+// HasGroup returns a boolean if a field has been set.
+func (o *IambackofficeCreateGroupResponse) HasGroup() bool {
 	if o != nil && !IsNil(o.Group) {
 		return true
 	}

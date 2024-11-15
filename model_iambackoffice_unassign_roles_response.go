@@ -61,8 +61,8 @@ func (o *IambackofficeUnassignRolesResponse) GetRoleCodesOk() ([]string, bool) {
 	return o.RoleCodes, true
 }
 
-// &#39;Has&#39;RoleCodes returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesResponse) &#39;Has&#39;RoleCodes() bool {
+// HasRoleCodes returns a boolean if a field has been set.
+func (o *IambackofficeUnassignRolesResponse) HasRoleCodes() bool {
 	if o != nil && !IsNil(o.RoleCodes) {
 		return true
 	}

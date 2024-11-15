@@ -63,8 +63,8 @@ func (o *IambackofficeRegistrationResponse) GetTokensOk() (*ProtobufAny, bool) {
 	return o.Tokens, true
 }
 
-// &#39;Has&#39;Tokens returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) &#39;Has&#39;Tokens() bool {
+// HasTokens returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) HasTokens() bool {
 	if o != nil && !IsNil(o.Tokens) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeRegistrationResponse) GetRegistrationOk() (*IambackofficeU
 	return o.Registration, true
 }
 
-// &#39;Has&#39;Registration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) &#39;Has&#39;Registration() bool {
+// HasRegistration returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) HasRegistration() bool {
 	if o != nil && !IsNil(o.Registration) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeRegistrationResponse) GetUserOk() (*IambackofficeUser, boo
 	return o.User, true
 }
 
-// &#39;Has&#39;User returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) &#39;Has&#39;User() bool {
+// HasUser returns a boolean if a field has been set.
+func (o *IambackofficeRegistrationResponse) HasUser() bool {
 	if o != nil && !IsNil(o.User) {
 		return true
 	}

@@ -66,8 +66,8 @@ func (o *IambackofficeTwoFactorMethod) GetAuthenticatorOk() (*IambackofficeAuthe
 	return o.Authenticator, true
 }
 
-// &#39;Has&#39;Authenticator returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Authenticator() bool {
+// HasAuthenticator returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasAuthenticator() bool {
 	if o != nil && !IsNil(o.Authenticator) {
 		return true
 	}
@@ -98,8 +98,8 @@ func (o *IambackofficeTwoFactorMethod) GetEmailOk() (*string, bool) {
 	return o.Email, true
 }
 
-// &#39;Has&#39;Email returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Email() bool {
+// HasEmail returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasEmail() bool {
 	if o != nil && !IsNil(o.Email) {
 		return true
 	}
@@ -130,8 +130,8 @@ func (o *IambackofficeTwoFactorMethod) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// &#39;Has&#39;Id returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Id() bool {
+// HasId returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -162,8 +162,8 @@ func (o *IambackofficeTwoFactorMethod) GetMethodOk() (*string, bool) {
 	return o.Method, true
 }
 
-// &#39;Has&#39;Method returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Method() bool {
+// HasMethod returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasMethod() bool {
 	if o != nil && !IsNil(o.Method) {
 		return true
 	}
@@ -194,8 +194,8 @@ func (o *IambackofficeTwoFactorMethod) GetMobilePhoneOk() (*string, bool) {
 	return o.MobilePhone, true
 }
 
-// &#39;Has&#39;MobilePhone returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;MobilePhone() bool {
+// HasMobilePhone returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasMobilePhone() bool {
 	if o != nil && !IsNil(o.MobilePhone) {
 		return true
 	}
@@ -226,8 +226,8 @@ func (o *IambackofficeTwoFactorMethod) GetSecretOk() (*string, bool) {
 	return o.Secret, true
 }
 
-// &#39;Has&#39;Secret returns a boolean if a field has been set.
-func (o *IambackofficeTwoFactorMethod) &#39;Has&#39;Secret() bool {
+// HasSecret returns a boolean if a field has been set.
+func (o *IambackofficeTwoFactorMethod) HasSecret() bool {
 	if o != nil && !IsNil(o.Secret) {
 		return true
 	}

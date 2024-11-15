@@ -62,8 +62,8 @@ func (o *IambackofficeUserTwoFactorConfiguration) GetMethodsOk() ([]Iambackoffic
 	return o.Methods, true
 }
 
-// &#39;Has&#39;Methods returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) &#39;Has&#39;Methods() bool {
+// HasMethods returns a boolean if a field has been set.
+func (o *IambackofficeUserTwoFactorConfiguration) HasMethods() bool {
 	if o != nil && !IsNil(o.Methods) {
 		return true
 	}
@@ -94,8 +94,8 @@ func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodesOk() ([]string
 	return o.RecoveryCodes, true
 }
 
-// &#39;Has&#39;RecoveryCodes returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) &#39;Has&#39;RecoveryCodes() bool {
+// HasRecoveryCodes returns a boolean if a field has been set.
+func (o *IambackofficeUserTwoFactorConfiguration) HasRecoveryCodes() bool {
 	if o != nil && !IsNil(o.RecoveryCodes) {
 		return true
 	}

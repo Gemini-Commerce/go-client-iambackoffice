@@ -63,8 +63,8 @@ func (o *IambackofficeSearchGroupsRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *IambackofficeSearchGroupsRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *IambackofficeSearchGroupsRequest) GetFiltersOk() (*SearchGroupsRequestF
 	return o.Filters, true
 }
 
-// &#39;Has&#39;Filters returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) &#39;Has&#39;Filters() bool {
+// HasFilters returns a boolean if a field has been set.
+func (o *IambackofficeSearchGroupsRequest) HasFilters() bool {
 	if o != nil && !IsNil(o.Filters) {
 		return true
 	}
@@ -127,8 +127,8 @@ func (o *IambackofficeSearchGroupsRequest) GetFiltersMaskOk() (*string, bool) {
 	return o.FiltersMask, true
 }
 
-// &#39;Has&#39;FiltersMask returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) &#39;Has&#39;FiltersMask() bool {
+// HasFiltersMask returns a boolean if a field has been set.
+func (o *IambackofficeSearchGroupsRequest) HasFiltersMask() bool {
 	if o != nil && !IsNil(o.FiltersMask) {
 		return true
 	}
