@@ -20,121 +20,121 @@ var _ MappedNullable = &IambackofficeGroup{}
 
 // IambackofficeGroup struct for IambackofficeGroup
 type IambackofficeGroup struct {
-	Id *string `json:"id,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Id *string `json:"id,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeGroup IambackofficeGroup
+    type _IambackofficeGroup IambackofficeGroup
 
 // NewIambackofficeGroup instantiates a new IambackofficeGroup object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeGroup() *IambackofficeGroup {
-	this := IambackofficeGroup{}
-	return &this
+this := IambackofficeGroup{}
+return &this
 }
 
 // NewIambackofficeGroupWithDefaults instantiates a new IambackofficeGroup object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeGroupWithDefaults() *IambackofficeGroup {
-	this := IambackofficeGroup{}
-	return &this
+this := IambackofficeGroup{}
+return &this
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
-func (o *IambackofficeGroup) GetId() string {
-	if o == nil || IsNil(o.Id) {
-		var ret string
-		return ret
-	}
-	return *o.Id
-}
+        // GetId returns the Id field value if set, zero value otherwise.
+        func (o *IambackofficeGroup) GetId() string {
+        if o == nil || IsNil(o.Id) {
+        var ret string
+        return ret
+        }
+            return *o.Id
+        }
 
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeGroup) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
-		return nil, false
-	}
-	return o.Id, true
-}
+        // GetIdOk returns a tuple with the Id field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeGroup) GetIdOk() (*string, bool) {
+        if o == nil || IsNil(o.Id) {
+            return nil, false
+        }
+            return o.Id, true
+        }
 
-// HasId returns a boolean if a field has been set.
-func (o *IambackofficeGroup) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
+        // HasId returns a boolean if a field has been set.
+        func (o *IambackofficeGroup) HasId() bool {
+        if o != nil && !IsNil(o.Id) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetId gets a reference to the given string and assigns it to the Id field.
-func (o *IambackofficeGroup) SetId(v string) {
-	o.Id = &v
-}
+        // SetId gets a reference to the given string and assigns it to the Id field.
+        func (o *IambackofficeGroup) SetId(v string) {
+            o.Id = &v
+        }
 
-func (o IambackofficeGroup) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeGroup) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeGroup) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Id) {
-		toSerialize["id"] = o.Id
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Id) {
+            toSerialize["id"] = o.Id
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeGroup) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeGroup := _IambackofficeGroup{}
-
-	err = json.Unmarshal(data, &varIambackofficeGroup)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeGroup(varIambackofficeGroup)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "id")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeGroup) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeGroup) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeGroup) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeGroup := _IambackofficeGroup{}
+
+            err = json.Unmarshal(data, &varIambackofficeGroup)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeGroup(varIambackofficeGroup)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "id")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeGroup) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeGroup) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeGroup struct {
 	value *IambackofficeGroup
 	isSet bool
@@ -170,5 +170,4 @@ func (v *NullableIambackofficeGroup) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

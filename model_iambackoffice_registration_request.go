@@ -20,306 +20,306 @@ var _ MappedNullable = &IambackofficeRegistrationRequest{}
 
 // IambackofficeRegistrationRequest struct for IambackofficeRegistrationRequest
 type IambackofficeRegistrationRequest struct {
-	Registration *IambackofficeUserRegistration `json:"registration,omitempty"`
-	SendSetPasswordEmail *bool `json:"sendSetPasswordEmail,omitempty"`
-	SkipRegistrationVerification *bool `json:"skipRegistrationVerification,omitempty"`
-	SkipVerification *bool `json:"skipVerification,omitempty"`
-	User *IambackofficeUser `json:"user,omitempty"`
-	TenantId *string `json:"tenantId,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Registration *IambackofficeUserRegistration `json:"registration,omitempty"`
+    SendSetPasswordEmail *bool `json:"sendSetPasswordEmail,omitempty"`
+    SkipRegistrationVerification *bool `json:"skipRegistrationVerification,omitempty"`
+    SkipVerification *bool `json:"skipVerification,omitempty"`
+    User *IambackofficeUser `json:"user,omitempty"`
+    TenantId *string `json:"tenantId,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeRegistrationRequest IambackofficeRegistrationRequest
+    type _IambackofficeRegistrationRequest IambackofficeRegistrationRequest
 
 // NewIambackofficeRegistrationRequest instantiates a new IambackofficeRegistrationRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeRegistrationRequest() *IambackofficeRegistrationRequest {
-	this := IambackofficeRegistrationRequest{}
-	return &this
+this := IambackofficeRegistrationRequest{}
+return &this
 }
 
 // NewIambackofficeRegistrationRequestWithDefaults instantiates a new IambackofficeRegistrationRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeRegistrationRequestWithDefaults() *IambackofficeRegistrationRequest {
-	this := IambackofficeRegistrationRequest{}
-	return &this
+this := IambackofficeRegistrationRequest{}
+return &this
 }
 
-// GetRegistration returns the Registration field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetRegistration() IambackofficeUserRegistration {
-	if o == nil || IsNil(o.Registration) {
-		var ret IambackofficeUserRegistration
-		return ret
-	}
-	return *o.Registration
-}
+        // GetRegistration returns the Registration field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetRegistration() IambackofficeUserRegistration {
+        if o == nil || IsNil(o.Registration) {
+        var ret IambackofficeUserRegistration
+        return ret
+        }
+            return *o.Registration
+        }
 
-// GetRegistrationOk returns a tuple with the Registration field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetRegistrationOk() (*IambackofficeUserRegistration, bool) {
-	if o == nil || IsNil(o.Registration) {
-		return nil, false
-	}
-	return o.Registration, true
-}
+        // GetRegistrationOk returns a tuple with the Registration field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetRegistrationOk() (*IambackofficeUserRegistration, bool) {
+        if o == nil || IsNil(o.Registration) {
+            return nil, false
+        }
+            return o.Registration, true
+        }
 
-// HasRegistration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasRegistration() bool {
-	if o != nil && !IsNil(o.Registration) {
-		return true
-	}
+        // HasRegistration returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasRegistration() bool {
+        if o != nil && !IsNil(o.Registration) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetRegistration gets a reference to the given IambackofficeUserRegistration and assigns it to the Registration field.
-func (o *IambackofficeRegistrationRequest) SetRegistration(v IambackofficeUserRegistration) {
-	o.Registration = &v
-}
+        // SetRegistration gets a reference to the given IambackofficeUserRegistration and assigns it to the Registration field.
+        func (o *IambackofficeRegistrationRequest) SetRegistration(v IambackofficeUserRegistration) {
+            o.Registration = &v
+        }
 
-// GetSendSetPasswordEmail returns the SendSetPasswordEmail field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmail() bool {
-	if o == nil || IsNil(o.SendSetPasswordEmail) {
-		var ret bool
-		return ret
-	}
-	return *o.SendSetPasswordEmail
-}
+        // GetSendSetPasswordEmail returns the SendSetPasswordEmail field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmail() bool {
+        if o == nil || IsNil(o.SendSetPasswordEmail) {
+        var ret bool
+        return ret
+        }
+            return *o.SendSetPasswordEmail
+        }
 
-// GetSendSetPasswordEmailOk returns a tuple with the SendSetPasswordEmail field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmailOk() (*bool, bool) {
-	if o == nil || IsNil(o.SendSetPasswordEmail) {
-		return nil, false
-	}
-	return o.SendSetPasswordEmail, true
-}
+        // GetSendSetPasswordEmailOk returns a tuple with the SendSetPasswordEmail field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetSendSetPasswordEmailOk() (*bool, bool) {
+        if o == nil || IsNil(o.SendSetPasswordEmail) {
+            return nil, false
+        }
+            return o.SendSetPasswordEmail, true
+        }
 
-// HasSendSetPasswordEmail returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSendSetPasswordEmail() bool {
-	if o != nil && !IsNil(o.SendSetPasswordEmail) {
-		return true
-	}
+        // HasSendSetPasswordEmail returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasSendSetPasswordEmail() bool {
+        if o != nil && !IsNil(o.SendSetPasswordEmail) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetSendSetPasswordEmail gets a reference to the given bool and assigns it to the SendSetPasswordEmail field.
-func (o *IambackofficeRegistrationRequest) SetSendSetPasswordEmail(v bool) {
-	o.SendSetPasswordEmail = &v
-}
+        // SetSendSetPasswordEmail gets a reference to the given bool and assigns it to the SendSetPasswordEmail field.
+        func (o *IambackofficeRegistrationRequest) SetSendSetPasswordEmail(v bool) {
+            o.SendSetPasswordEmail = &v
+        }
 
-// GetSkipRegistrationVerification returns the SkipRegistrationVerification field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerification() bool {
-	if o == nil || IsNil(o.SkipRegistrationVerification) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipRegistrationVerification
-}
+        // GetSkipRegistrationVerification returns the SkipRegistrationVerification field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerification() bool {
+        if o == nil || IsNil(o.SkipRegistrationVerification) {
+        var ret bool
+        return ret
+        }
+            return *o.SkipRegistrationVerification
+        }
 
-// GetSkipRegistrationVerificationOk returns a tuple with the SkipRegistrationVerification field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerificationOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipRegistrationVerification) {
-		return nil, false
-	}
-	return o.SkipRegistrationVerification, true
-}
+        // GetSkipRegistrationVerificationOk returns a tuple with the SkipRegistrationVerification field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetSkipRegistrationVerificationOk() (*bool, bool) {
+        if o == nil || IsNil(o.SkipRegistrationVerification) {
+            return nil, false
+        }
+            return o.SkipRegistrationVerification, true
+        }
 
-// HasSkipRegistrationVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSkipRegistrationVerification() bool {
-	if o != nil && !IsNil(o.SkipRegistrationVerification) {
-		return true
-	}
+        // HasSkipRegistrationVerification returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasSkipRegistrationVerification() bool {
+        if o != nil && !IsNil(o.SkipRegistrationVerification) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetSkipRegistrationVerification gets a reference to the given bool and assigns it to the SkipRegistrationVerification field.
-func (o *IambackofficeRegistrationRequest) SetSkipRegistrationVerification(v bool) {
-	o.SkipRegistrationVerification = &v
-}
+        // SetSkipRegistrationVerification gets a reference to the given bool and assigns it to the SkipRegistrationVerification field.
+        func (o *IambackofficeRegistrationRequest) SetSkipRegistrationVerification(v bool) {
+            o.SkipRegistrationVerification = &v
+        }
 
-// GetSkipVerification returns the SkipVerification field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetSkipVerification() bool {
-	if o == nil || IsNil(o.SkipVerification) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipVerification
-}
+        // GetSkipVerification returns the SkipVerification field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetSkipVerification() bool {
+        if o == nil || IsNil(o.SkipVerification) {
+        var ret bool
+        return ret
+        }
+            return *o.SkipVerification
+        }
 
-// GetSkipVerificationOk returns a tuple with the SkipVerification field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetSkipVerificationOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipVerification) {
-		return nil, false
-	}
-	return o.SkipVerification, true
-}
+        // GetSkipVerificationOk returns a tuple with the SkipVerification field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetSkipVerificationOk() (*bool, bool) {
+        if o == nil || IsNil(o.SkipVerification) {
+            return nil, false
+        }
+            return o.SkipVerification, true
+        }
 
-// HasSkipVerification returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasSkipVerification() bool {
-	if o != nil && !IsNil(o.SkipVerification) {
-		return true
-	}
+        // HasSkipVerification returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasSkipVerification() bool {
+        if o != nil && !IsNil(o.SkipVerification) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetSkipVerification gets a reference to the given bool and assigns it to the SkipVerification field.
-func (o *IambackofficeRegistrationRequest) SetSkipVerification(v bool) {
-	o.SkipVerification = &v
-}
+        // SetSkipVerification gets a reference to the given bool and assigns it to the SkipVerification field.
+        func (o *IambackofficeRegistrationRequest) SetSkipVerification(v bool) {
+            o.SkipVerification = &v
+        }
 
-// GetUser returns the User field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetUser() IambackofficeUser {
-	if o == nil || IsNil(o.User) {
-		var ret IambackofficeUser
-		return ret
-	}
-	return *o.User
-}
+        // GetUser returns the User field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetUser() IambackofficeUser {
+        if o == nil || IsNil(o.User) {
+        var ret IambackofficeUser
+        return ret
+        }
+            return *o.User
+        }
 
-// GetUserOk returns a tuple with the User field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetUserOk() (*IambackofficeUser, bool) {
-	if o == nil || IsNil(o.User) {
-		return nil, false
-	}
-	return o.User, true
-}
+        // GetUserOk returns a tuple with the User field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetUserOk() (*IambackofficeUser, bool) {
+        if o == nil || IsNil(o.User) {
+            return nil, false
+        }
+            return o.User, true
+        }
 
-// HasUser returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasUser() bool {
-	if o != nil && !IsNil(o.User) {
-		return true
-	}
+        // HasUser returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasUser() bool {
+        if o != nil && !IsNil(o.User) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetUser gets a reference to the given IambackofficeUser and assigns it to the User field.
-func (o *IambackofficeRegistrationRequest) SetUser(v IambackofficeUser) {
-	o.User = &v
-}
+        // SetUser gets a reference to the given IambackofficeUser and assigns it to the User field.
+        func (o *IambackofficeRegistrationRequest) SetUser(v IambackofficeUser) {
+            o.User = &v
+        }
 
-// GetTenantId returns the TenantId field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationRequest) GetTenantId() string {
-	if o == nil || IsNil(o.TenantId) {
-		var ret string
-		return ret
-	}
-	return *o.TenantId
-}
+        // GetTenantId returns the TenantId field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationRequest) GetTenantId() string {
+        if o == nil || IsNil(o.TenantId) {
+        var ret string
+        return ret
+        }
+            return *o.TenantId
+        }
 
-// GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationRequest) GetTenantIdOk() (*string, bool) {
-	if o == nil || IsNil(o.TenantId) {
-		return nil, false
-	}
-	return o.TenantId, true
-}
+        // GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationRequest) GetTenantIdOk() (*string, bool) {
+        if o == nil || IsNil(o.TenantId) {
+            return nil, false
+        }
+            return o.TenantId, true
+        }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationRequest) HasTenantId() bool {
-	if o != nil && !IsNil(o.TenantId) {
-		return true
-	}
+        // HasTenantId returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationRequest) HasTenantId() bool {
+        if o != nil && !IsNil(o.TenantId) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetTenantId gets a reference to the given string and assigns it to the TenantId field.
-func (o *IambackofficeRegistrationRequest) SetTenantId(v string) {
-	o.TenantId = &v
-}
+        // SetTenantId gets a reference to the given string and assigns it to the TenantId field.
+        func (o *IambackofficeRegistrationRequest) SetTenantId(v string) {
+            o.TenantId = &v
+        }
 
-func (o IambackofficeRegistrationRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeRegistrationRequest) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeRegistrationRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Registration) {
-		toSerialize["registration"] = o.Registration
-	}
-	if !IsNil(o.SendSetPasswordEmail) {
-		toSerialize["sendSetPasswordEmail"] = o.SendSetPasswordEmail
-	}
-	if !IsNil(o.SkipRegistrationVerification) {
-		toSerialize["skipRegistrationVerification"] = o.SkipRegistrationVerification
-	}
-	if !IsNil(o.SkipVerification) {
-		toSerialize["skipVerification"] = o.SkipVerification
-	}
-	if !IsNil(o.User) {
-		toSerialize["user"] = o.User
-	}
-	if !IsNil(o.TenantId) {
-		toSerialize["tenantId"] = o.TenantId
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Registration) {
+            toSerialize["registration"] = o.Registration
+            }
+            if !IsNil(o.SendSetPasswordEmail) {
+            toSerialize["sendSetPasswordEmail"] = o.SendSetPasswordEmail
+            }
+            if !IsNil(o.SkipRegistrationVerification) {
+            toSerialize["skipRegistrationVerification"] = o.SkipRegistrationVerification
+            }
+            if !IsNil(o.SkipVerification) {
+            toSerialize["skipVerification"] = o.SkipVerification
+            }
+            if !IsNil(o.User) {
+            toSerialize["user"] = o.User
+            }
+            if !IsNil(o.TenantId) {
+            toSerialize["tenantId"] = o.TenantId
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeRegistrationRequest) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeRegistrationRequest := _IambackofficeRegistrationRequest{}
-
-	err = json.Unmarshal(data, &varIambackofficeRegistrationRequest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeRegistrationRequest(varIambackofficeRegistrationRequest)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "registration")
-		delete(additionalProperties, "sendSetPasswordEmail")
-		delete(additionalProperties, "skipRegistrationVerification")
-		delete(additionalProperties, "skipVerification")
-		delete(additionalProperties, "user")
-		delete(additionalProperties, "tenantId")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeRegistrationRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeRegistrationRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeRegistrationRequest) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeRegistrationRequest := _IambackofficeRegistrationRequest{}
+
+            err = json.Unmarshal(data, &varIambackofficeRegistrationRequest)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeRegistrationRequest(varIambackofficeRegistrationRequest)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "registration")
+                delete(additionalProperties, "sendSetPasswordEmail")
+                delete(additionalProperties, "skipRegistrationVerification")
+                delete(additionalProperties, "skipVerification")
+                delete(additionalProperties, "user")
+                delete(additionalProperties, "tenantId")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeRegistrationRequest) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeRegistrationRequest) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeRegistrationRequest struct {
 	value *IambackofficeRegistrationRequest
 	isSet bool
@@ -355,5 +355,4 @@ func (v *NullableIambackofficeRegistrationRequest) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

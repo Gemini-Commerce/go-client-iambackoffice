@@ -20,195 +20,195 @@ var _ MappedNullable = &IambackofficeRegistrationResponse{}
 
 // IambackofficeRegistrationResponse struct for IambackofficeRegistrationResponse
 type IambackofficeRegistrationResponse struct {
-	Tokens *ProtobufAny `json:"tokens,omitempty"`
-	Registration *IambackofficeUserRegistration `json:"registration,omitempty"`
-	User *IambackofficeUser `json:"user,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Tokens *ProtobufAny `json:"tokens,omitempty"`
+    Registration *IambackofficeUserRegistration `json:"registration,omitempty"`
+    User *IambackofficeUser `json:"user,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeRegistrationResponse IambackofficeRegistrationResponse
+    type _IambackofficeRegistrationResponse IambackofficeRegistrationResponse
 
 // NewIambackofficeRegistrationResponse instantiates a new IambackofficeRegistrationResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeRegistrationResponse() *IambackofficeRegistrationResponse {
-	this := IambackofficeRegistrationResponse{}
-	return &this
+this := IambackofficeRegistrationResponse{}
+return &this
 }
 
 // NewIambackofficeRegistrationResponseWithDefaults instantiates a new IambackofficeRegistrationResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeRegistrationResponseWithDefaults() *IambackofficeRegistrationResponse {
-	this := IambackofficeRegistrationResponse{}
-	return &this
+this := IambackofficeRegistrationResponse{}
+return &this
 }
 
-// GetTokens returns the Tokens field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationResponse) GetTokens() ProtobufAny {
-	if o == nil || IsNil(o.Tokens) {
-		var ret ProtobufAny
-		return ret
-	}
-	return *o.Tokens
-}
+        // GetTokens returns the Tokens field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationResponse) GetTokens() ProtobufAny {
+        if o == nil || IsNil(o.Tokens) {
+        var ret ProtobufAny
+        return ret
+        }
+            return *o.Tokens
+        }
 
-// GetTokensOk returns a tuple with the Tokens field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationResponse) GetTokensOk() (*ProtobufAny, bool) {
-	if o == nil || IsNil(o.Tokens) {
-		return nil, false
-	}
-	return o.Tokens, true
-}
+        // GetTokensOk returns a tuple with the Tokens field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationResponse) GetTokensOk() (*ProtobufAny, bool) {
+        if o == nil || IsNil(o.Tokens) {
+            return nil, false
+        }
+            return o.Tokens, true
+        }
 
-// HasTokens returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasTokens() bool {
-	if o != nil && !IsNil(o.Tokens) {
-		return true
-	}
+        // HasTokens returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationResponse) HasTokens() bool {
+        if o != nil && !IsNil(o.Tokens) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetTokens gets a reference to the given ProtobufAny and assigns it to the Tokens field.
-func (o *IambackofficeRegistrationResponse) SetTokens(v ProtobufAny) {
-	o.Tokens = &v
-}
+        // SetTokens gets a reference to the given ProtobufAny and assigns it to the Tokens field.
+        func (o *IambackofficeRegistrationResponse) SetTokens(v ProtobufAny) {
+            o.Tokens = &v
+        }
 
-// GetRegistration returns the Registration field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationResponse) GetRegistration() IambackofficeUserRegistration {
-	if o == nil || IsNil(o.Registration) {
-		var ret IambackofficeUserRegistration
-		return ret
-	}
-	return *o.Registration
-}
+        // GetRegistration returns the Registration field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationResponse) GetRegistration() IambackofficeUserRegistration {
+        if o == nil || IsNil(o.Registration) {
+        var ret IambackofficeUserRegistration
+        return ret
+        }
+            return *o.Registration
+        }
 
-// GetRegistrationOk returns a tuple with the Registration field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationResponse) GetRegistrationOk() (*IambackofficeUserRegistration, bool) {
-	if o == nil || IsNil(o.Registration) {
-		return nil, false
-	}
-	return o.Registration, true
-}
+        // GetRegistrationOk returns a tuple with the Registration field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationResponse) GetRegistrationOk() (*IambackofficeUserRegistration, bool) {
+        if o == nil || IsNil(o.Registration) {
+            return nil, false
+        }
+            return o.Registration, true
+        }
 
-// HasRegistration returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasRegistration() bool {
-	if o != nil && !IsNil(o.Registration) {
-		return true
-	}
+        // HasRegistration returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationResponse) HasRegistration() bool {
+        if o != nil && !IsNil(o.Registration) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetRegistration gets a reference to the given IambackofficeUserRegistration and assigns it to the Registration field.
-func (o *IambackofficeRegistrationResponse) SetRegistration(v IambackofficeUserRegistration) {
-	o.Registration = &v
-}
+        // SetRegistration gets a reference to the given IambackofficeUserRegistration and assigns it to the Registration field.
+        func (o *IambackofficeRegistrationResponse) SetRegistration(v IambackofficeUserRegistration) {
+            o.Registration = &v
+        }
 
-// GetUser returns the User field value if set, zero value otherwise.
-func (o *IambackofficeRegistrationResponse) GetUser() IambackofficeUser {
-	if o == nil || IsNil(o.User) {
-		var ret IambackofficeUser
-		return ret
-	}
-	return *o.User
-}
+        // GetUser returns the User field value if set, zero value otherwise.
+        func (o *IambackofficeRegistrationResponse) GetUser() IambackofficeUser {
+        if o == nil || IsNil(o.User) {
+        var ret IambackofficeUser
+        return ret
+        }
+            return *o.User
+        }
 
-// GetUserOk returns a tuple with the User field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeRegistrationResponse) GetUserOk() (*IambackofficeUser, bool) {
-	if o == nil || IsNil(o.User) {
-		return nil, false
-	}
-	return o.User, true
-}
+        // GetUserOk returns a tuple with the User field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeRegistrationResponse) GetUserOk() (*IambackofficeUser, bool) {
+        if o == nil || IsNil(o.User) {
+            return nil, false
+        }
+            return o.User, true
+        }
 
-// HasUser returns a boolean if a field has been set.
-func (o *IambackofficeRegistrationResponse) HasUser() bool {
-	if o != nil && !IsNil(o.User) {
-		return true
-	}
+        // HasUser returns a boolean if a field has been set.
+        func (o *IambackofficeRegistrationResponse) HasUser() bool {
+        if o != nil && !IsNil(o.User) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetUser gets a reference to the given IambackofficeUser and assigns it to the User field.
-func (o *IambackofficeRegistrationResponse) SetUser(v IambackofficeUser) {
-	o.User = &v
-}
+        // SetUser gets a reference to the given IambackofficeUser and assigns it to the User field.
+        func (o *IambackofficeRegistrationResponse) SetUser(v IambackofficeUser) {
+            o.User = &v
+        }
 
-func (o IambackofficeRegistrationResponse) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeRegistrationResponse) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeRegistrationResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Tokens) {
-		toSerialize["tokens"] = o.Tokens
-	}
-	if !IsNil(o.Registration) {
-		toSerialize["registration"] = o.Registration
-	}
-	if !IsNil(o.User) {
-		toSerialize["user"] = o.User
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Tokens) {
+            toSerialize["tokens"] = o.Tokens
+            }
+            if !IsNil(o.Registration) {
+            toSerialize["registration"] = o.Registration
+            }
+            if !IsNil(o.User) {
+            toSerialize["user"] = o.User
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeRegistrationResponse) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeRegistrationResponse := _IambackofficeRegistrationResponse{}
-
-	err = json.Unmarshal(data, &varIambackofficeRegistrationResponse)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeRegistrationResponse(varIambackofficeRegistrationResponse)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "tokens")
-		delete(additionalProperties, "registration")
-		delete(additionalProperties, "user")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeRegistrationResponse) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeRegistrationResponse) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeRegistrationResponse) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeRegistrationResponse := _IambackofficeRegistrationResponse{}
+
+            err = json.Unmarshal(data, &varIambackofficeRegistrationResponse)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeRegistrationResponse(varIambackofficeRegistrationResponse)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "tokens")
+                delete(additionalProperties, "registration")
+                delete(additionalProperties, "user")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeRegistrationResponse) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeRegistrationResponse) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeRegistrationResponse struct {
 	value *IambackofficeRegistrationResponse
 	isSet bool
@@ -244,5 +244,4 @@ func (v *NullableIambackofficeRegistrationResponse) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

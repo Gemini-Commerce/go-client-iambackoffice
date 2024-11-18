@@ -20,158 +20,158 @@ var _ MappedNullable = &IambackofficeUserTwoFactorConfiguration{}
 
 // IambackofficeUserTwoFactorConfiguration struct for IambackofficeUserTwoFactorConfiguration
 type IambackofficeUserTwoFactorConfiguration struct {
-	Methods []IambackofficeTwoFactorMethod `json:"methods,omitempty"`
-	RecoveryCodes []string `json:"recoveryCodes,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Methods []IambackofficeTwoFactorMethod `json:"methods,omitempty"`
+    RecoveryCodes []string `json:"recoveryCodes,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeUserTwoFactorConfiguration IambackofficeUserTwoFactorConfiguration
+    type _IambackofficeUserTwoFactorConfiguration IambackofficeUserTwoFactorConfiguration
 
 // NewIambackofficeUserTwoFactorConfiguration instantiates a new IambackofficeUserTwoFactorConfiguration object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeUserTwoFactorConfiguration() *IambackofficeUserTwoFactorConfiguration {
-	this := IambackofficeUserTwoFactorConfiguration{}
-	return &this
+this := IambackofficeUserTwoFactorConfiguration{}
+return &this
 }
 
 // NewIambackofficeUserTwoFactorConfigurationWithDefaults instantiates a new IambackofficeUserTwoFactorConfiguration object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeUserTwoFactorConfigurationWithDefaults() *IambackofficeUserTwoFactorConfiguration {
-	this := IambackofficeUserTwoFactorConfiguration{}
-	return &this
+this := IambackofficeUserTwoFactorConfiguration{}
+return &this
 }
 
-// GetMethods returns the Methods field value if set, zero value otherwise.
-func (o *IambackofficeUserTwoFactorConfiguration) GetMethods() []IambackofficeTwoFactorMethod {
-	if o == nil || IsNil(o.Methods) {
-		var ret []IambackofficeTwoFactorMethod
-		return ret
-	}
-	return o.Methods
-}
+        // GetMethods returns the Methods field value if set, zero value otherwise.
+        func (o *IambackofficeUserTwoFactorConfiguration) GetMethods() []IambackofficeTwoFactorMethod {
+        if o == nil || IsNil(o.Methods) {
+        var ret []IambackofficeTwoFactorMethod
+        return ret
+        }
+            return o.Methods
+        }
 
-// GetMethodsOk returns a tuple with the Methods field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) GetMethodsOk() ([]IambackofficeTwoFactorMethod, bool) {
-	if o == nil || IsNil(o.Methods) {
-		return nil, false
-	}
-	return o.Methods, true
-}
+        // GetMethodsOk returns a tuple with the Methods field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUserTwoFactorConfiguration) GetMethodsOk() ([]IambackofficeTwoFactorMethod, bool) {
+        if o == nil || IsNil(o.Methods) {
+            return nil, false
+        }
+            return o.Methods, true
+        }
 
-// HasMethods returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) HasMethods() bool {
-	if o != nil && !IsNil(o.Methods) {
-		return true
-	}
+        // HasMethods returns a boolean if a field has been set.
+        func (o *IambackofficeUserTwoFactorConfiguration) HasMethods() bool {
+        if o != nil && !IsNil(o.Methods) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetMethods gets a reference to the given []IambackofficeTwoFactorMethod and assigns it to the Methods field.
-func (o *IambackofficeUserTwoFactorConfiguration) SetMethods(v []IambackofficeTwoFactorMethod) {
-	o.Methods = v
-}
+        // SetMethods gets a reference to the given []IambackofficeTwoFactorMethod and assigns it to the Methods field.
+        func (o *IambackofficeUserTwoFactorConfiguration) SetMethods(v []IambackofficeTwoFactorMethod) {
+            o.Methods = v
+        }
 
-// GetRecoveryCodes returns the RecoveryCodes field value if set, zero value otherwise.
-func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodes() []string {
-	if o == nil || IsNil(o.RecoveryCodes) {
-		var ret []string
-		return ret
-	}
-	return o.RecoveryCodes
-}
+        // GetRecoveryCodes returns the RecoveryCodes field value if set, zero value otherwise.
+        func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodes() []string {
+        if o == nil || IsNil(o.RecoveryCodes) {
+        var ret []string
+        return ret
+        }
+            return o.RecoveryCodes
+        }
 
-// GetRecoveryCodesOk returns a tuple with the RecoveryCodes field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodesOk() ([]string, bool) {
-	if o == nil || IsNil(o.RecoveryCodes) {
-		return nil, false
-	}
-	return o.RecoveryCodes, true
-}
+        // GetRecoveryCodesOk returns a tuple with the RecoveryCodes field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUserTwoFactorConfiguration) GetRecoveryCodesOk() ([]string, bool) {
+        if o == nil || IsNil(o.RecoveryCodes) {
+            return nil, false
+        }
+            return o.RecoveryCodes, true
+        }
 
-// HasRecoveryCodes returns a boolean if a field has been set.
-func (o *IambackofficeUserTwoFactorConfiguration) HasRecoveryCodes() bool {
-	if o != nil && !IsNil(o.RecoveryCodes) {
-		return true
-	}
+        // HasRecoveryCodes returns a boolean if a field has been set.
+        func (o *IambackofficeUserTwoFactorConfiguration) HasRecoveryCodes() bool {
+        if o != nil && !IsNil(o.RecoveryCodes) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetRecoveryCodes gets a reference to the given []string and assigns it to the RecoveryCodes field.
-func (o *IambackofficeUserTwoFactorConfiguration) SetRecoveryCodes(v []string) {
-	o.RecoveryCodes = v
-}
+        // SetRecoveryCodes gets a reference to the given []string and assigns it to the RecoveryCodes field.
+        func (o *IambackofficeUserTwoFactorConfiguration) SetRecoveryCodes(v []string) {
+            o.RecoveryCodes = v
+        }
 
-func (o IambackofficeUserTwoFactorConfiguration) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeUserTwoFactorConfiguration) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeUserTwoFactorConfiguration) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Methods) {
-		toSerialize["methods"] = o.Methods
-	}
-	if !IsNil(o.RecoveryCodes) {
-		toSerialize["recoveryCodes"] = o.RecoveryCodes
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Methods) {
+            toSerialize["methods"] = o.Methods
+            }
+            if !IsNil(o.RecoveryCodes) {
+            toSerialize["recoveryCodes"] = o.RecoveryCodes
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeUserTwoFactorConfiguration) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeUserTwoFactorConfiguration := _IambackofficeUserTwoFactorConfiguration{}
-
-	err = json.Unmarshal(data, &varIambackofficeUserTwoFactorConfiguration)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeUserTwoFactorConfiguration(varIambackofficeUserTwoFactorConfiguration)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "methods")
-		delete(additionalProperties, "recoveryCodes")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeUserTwoFactorConfiguration) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeUserTwoFactorConfiguration) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeUserTwoFactorConfiguration) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeUserTwoFactorConfiguration := _IambackofficeUserTwoFactorConfiguration{}
+
+            err = json.Unmarshal(data, &varIambackofficeUserTwoFactorConfiguration)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeUserTwoFactorConfiguration(varIambackofficeUserTwoFactorConfiguration)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "methods")
+                delete(additionalProperties, "recoveryCodes")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeUserTwoFactorConfiguration) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeUserTwoFactorConfiguration) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeUserTwoFactorConfiguration struct {
 	value *IambackofficeUserTwoFactorConfiguration
 	isSet bool
@@ -207,5 +207,4 @@ func (v *NullableIambackofficeUserTwoFactorConfiguration) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

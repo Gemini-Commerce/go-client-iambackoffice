@@ -20,195 +20,195 @@ var _ MappedNullable = &IambackofficeUnassignRolesRequest{}
 
 // IambackofficeUnassignRolesRequest struct for IambackofficeUnassignRolesRequest
 type IambackofficeUnassignRolesRequest struct {
-	LoginId *string `json:"loginId,omitempty"`
-	TenantId *string `json:"tenantId,omitempty"`
-	RoleCodes []string `json:"roleCodes,omitempty"`
-	AdditionalProperties map[string]interface{}
+    LoginId *string `json:"loginId,omitempty"`
+    TenantId *string `json:"tenantId,omitempty"`
+    RoleCodes []string `json:"roleCodes,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeUnassignRolesRequest IambackofficeUnassignRolesRequest
+    type _IambackofficeUnassignRolesRequest IambackofficeUnassignRolesRequest
 
 // NewIambackofficeUnassignRolesRequest instantiates a new IambackofficeUnassignRolesRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeUnassignRolesRequest() *IambackofficeUnassignRolesRequest {
-	this := IambackofficeUnassignRolesRequest{}
-	return &this
+this := IambackofficeUnassignRolesRequest{}
+return &this
 }
 
 // NewIambackofficeUnassignRolesRequestWithDefaults instantiates a new IambackofficeUnassignRolesRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeUnassignRolesRequestWithDefaults() *IambackofficeUnassignRolesRequest {
-	this := IambackofficeUnassignRolesRequest{}
-	return &this
+this := IambackofficeUnassignRolesRequest{}
+return &this
 }
 
-// GetLoginId returns the LoginId field value if set, zero value otherwise.
-func (o *IambackofficeUnassignRolesRequest) GetLoginId() string {
-	if o == nil || IsNil(o.LoginId) {
-		var ret string
-		return ret
-	}
-	return *o.LoginId
-}
+        // GetLoginId returns the LoginId field value if set, zero value otherwise.
+        func (o *IambackofficeUnassignRolesRequest) GetLoginId() string {
+        if o == nil || IsNil(o.LoginId) {
+        var ret string
+        return ret
+        }
+            return *o.LoginId
+        }
 
-// GetLoginIdOk returns a tuple with the LoginId field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUnassignRolesRequest) GetLoginIdOk() (*string, bool) {
-	if o == nil || IsNil(o.LoginId) {
-		return nil, false
-	}
-	return o.LoginId, true
-}
+        // GetLoginIdOk returns a tuple with the LoginId field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUnassignRolesRequest) GetLoginIdOk() (*string, bool) {
+        if o == nil || IsNil(o.LoginId) {
+            return nil, false
+        }
+            return o.LoginId, true
+        }
 
-// HasLoginId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasLoginId() bool {
-	if o != nil && !IsNil(o.LoginId) {
-		return true
-	}
+        // HasLoginId returns a boolean if a field has been set.
+        func (o *IambackofficeUnassignRolesRequest) HasLoginId() bool {
+        if o != nil && !IsNil(o.LoginId) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetLoginId gets a reference to the given string and assigns it to the LoginId field.
-func (o *IambackofficeUnassignRolesRequest) SetLoginId(v string) {
-	o.LoginId = &v
-}
+        // SetLoginId gets a reference to the given string and assigns it to the LoginId field.
+        func (o *IambackofficeUnassignRolesRequest) SetLoginId(v string) {
+            o.LoginId = &v
+        }
 
-// GetTenantId returns the TenantId field value if set, zero value otherwise.
-func (o *IambackofficeUnassignRolesRequest) GetTenantId() string {
-	if o == nil || IsNil(o.TenantId) {
-		var ret string
-		return ret
-	}
-	return *o.TenantId
-}
+        // GetTenantId returns the TenantId field value if set, zero value otherwise.
+        func (o *IambackofficeUnassignRolesRequest) GetTenantId() string {
+        if o == nil || IsNil(o.TenantId) {
+        var ret string
+        return ret
+        }
+            return *o.TenantId
+        }
 
-// GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUnassignRolesRequest) GetTenantIdOk() (*string, bool) {
-	if o == nil || IsNil(o.TenantId) {
-		return nil, false
-	}
-	return o.TenantId, true
-}
+        // GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUnassignRolesRequest) GetTenantIdOk() (*string, bool) {
+        if o == nil || IsNil(o.TenantId) {
+            return nil, false
+        }
+            return o.TenantId, true
+        }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasTenantId() bool {
-	if o != nil && !IsNil(o.TenantId) {
-		return true
-	}
+        // HasTenantId returns a boolean if a field has been set.
+        func (o *IambackofficeUnassignRolesRequest) HasTenantId() bool {
+        if o != nil && !IsNil(o.TenantId) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetTenantId gets a reference to the given string and assigns it to the TenantId field.
-func (o *IambackofficeUnassignRolesRequest) SetTenantId(v string) {
-	o.TenantId = &v
-}
+        // SetTenantId gets a reference to the given string and assigns it to the TenantId field.
+        func (o *IambackofficeUnassignRolesRequest) SetTenantId(v string) {
+            o.TenantId = &v
+        }
 
-// GetRoleCodes returns the RoleCodes field value if set, zero value otherwise.
-func (o *IambackofficeUnassignRolesRequest) GetRoleCodes() []string {
-	if o == nil || IsNil(o.RoleCodes) {
-		var ret []string
-		return ret
-	}
-	return o.RoleCodes
-}
+        // GetRoleCodes returns the RoleCodes field value if set, zero value otherwise.
+        func (o *IambackofficeUnassignRolesRequest) GetRoleCodes() []string {
+        if o == nil || IsNil(o.RoleCodes) {
+        var ret []string
+        return ret
+        }
+            return o.RoleCodes
+        }
 
-// GetRoleCodesOk returns a tuple with the RoleCodes field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUnassignRolesRequest) GetRoleCodesOk() ([]string, bool) {
-	if o == nil || IsNil(o.RoleCodes) {
-		return nil, false
-	}
-	return o.RoleCodes, true
-}
+        // GetRoleCodesOk returns a tuple with the RoleCodes field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUnassignRolesRequest) GetRoleCodesOk() ([]string, bool) {
+        if o == nil || IsNil(o.RoleCodes) {
+            return nil, false
+        }
+            return o.RoleCodes, true
+        }
 
-// HasRoleCodes returns a boolean if a field has been set.
-func (o *IambackofficeUnassignRolesRequest) HasRoleCodes() bool {
-	if o != nil && !IsNil(o.RoleCodes) {
-		return true
-	}
+        // HasRoleCodes returns a boolean if a field has been set.
+        func (o *IambackofficeUnassignRolesRequest) HasRoleCodes() bool {
+        if o != nil && !IsNil(o.RoleCodes) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetRoleCodes gets a reference to the given []string and assigns it to the RoleCodes field.
-func (o *IambackofficeUnassignRolesRequest) SetRoleCodes(v []string) {
-	o.RoleCodes = v
-}
+        // SetRoleCodes gets a reference to the given []string and assigns it to the RoleCodes field.
+        func (o *IambackofficeUnassignRolesRequest) SetRoleCodes(v []string) {
+            o.RoleCodes = v
+        }
 
-func (o IambackofficeUnassignRolesRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeUnassignRolesRequest) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeUnassignRolesRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.LoginId) {
-		toSerialize["loginId"] = o.LoginId
-	}
-	if !IsNil(o.TenantId) {
-		toSerialize["tenantId"] = o.TenantId
-	}
-	if !IsNil(o.RoleCodes) {
-		toSerialize["roleCodes"] = o.RoleCodes
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.LoginId) {
+            toSerialize["loginId"] = o.LoginId
+            }
+            if !IsNil(o.TenantId) {
+            toSerialize["tenantId"] = o.TenantId
+            }
+            if !IsNil(o.RoleCodes) {
+            toSerialize["roleCodes"] = o.RoleCodes
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeUnassignRolesRequest) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeUnassignRolesRequest := _IambackofficeUnassignRolesRequest{}
-
-	err = json.Unmarshal(data, &varIambackofficeUnassignRolesRequest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeUnassignRolesRequest(varIambackofficeUnassignRolesRequest)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "loginId")
-		delete(additionalProperties, "tenantId")
-		delete(additionalProperties, "roleCodes")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeUnassignRolesRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeUnassignRolesRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeUnassignRolesRequest) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeUnassignRolesRequest := _IambackofficeUnassignRolesRequest{}
+
+            err = json.Unmarshal(data, &varIambackofficeUnassignRolesRequest)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeUnassignRolesRequest(varIambackofficeUnassignRolesRequest)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "loginId")
+                delete(additionalProperties, "tenantId")
+                delete(additionalProperties, "roleCodes")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeUnassignRolesRequest) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeUnassignRolesRequest) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeUnassignRolesRequest struct {
 	value *IambackofficeUnassignRolesRequest
 	isSet bool
@@ -244,5 +244,4 @@ func (v *NullableIambackofficeUnassignRolesRequest) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

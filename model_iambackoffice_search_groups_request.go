@@ -20,195 +20,195 @@ var _ MappedNullable = &IambackofficeSearchGroupsRequest{}
 
 // IambackofficeSearchGroupsRequest struct for IambackofficeSearchGroupsRequest
 type IambackofficeSearchGroupsRequest struct {
-	TenantId *string `json:"tenantId,omitempty"`
-	Filters *SearchGroupsRequestFilters `json:"filters,omitempty"`
-	FiltersMask *string `json:"filtersMask,omitempty"`
-	AdditionalProperties map[string]interface{}
+    TenantId *string `json:"tenantId,omitempty"`
+    Filters *SearchGroupsRequestFilters `json:"filters,omitempty"`
+    FiltersMask *string `json:"filtersMask,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeSearchGroupsRequest IambackofficeSearchGroupsRequest
+    type _IambackofficeSearchGroupsRequest IambackofficeSearchGroupsRequest
 
 // NewIambackofficeSearchGroupsRequest instantiates a new IambackofficeSearchGroupsRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeSearchGroupsRequest() *IambackofficeSearchGroupsRequest {
-	this := IambackofficeSearchGroupsRequest{}
-	return &this
+this := IambackofficeSearchGroupsRequest{}
+return &this
 }
 
 // NewIambackofficeSearchGroupsRequestWithDefaults instantiates a new IambackofficeSearchGroupsRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeSearchGroupsRequestWithDefaults() *IambackofficeSearchGroupsRequest {
-	this := IambackofficeSearchGroupsRequest{}
-	return &this
+this := IambackofficeSearchGroupsRequest{}
+return &this
 }
 
-// GetTenantId returns the TenantId field value if set, zero value otherwise.
-func (o *IambackofficeSearchGroupsRequest) GetTenantId() string {
-	if o == nil || IsNil(o.TenantId) {
-		var ret string
-		return ret
-	}
-	return *o.TenantId
-}
+        // GetTenantId returns the TenantId field value if set, zero value otherwise.
+        func (o *IambackofficeSearchGroupsRequest) GetTenantId() string {
+        if o == nil || IsNil(o.TenantId) {
+        var ret string
+        return ret
+        }
+            return *o.TenantId
+        }
 
-// GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeSearchGroupsRequest) GetTenantIdOk() (*string, bool) {
-	if o == nil || IsNil(o.TenantId) {
-		return nil, false
-	}
-	return o.TenantId, true
-}
+        // GetTenantIdOk returns a tuple with the TenantId field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeSearchGroupsRequest) GetTenantIdOk() (*string, bool) {
+        if o == nil || IsNil(o.TenantId) {
+            return nil, false
+        }
+            return o.TenantId, true
+        }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) HasTenantId() bool {
-	if o != nil && !IsNil(o.TenantId) {
-		return true
-	}
+        // HasTenantId returns a boolean if a field has been set.
+        func (o *IambackofficeSearchGroupsRequest) HasTenantId() bool {
+        if o != nil && !IsNil(o.TenantId) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetTenantId gets a reference to the given string and assigns it to the TenantId field.
-func (o *IambackofficeSearchGroupsRequest) SetTenantId(v string) {
-	o.TenantId = &v
-}
+        // SetTenantId gets a reference to the given string and assigns it to the TenantId field.
+        func (o *IambackofficeSearchGroupsRequest) SetTenantId(v string) {
+            o.TenantId = &v
+        }
 
-// GetFilters returns the Filters field value if set, zero value otherwise.
-func (o *IambackofficeSearchGroupsRequest) GetFilters() SearchGroupsRequestFilters {
-	if o == nil || IsNil(o.Filters) {
-		var ret SearchGroupsRequestFilters
-		return ret
-	}
-	return *o.Filters
-}
+        // GetFilters returns the Filters field value if set, zero value otherwise.
+        func (o *IambackofficeSearchGroupsRequest) GetFilters() SearchGroupsRequestFilters {
+        if o == nil || IsNil(o.Filters) {
+        var ret SearchGroupsRequestFilters
+        return ret
+        }
+            return *o.Filters
+        }
 
-// GetFiltersOk returns a tuple with the Filters field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeSearchGroupsRequest) GetFiltersOk() (*SearchGroupsRequestFilters, bool) {
-	if o == nil || IsNil(o.Filters) {
-		return nil, false
-	}
-	return o.Filters, true
-}
+        // GetFiltersOk returns a tuple with the Filters field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeSearchGroupsRequest) GetFiltersOk() (*SearchGroupsRequestFilters, bool) {
+        if o == nil || IsNil(o.Filters) {
+            return nil, false
+        }
+            return o.Filters, true
+        }
 
-// HasFilters returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) HasFilters() bool {
-	if o != nil && !IsNil(o.Filters) {
-		return true
-	}
+        // HasFilters returns a boolean if a field has been set.
+        func (o *IambackofficeSearchGroupsRequest) HasFilters() bool {
+        if o != nil && !IsNil(o.Filters) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetFilters gets a reference to the given SearchGroupsRequestFilters and assigns it to the Filters field.
-func (o *IambackofficeSearchGroupsRequest) SetFilters(v SearchGroupsRequestFilters) {
-	o.Filters = &v
-}
+        // SetFilters gets a reference to the given SearchGroupsRequestFilters and assigns it to the Filters field.
+        func (o *IambackofficeSearchGroupsRequest) SetFilters(v SearchGroupsRequestFilters) {
+            o.Filters = &v
+        }
 
-// GetFiltersMask returns the FiltersMask field value if set, zero value otherwise.
-func (o *IambackofficeSearchGroupsRequest) GetFiltersMask() string {
-	if o == nil || IsNil(o.FiltersMask) {
-		var ret string
-		return ret
-	}
-	return *o.FiltersMask
-}
+        // GetFiltersMask returns the FiltersMask field value if set, zero value otherwise.
+        func (o *IambackofficeSearchGroupsRequest) GetFiltersMask() string {
+        if o == nil || IsNil(o.FiltersMask) {
+        var ret string
+        return ret
+        }
+            return *o.FiltersMask
+        }
 
-// GetFiltersMaskOk returns a tuple with the FiltersMask field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeSearchGroupsRequest) GetFiltersMaskOk() (*string, bool) {
-	if o == nil || IsNil(o.FiltersMask) {
-		return nil, false
-	}
-	return o.FiltersMask, true
-}
+        // GetFiltersMaskOk returns a tuple with the FiltersMask field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeSearchGroupsRequest) GetFiltersMaskOk() (*string, bool) {
+        if o == nil || IsNil(o.FiltersMask) {
+            return nil, false
+        }
+            return o.FiltersMask, true
+        }
 
-// HasFiltersMask returns a boolean if a field has been set.
-func (o *IambackofficeSearchGroupsRequest) HasFiltersMask() bool {
-	if o != nil && !IsNil(o.FiltersMask) {
-		return true
-	}
+        // HasFiltersMask returns a boolean if a field has been set.
+        func (o *IambackofficeSearchGroupsRequest) HasFiltersMask() bool {
+        if o != nil && !IsNil(o.FiltersMask) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetFiltersMask gets a reference to the given string and assigns it to the FiltersMask field.
-func (o *IambackofficeSearchGroupsRequest) SetFiltersMask(v string) {
-	o.FiltersMask = &v
-}
+        // SetFiltersMask gets a reference to the given string and assigns it to the FiltersMask field.
+        func (o *IambackofficeSearchGroupsRequest) SetFiltersMask(v string) {
+            o.FiltersMask = &v
+        }
 
-func (o IambackofficeSearchGroupsRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeSearchGroupsRequest) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeSearchGroupsRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.TenantId) {
-		toSerialize["tenantId"] = o.TenantId
-	}
-	if !IsNil(o.Filters) {
-		toSerialize["filters"] = o.Filters
-	}
-	if !IsNil(o.FiltersMask) {
-		toSerialize["filtersMask"] = o.FiltersMask
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.TenantId) {
+            toSerialize["tenantId"] = o.TenantId
+            }
+            if !IsNil(o.Filters) {
+            toSerialize["filters"] = o.Filters
+            }
+            if !IsNil(o.FiltersMask) {
+            toSerialize["filtersMask"] = o.FiltersMask
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeSearchGroupsRequest) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeSearchGroupsRequest := _IambackofficeSearchGroupsRequest{}
-
-	err = json.Unmarshal(data, &varIambackofficeSearchGroupsRequest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeSearchGroupsRequest(varIambackofficeSearchGroupsRequest)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "tenantId")
-		delete(additionalProperties, "filters")
-		delete(additionalProperties, "filtersMask")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeSearchGroupsRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeSearchGroupsRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeSearchGroupsRequest) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeSearchGroupsRequest := _IambackofficeSearchGroupsRequest{}
+
+            err = json.Unmarshal(data, &varIambackofficeSearchGroupsRequest)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeSearchGroupsRequest(varIambackofficeSearchGroupsRequest)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "tenantId")
+                delete(additionalProperties, "filters")
+                delete(additionalProperties, "filtersMask")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeSearchGroupsRequest) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeSearchGroupsRequest) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeSearchGroupsRequest struct {
 	value *IambackofficeSearchGroupsRequest
 	isSet bool
@@ -244,5 +244,4 @@ func (v *NullableIambackofficeSearchGroupsRequest) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

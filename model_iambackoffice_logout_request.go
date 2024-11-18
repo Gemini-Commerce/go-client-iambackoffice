@@ -20,158 +20,158 @@ var _ MappedNullable = &IambackofficeLogoutRequest{}
 
 // IambackofficeLogoutRequest struct for IambackofficeLogoutRequest
 type IambackofficeLogoutRequest struct {
-	Global *bool `json:"global,omitempty"`
-	Tokens *ProtobufAny `json:"tokens,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Global *bool `json:"global,omitempty"`
+    Tokens *ProtobufAny `json:"tokens,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeLogoutRequest IambackofficeLogoutRequest
+    type _IambackofficeLogoutRequest IambackofficeLogoutRequest
 
 // NewIambackofficeLogoutRequest instantiates a new IambackofficeLogoutRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeLogoutRequest() *IambackofficeLogoutRequest {
-	this := IambackofficeLogoutRequest{}
-	return &this
+this := IambackofficeLogoutRequest{}
+return &this
 }
 
 // NewIambackofficeLogoutRequestWithDefaults instantiates a new IambackofficeLogoutRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeLogoutRequestWithDefaults() *IambackofficeLogoutRequest {
-	this := IambackofficeLogoutRequest{}
-	return &this
+this := IambackofficeLogoutRequest{}
+return &this
 }
 
-// GetGlobal returns the Global field value if set, zero value otherwise.
-func (o *IambackofficeLogoutRequest) GetGlobal() bool {
-	if o == nil || IsNil(o.Global) {
-		var ret bool
-		return ret
-	}
-	return *o.Global
-}
+        // GetGlobal returns the Global field value if set, zero value otherwise.
+        func (o *IambackofficeLogoutRequest) GetGlobal() bool {
+        if o == nil || IsNil(o.Global) {
+        var ret bool
+        return ret
+        }
+            return *o.Global
+        }
 
-// GetGlobalOk returns a tuple with the Global field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeLogoutRequest) GetGlobalOk() (*bool, bool) {
-	if o == nil || IsNil(o.Global) {
-		return nil, false
-	}
-	return o.Global, true
-}
+        // GetGlobalOk returns a tuple with the Global field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeLogoutRequest) GetGlobalOk() (*bool, bool) {
+        if o == nil || IsNil(o.Global) {
+            return nil, false
+        }
+            return o.Global, true
+        }
 
-// HasGlobal returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) HasGlobal() bool {
-	if o != nil && !IsNil(o.Global) {
-		return true
-	}
+        // HasGlobal returns a boolean if a field has been set.
+        func (o *IambackofficeLogoutRequest) HasGlobal() bool {
+        if o != nil && !IsNil(o.Global) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetGlobal gets a reference to the given bool and assigns it to the Global field.
-func (o *IambackofficeLogoutRequest) SetGlobal(v bool) {
-	o.Global = &v
-}
+        // SetGlobal gets a reference to the given bool and assigns it to the Global field.
+        func (o *IambackofficeLogoutRequest) SetGlobal(v bool) {
+            o.Global = &v
+        }
 
-// GetTokens returns the Tokens field value if set, zero value otherwise.
-func (o *IambackofficeLogoutRequest) GetTokens() ProtobufAny {
-	if o == nil || IsNil(o.Tokens) {
-		var ret ProtobufAny
-		return ret
-	}
-	return *o.Tokens
-}
+        // GetTokens returns the Tokens field value if set, zero value otherwise.
+        func (o *IambackofficeLogoutRequest) GetTokens() ProtobufAny {
+        if o == nil || IsNil(o.Tokens) {
+        var ret ProtobufAny
+        return ret
+        }
+            return *o.Tokens
+        }
 
-// GetTokensOk returns a tuple with the Tokens field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeLogoutRequest) GetTokensOk() (*ProtobufAny, bool) {
-	if o == nil || IsNil(o.Tokens) {
-		return nil, false
-	}
-	return o.Tokens, true
-}
+        // GetTokensOk returns a tuple with the Tokens field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeLogoutRequest) GetTokensOk() (*ProtobufAny, bool) {
+        if o == nil || IsNil(o.Tokens) {
+            return nil, false
+        }
+            return o.Tokens, true
+        }
 
-// HasTokens returns a boolean if a field has been set.
-func (o *IambackofficeLogoutRequest) HasTokens() bool {
-	if o != nil && !IsNil(o.Tokens) {
-		return true
-	}
+        // HasTokens returns a boolean if a field has been set.
+        func (o *IambackofficeLogoutRequest) HasTokens() bool {
+        if o != nil && !IsNil(o.Tokens) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetTokens gets a reference to the given ProtobufAny and assigns it to the Tokens field.
-func (o *IambackofficeLogoutRequest) SetTokens(v ProtobufAny) {
-	o.Tokens = &v
-}
+        // SetTokens gets a reference to the given ProtobufAny and assigns it to the Tokens field.
+        func (o *IambackofficeLogoutRequest) SetTokens(v ProtobufAny) {
+            o.Tokens = &v
+        }
 
-func (o IambackofficeLogoutRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeLogoutRequest) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeLogoutRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Global) {
-		toSerialize["global"] = o.Global
-	}
-	if !IsNil(o.Tokens) {
-		toSerialize["tokens"] = o.Tokens
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Global) {
+            toSerialize["global"] = o.Global
+            }
+            if !IsNil(o.Tokens) {
+            toSerialize["tokens"] = o.Tokens
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeLogoutRequest) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeLogoutRequest := _IambackofficeLogoutRequest{}
-
-	err = json.Unmarshal(data, &varIambackofficeLogoutRequest)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeLogoutRequest(varIambackofficeLogoutRequest)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "global")
-		delete(additionalProperties, "tokens")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeLogoutRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeLogoutRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeLogoutRequest) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeLogoutRequest := _IambackofficeLogoutRequest{}
+
+            err = json.Unmarshal(data, &varIambackofficeLogoutRequest)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeLogoutRequest(varIambackofficeLogoutRequest)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "global")
+                delete(additionalProperties, "tokens")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeLogoutRequest) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeLogoutRequest) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeLogoutRequest struct {
 	value *IambackofficeLogoutRequest
 	isSet bool
@@ -207,5 +207,4 @@ func (v *NullableIambackofficeLogoutRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

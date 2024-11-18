@@ -20,121 +20,121 @@ var _ MappedNullable = &IambackofficeUserMfaResponse{}
 
 // IambackofficeUserMfaResponse struct for IambackofficeUserMfaResponse
 type IambackofficeUserMfaResponse struct {
-	Success *bool `json:"success,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Success *bool `json:"success,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeUserMfaResponse IambackofficeUserMfaResponse
+    type _IambackofficeUserMfaResponse IambackofficeUserMfaResponse
 
 // NewIambackofficeUserMfaResponse instantiates a new IambackofficeUserMfaResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeUserMfaResponse() *IambackofficeUserMfaResponse {
-	this := IambackofficeUserMfaResponse{}
-	return &this
+this := IambackofficeUserMfaResponse{}
+return &this
 }
 
 // NewIambackofficeUserMfaResponseWithDefaults instantiates a new IambackofficeUserMfaResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeUserMfaResponseWithDefaults() *IambackofficeUserMfaResponse {
-	this := IambackofficeUserMfaResponse{}
-	return &this
+this := IambackofficeUserMfaResponse{}
+return &this
 }
 
-// GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *IambackofficeUserMfaResponse) GetSuccess() bool {
-	if o == nil || IsNil(o.Success) {
-		var ret bool
-		return ret
-	}
-	return *o.Success
-}
+        // GetSuccess returns the Success field value if set, zero value otherwise.
+        func (o *IambackofficeUserMfaResponse) GetSuccess() bool {
+        if o == nil || IsNil(o.Success) {
+        var ret bool
+        return ret
+        }
+            return *o.Success
+        }
 
-// GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeUserMfaResponse) GetSuccessOk() (*bool, bool) {
-	if o == nil || IsNil(o.Success) {
-		return nil, false
-	}
-	return o.Success, true
-}
+        // GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeUserMfaResponse) GetSuccessOk() (*bool, bool) {
+        if o == nil || IsNil(o.Success) {
+            return nil, false
+        }
+            return o.Success, true
+        }
 
-// HasSuccess returns a boolean if a field has been set.
-func (o *IambackofficeUserMfaResponse) HasSuccess() bool {
-	if o != nil && !IsNil(o.Success) {
-		return true
-	}
+        // HasSuccess returns a boolean if a field has been set.
+        func (o *IambackofficeUserMfaResponse) HasSuccess() bool {
+        if o != nil && !IsNil(o.Success) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetSuccess gets a reference to the given bool and assigns it to the Success field.
-func (o *IambackofficeUserMfaResponse) SetSuccess(v bool) {
-	o.Success = &v
-}
+        // SetSuccess gets a reference to the given bool and assigns it to the Success field.
+        func (o *IambackofficeUserMfaResponse) SetSuccess(v bool) {
+            o.Success = &v
+        }
 
-func (o IambackofficeUserMfaResponse) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeUserMfaResponse) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeUserMfaResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Success) {
-		toSerialize["success"] = o.Success
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Success) {
+            toSerialize["success"] = o.Success
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeUserMfaResponse) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeUserMfaResponse := _IambackofficeUserMfaResponse{}
-
-	err = json.Unmarshal(data, &varIambackofficeUserMfaResponse)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeUserMfaResponse(varIambackofficeUserMfaResponse)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "success")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeUserMfaResponse) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeUserMfaResponse) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeUserMfaResponse) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeUserMfaResponse := _IambackofficeUserMfaResponse{}
+
+            err = json.Unmarshal(data, &varIambackofficeUserMfaResponse)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeUserMfaResponse(varIambackofficeUserMfaResponse)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "success")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeUserMfaResponse) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeUserMfaResponse) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeUserMfaResponse struct {
 	value *IambackofficeUserMfaResponse
 	isSet bool
@@ -170,5 +170,4 @@ func (v *NullableIambackofficeUserMfaResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 

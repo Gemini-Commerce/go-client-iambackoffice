@@ -20,121 +20,121 @@ var _ MappedNullable = &IambackofficeMetaData{}
 
 // IambackofficeMetaData struct for IambackofficeMetaData
 type IambackofficeMetaData struct {
-	Device *IambackofficeDevice `json:"device,omitempty"`
-	AdditionalProperties map[string]interface{}
+    Device *IambackofficeDevice `json:"device,omitempty"`
+    AdditionalProperties map[string]interface{}
 }
 
-type _IambackofficeMetaData IambackofficeMetaData
+    type _IambackofficeMetaData IambackofficeMetaData
 
 // NewIambackofficeMetaData instantiates a new IambackofficeMetaData object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeMetaData() *IambackofficeMetaData {
-	this := IambackofficeMetaData{}
-	return &this
+this := IambackofficeMetaData{}
+return &this
 }
 
 // NewIambackofficeMetaDataWithDefaults instantiates a new IambackofficeMetaData object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeMetaDataWithDefaults() *IambackofficeMetaData {
-	this := IambackofficeMetaData{}
-	return &this
+this := IambackofficeMetaData{}
+return &this
 }
 
-// GetDevice returns the Device field value if set, zero value otherwise.
-func (o *IambackofficeMetaData) GetDevice() IambackofficeDevice {
-	if o == nil || IsNil(o.Device) {
-		var ret IambackofficeDevice
-		return ret
-	}
-	return *o.Device
-}
+        // GetDevice returns the Device field value if set, zero value otherwise.
+        func (o *IambackofficeMetaData) GetDevice() IambackofficeDevice {
+        if o == nil || IsNil(o.Device) {
+        var ret IambackofficeDevice
+        return ret
+        }
+            return *o.Device
+        }
 
-// GetDeviceOk returns a tuple with the Device field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *IambackofficeMetaData) GetDeviceOk() (*IambackofficeDevice, bool) {
-	if o == nil || IsNil(o.Device) {
-		return nil, false
-	}
-	return o.Device, true
-}
+        // GetDeviceOk returns a tuple with the Device field value if set, nil otherwise
+        // and a boolean to check if the value has been set.
+        func (o *IambackofficeMetaData) GetDeviceOk() (*IambackofficeDevice, bool) {
+        if o == nil || IsNil(o.Device) {
+            return nil, false
+        }
+            return o.Device, true
+        }
 
-// HasDevice returns a boolean if a field has been set.
-func (o *IambackofficeMetaData) HasDevice() bool {
-	if o != nil && !IsNil(o.Device) {
-		return true
-	}
+        // HasDevice returns a boolean if a field has been set.
+        func (o *IambackofficeMetaData) HasDevice() bool {
+        if o != nil && !IsNil(o.Device) {
+        return true
+        }
 
-	return false
-}
+        return false
+        }
 
-// SetDevice gets a reference to the given IambackofficeDevice and assigns it to the Device field.
-func (o *IambackofficeMetaData) SetDevice(v IambackofficeDevice) {
-	o.Device = &v
-}
+        // SetDevice gets a reference to the given IambackofficeDevice and assigns it to the Device field.
+        func (o *IambackofficeMetaData) SetDevice(v IambackofficeDevice) {
+            o.Device = &v
+        }
 
-func (o IambackofficeMetaData) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+    func (o IambackofficeMetaData) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o IambackofficeMetaData) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Device) {
-		toSerialize["device"] = o.Device
-	}
+toSerialize := map[string]interface{}{}
+            if !IsNil(o.Device) {
+            toSerialize["device"] = o.Device
+            }
 
-	for key, value := range o.AdditionalProperties {
-		toSerialize[key] = value
-	}
-
-	return toSerialize, nil
-}
-
-func (o *IambackofficeMetaData) UnmarshalJSON(data []byte) (err error) {
-	varIambackofficeMetaData := _IambackofficeMetaData{}
-
-	err = json.Unmarshal(data, &varIambackofficeMetaData)
-
-	if err != nil {
-		return err
-	}
-
-	*o = IambackofficeMetaData(varIambackofficeMetaData)
-
-	additionalProperties := make(map[string]interface{})
-
-	if err = json.Unmarshal(data, &additionalProperties); err == nil {
-		delete(additionalProperties, "device")
-		o.AdditionalProperties = additionalProperties
-	}
-
-	return err
-}
-
-// GetValue returns the value of well-known types
-func (o *IambackofficeMetaData) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-// SetValue populate the value of well-known types
-func (o *IambackofficeMetaData) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
-		return
-	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
+    for key, value := range o.AdditionalProperties {
+    toSerialize[key] = value
     }
-	o.AdditionalProperties["value"] = value
-	return
+
+return toSerialize, nil
 }
+
+        func (o *IambackofficeMetaData) UnmarshalJSON(data []byte) (err error) {
+            varIambackofficeMetaData := _IambackofficeMetaData{}
+
+            err = json.Unmarshal(data, &varIambackofficeMetaData)
+
+            if err != nil {
+            return err
+            }
+
+            *o = IambackofficeMetaData(varIambackofficeMetaData)
+
+            additionalProperties := make(map[string]interface{})
+
+            if err = json.Unmarshal(data, &additionalProperties); err == nil {
+                delete(additionalProperties, "device")
+            o.AdditionalProperties = additionalProperties
+            }
+
+            return err
+        }
+
+    // GetValue returns the value of well-known types
+    func (o *IambackofficeMetaData) GetValue() interface{} {
+    if o == nil || IsNil(o.AdditionalProperties) {
+    return nil
+    }
+    return o.AdditionalProperties["value"]
+    }
+    // SetValue populate the value of well-known types
+    func (o *IambackofficeMetaData) SetValue(value interface{}) {
+    if o == nil || IsNil(value) {
+    return
+    }
+    if IsNil(o.AdditionalProperties) {
+    o.AdditionalProperties = map[string]interface{}{}
+    }
+    o.AdditionalProperties["value"] = value
+    return
+    }
 type NullableIambackofficeMetaData struct {
 	value *IambackofficeMetaData
 	isSet bool
@@ -170,5 +170,4 @@ func (v *NullableIambackofficeMetaData) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
 
