@@ -19,12 +19,171 @@ import (
 	"net/url"
 )
 
+type IamBackofficeAPI interface {
+
+	/*
+		IamBackofficeAssignRoles AUTHZ
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeAssignRolesRequest
+	*/
+	IamBackofficeAssignRoles(ctx context.Context) ApiIamBackofficeAssignRolesRequest
+
+	// IamBackofficeAssignRolesExecute executes the request
+	//  @return IambackofficeAssignRolesResponse
+	IamBackofficeAssignRolesExecute(r ApiIamBackofficeAssignRolesRequest) (*IambackofficeAssignRolesResponse, *http.Response, error)
+
+	/*
+		IamBackofficeAssignUserToGroup Method for IamBackofficeAssignUserToGroup
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeAssignUserToGroupRequest
+	*/
+	IamBackofficeAssignUserToGroup(ctx context.Context) ApiIamBackofficeAssignUserToGroupRequest
+
+	// IamBackofficeAssignUserToGroupExecute executes the request
+	//  @return map[string]interface{}
+	IamBackofficeAssignUserToGroupExecute(r ApiIamBackofficeAssignUserToGroupRequest) (map[string]interface{}, *http.Response, error)
+
+	/*
+		IamBackofficeCreateGroup GROUPS
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeCreateGroupRequest
+	*/
+	IamBackofficeCreateGroup(ctx context.Context) ApiIamBackofficeCreateGroupRequest
+
+	// IamBackofficeCreateGroupExecute executes the request
+	//  @return IambackofficeCreateGroupResponse
+	IamBackofficeCreateGroupExecute(r ApiIamBackofficeCreateGroupRequest) (*IambackofficeCreateGroupResponse, *http.Response, error)
+
+	/*
+		IamBackofficeDisableUserMfa Method for IamBackofficeDisableUserMfa
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeDisableUserMfaRequest
+	*/
+	IamBackofficeDisableUserMfa(ctx context.Context) ApiIamBackofficeDisableUserMfaRequest
+
+	// IamBackofficeDisableUserMfaExecute executes the request
+	//  @return IambackofficeUserMfaResponse
+	IamBackofficeDisableUserMfaExecute(r ApiIamBackofficeDisableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error)
+
+	/*
+		IamBackofficeEnableUserMfa Method for IamBackofficeEnableUserMfa
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeEnableUserMfaRequest
+	*/
+	IamBackofficeEnableUserMfa(ctx context.Context) ApiIamBackofficeEnableUserMfaRequest
+
+	// IamBackofficeEnableUserMfaExecute executes the request
+	//  @return IambackofficeUserMfaResponse
+	IamBackofficeEnableUserMfaExecute(r ApiIamBackofficeEnableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error)
+
+	/*
+		IamBackofficeGenerateSecretForQR MFA
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeGenerateSecretForQRRequest
+	*/
+	IamBackofficeGenerateSecretForQR(ctx context.Context) ApiIamBackofficeGenerateSecretForQRRequest
+
+	// IamBackofficeGenerateSecretForQRExecute executes the request
+	//  @return IambackofficeGenerateSecretForQRResponse
+	IamBackofficeGenerateSecretForQRExecute(r ApiIamBackofficeGenerateSecretForQRRequest) (*IambackofficeGenerateSecretForQRResponse, *http.Response, error)
+
+	/*
+		IamBackofficeGetUser USER
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeGetUserRequest
+	*/
+	IamBackofficeGetUser(ctx context.Context) ApiIamBackofficeGetUserRequest
+
+	// IamBackofficeGetUserExecute executes the request
+	//  @return IambackofficeGetUserResponse
+	IamBackofficeGetUserExecute(r ApiIamBackofficeGetUserRequest) (*IambackofficeGetUserResponse, *http.Response, error)
+
+	/*
+		IamBackofficeLogin LOGIN
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeLoginRequest
+	*/
+	IamBackofficeLogin(ctx context.Context) ApiIamBackofficeLoginRequest
+
+	// IamBackofficeLoginExecute executes the request
+	//  @return IambackofficeLoginResponse
+	IamBackofficeLoginExecute(r ApiIamBackofficeLoginRequest) (*IambackofficeLoginResponse, *http.Response, error)
+
+	/*
+		IamBackofficeLoginMfa LOGIN MFA
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeLoginMfaRequest
+	*/
+	IamBackofficeLoginMfa(ctx context.Context) ApiIamBackofficeLoginMfaRequest
+
+	// IamBackofficeLoginMfaExecute executes the request
+	//  @return IambackofficeLoginResponse
+	IamBackofficeLoginMfaExecute(r ApiIamBackofficeLoginMfaRequest) (*IambackofficeLoginResponse, *http.Response, error)
+
+	/*
+		IamBackofficeLogout Method for IamBackofficeLogout
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeLogoutRequest
+	*/
+	IamBackofficeLogout(ctx context.Context) ApiIamBackofficeLogoutRequest
+
+	// IamBackofficeLogoutExecute executes the request
+	//  @return IambackofficeLogoutResponse
+	IamBackofficeLogoutExecute(r ApiIamBackofficeLogoutRequest) (*IambackofficeLogoutResponse, *http.Response, error)
+
+	/*
+		IamBackofficeRegister REGISTRATION
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeRegisterRequest
+	*/
+	IamBackofficeRegister(ctx context.Context) ApiIamBackofficeRegisterRequest
+
+	// IamBackofficeRegisterExecute executes the request
+	//  @return IambackofficeRegistrationResponse
+	IamBackofficeRegisterExecute(r ApiIamBackofficeRegisterRequest) (*IambackofficeRegistrationResponse, *http.Response, error)
+
+	/*
+		IamBackofficeSearchGroups Method for IamBackofficeSearchGroups
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeSearchGroupsRequest
+	*/
+	IamBackofficeSearchGroups(ctx context.Context) ApiIamBackofficeSearchGroupsRequest
+
+	// IamBackofficeSearchGroupsExecute executes the request
+	//  @return IambackofficeSearchGroupsResponse
+	IamBackofficeSearchGroupsExecute(r ApiIamBackofficeSearchGroupsRequest) (*IambackofficeSearchGroupsResponse, *http.Response, error)
+
+	/*
+		IamBackofficeUnassignRoles Method for IamBackofficeUnassignRoles
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiIamBackofficeUnassignRolesRequest
+	*/
+	IamBackofficeUnassignRoles(ctx context.Context) ApiIamBackofficeUnassignRolesRequest
+
+	// IamBackofficeUnassignRolesExecute executes the request
+	//  @return IambackofficeUnassignRolesResponse
+	IamBackofficeUnassignRolesExecute(r ApiIamBackofficeUnassignRolesRequest) (*IambackofficeUnassignRolesResponse, *http.Response, error)
+}
+
 // IamBackofficeAPIService IamBackofficeAPI service
 type IamBackofficeAPIService service
 
 type ApiIamBackofficeAssignRolesRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeAssignRolesRequest
 }
 
@@ -141,7 +300,7 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r ApiIamBackof
 
 type ApiIamBackofficeAssignUserToGroupRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeAssignUserToGroupRequest
 }
 
@@ -258,7 +417,7 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r ApiIam
 
 type ApiIamBackofficeCreateGroupRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeCreateGroupRequest
 }
 
@@ -375,7 +534,7 @@ func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r ApiIamBackof
 
 type ApiIamBackofficeDisableUserMfaRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeDisableUserMfaRequest
 }
 
@@ -492,7 +651,7 @@ func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r ApiIamBac
 
 type ApiIamBackofficeEnableUserMfaRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeEnableUserMfaRequest
 }
 
@@ -609,7 +768,7 @@ func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r ApiIamBack
 
 type ApiIamBackofficeGenerateSecretForQRRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *map[string]interface{}
 }
 
@@ -726,7 +885,7 @@ func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r ApiI
 
 type ApiIamBackofficeGetUserRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeGetUserRequest
 }
 
@@ -843,7 +1002,7 @@ func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r ApiIamBackoffice
 
 type ApiIamBackofficeLoginRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeLoginRequest
 }
 
@@ -960,7 +1119,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r ApiIamBackofficeLo
 
 type ApiIamBackofficeLoginMfaRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeLoginMfaRequest
 }
 
@@ -1077,7 +1236,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r ApiIamBackoffic
 
 type ApiIamBackofficeLogoutRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeLogoutRequest
 }
 
@@ -1194,7 +1353,7 @@ func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r ApiIamBackofficeL
 
 type ApiIamBackofficeRegisterRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeRegistrationRequest
 }
 
@@ -1311,7 +1470,7 @@ func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r ApiIamBackoffic
 
 type ApiIamBackofficeSearchGroupsRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeSearchGroupsRequest
 }
 
@@ -1428,7 +1587,7 @@ func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r ApiIamBacko
 
 type ApiIamBackofficeUnassignRolesRequest struct {
 	ctx        context.Context
-	ApiService *IamBackofficeAPIService
+	ApiService IamBackofficeAPI
 	body       *IambackofficeUnassignRolesRequest
 }
 

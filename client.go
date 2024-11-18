@@ -51,7 +51,7 @@ type APIClient struct {
 
 	// API Services
 
-	IamBackofficeAPI *IamBackofficeAPIService
+	IamBackofficeAPI IamBackofficeAPI
 }
 
 type service struct {
