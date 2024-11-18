@@ -191,26 +191,6 @@ func (o *IambackofficeAssignUserToGroupRequest) UnmarshalJSON(data []byte) (err 
 	return err
 }
 
-// GetValue returns the value of well-known types
-func (o *IambackofficeAssignUserToGroupRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-
-// SetValue populate the value of well-known types
-func (o *IambackofficeAssignUserToGroupRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(value) {
-		return
-	}
-	if IsNil(o.AdditionalProperties) {
-		o.AdditionalProperties = map[string]interface{}{}
-	}
-	o.AdditionalProperties["value"] = value
-	return
-}
-
 type NullableIambackofficeAssignUserToGroupRequest struct {
 	value *IambackofficeAssignUserToGroupRequest
 	isSet bool

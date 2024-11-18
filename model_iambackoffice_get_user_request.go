@@ -228,26 +228,6 @@ func (o *IambackofficeGetUserRequest) UnmarshalJSON(data []byte) (err error) {
 	return err
 }
 
-// GetValue returns the value of well-known types
-func (o *IambackofficeGetUserRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.AdditionalProperties) {
-		return nil
-	}
-	return o.AdditionalProperties["value"]
-}
-
-// SetValue populate the value of well-known types
-func (o *IambackofficeGetUserRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(value) {
-		return
-	}
-	if IsNil(o.AdditionalProperties) {
-		o.AdditionalProperties = map[string]interface{}{}
-	}
-	o.AdditionalProperties["value"] = value
-	return
-}
-
 type NullableIambackofficeGetUserRequest struct {
 	value *IambackofficeGetUserRequest
 	isSet bool
