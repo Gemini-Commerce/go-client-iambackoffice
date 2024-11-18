@@ -20,195 +20,197 @@ var _ MappedNullable = &IambackofficeDisableUserMfaRequest{}
 
 // IambackofficeDisableUserMfaRequest struct for IambackofficeDisableUserMfaRequest
 type IambackofficeDisableUserMfaRequest struct {
-    UserId *string `json:"userId,omitempty"`
-    Code *string `json:"code,omitempty"`
-    MethodId *string `json:"methodId,omitempty"`
-    AdditionalProperties map[string]interface{}
+	UserId               *string `json:"userId,omitempty"`
+	Code                 *string `json:"code,omitempty"`
+	MethodId             *string `json:"methodId,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
-    type _IambackofficeDisableUserMfaRequest IambackofficeDisableUserMfaRequest
+type _IambackofficeDisableUserMfaRequest IambackofficeDisableUserMfaRequest
 
 // NewIambackofficeDisableUserMfaRequest instantiates a new IambackofficeDisableUserMfaRequest object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeDisableUserMfaRequest() *IambackofficeDisableUserMfaRequest {
-this := IambackofficeDisableUserMfaRequest{}
-return &this
+	this := IambackofficeDisableUserMfaRequest{}
+	return &this
 }
 
 // NewIambackofficeDisableUserMfaRequestWithDefaults instantiates a new IambackofficeDisableUserMfaRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeDisableUserMfaRequestWithDefaults() *IambackofficeDisableUserMfaRequest {
-this := IambackofficeDisableUserMfaRequest{}
-return &this
+	this := IambackofficeDisableUserMfaRequest{}
+	return &this
 }
 
-        // GetUserId returns the UserId field value if set, zero value otherwise.
-        func (o *IambackofficeDisableUserMfaRequest) GetUserId() string {
-        if o == nil || IsNil(o.UserId) {
-        var ret string
-        return ret
-        }
-            return *o.UserId
-        }
+// GetUserId returns the UserId field value if set, zero value otherwise.
+func (o *IambackofficeDisableUserMfaRequest) GetUserId() string {
+	if o == nil || IsNil(o.UserId) {
+		var ret string
+		return ret
+	}
+	return *o.UserId
+}
 
-        // GetUserIdOk returns a tuple with the UserId field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDisableUserMfaRequest) GetUserIdOk() (*string, bool) {
-        if o == nil || IsNil(o.UserId) {
-            return nil, false
-        }
-            return o.UserId, true
-        }
+// GetUserIdOk returns a tuple with the UserId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDisableUserMfaRequest) GetUserIdOk() (*string, bool) {
+	if o == nil || IsNil(o.UserId) {
+		return nil, false
+	}
+	return o.UserId, true
+}
 
-        // HasUserId returns a boolean if a field has been set.
-        func (o *IambackofficeDisableUserMfaRequest) HasUserId() bool {
-        if o != nil && !IsNil(o.UserId) {
-        return true
-        }
+// HasUserId returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) HasUserId() bool {
+	if o != nil && !IsNil(o.UserId) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetUserId gets a reference to the given string and assigns it to the UserId field.
-        func (o *IambackofficeDisableUserMfaRequest) SetUserId(v string) {
-            o.UserId = &v
-        }
+// SetUserId gets a reference to the given string and assigns it to the UserId field.
+func (o *IambackofficeDisableUserMfaRequest) SetUserId(v string) {
+	o.UserId = &v
+}
 
-        // GetCode returns the Code field value if set, zero value otherwise.
-        func (o *IambackofficeDisableUserMfaRequest) GetCode() string {
-        if o == nil || IsNil(o.Code) {
-        var ret string
-        return ret
-        }
-            return *o.Code
-        }
+// GetCode returns the Code field value if set, zero value otherwise.
+func (o *IambackofficeDisableUserMfaRequest) GetCode() string {
+	if o == nil || IsNil(o.Code) {
+		var ret string
+		return ret
+	}
+	return *o.Code
+}
 
-        // GetCodeOk returns a tuple with the Code field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDisableUserMfaRequest) GetCodeOk() (*string, bool) {
-        if o == nil || IsNil(o.Code) {
-            return nil, false
-        }
-            return o.Code, true
-        }
+// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDisableUserMfaRequest) GetCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.Code) {
+		return nil, false
+	}
+	return o.Code, true
+}
 
-        // HasCode returns a boolean if a field has been set.
-        func (o *IambackofficeDisableUserMfaRequest) HasCode() bool {
-        if o != nil && !IsNil(o.Code) {
-        return true
-        }
+// HasCode returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) HasCode() bool {
+	if o != nil && !IsNil(o.Code) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetCode gets a reference to the given string and assigns it to the Code field.
-        func (o *IambackofficeDisableUserMfaRequest) SetCode(v string) {
-            o.Code = &v
-        }
+// SetCode gets a reference to the given string and assigns it to the Code field.
+func (o *IambackofficeDisableUserMfaRequest) SetCode(v string) {
+	o.Code = &v
+}
 
-        // GetMethodId returns the MethodId field value if set, zero value otherwise.
-        func (o *IambackofficeDisableUserMfaRequest) GetMethodId() string {
-        if o == nil || IsNil(o.MethodId) {
-        var ret string
-        return ret
-        }
-            return *o.MethodId
-        }
+// GetMethodId returns the MethodId field value if set, zero value otherwise.
+func (o *IambackofficeDisableUserMfaRequest) GetMethodId() string {
+	if o == nil || IsNil(o.MethodId) {
+		var ret string
+		return ret
+	}
+	return *o.MethodId
+}
 
-        // GetMethodIdOk returns a tuple with the MethodId field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDisableUserMfaRequest) GetMethodIdOk() (*string, bool) {
-        if o == nil || IsNil(o.MethodId) {
-            return nil, false
-        }
-            return o.MethodId, true
-        }
+// GetMethodIdOk returns a tuple with the MethodId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDisableUserMfaRequest) GetMethodIdOk() (*string, bool) {
+	if o == nil || IsNil(o.MethodId) {
+		return nil, false
+	}
+	return o.MethodId, true
+}
 
-        // HasMethodId returns a boolean if a field has been set.
-        func (o *IambackofficeDisableUserMfaRequest) HasMethodId() bool {
-        if o != nil && !IsNil(o.MethodId) {
-        return true
-        }
+// HasMethodId returns a boolean if a field has been set.
+func (o *IambackofficeDisableUserMfaRequest) HasMethodId() bool {
+	if o != nil && !IsNil(o.MethodId) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetMethodId gets a reference to the given string and assigns it to the MethodId field.
-        func (o *IambackofficeDisableUserMfaRequest) SetMethodId(v string) {
-            o.MethodId = &v
-        }
+// SetMethodId gets a reference to the given string and assigns it to the MethodId field.
+func (o *IambackofficeDisableUserMfaRequest) SetMethodId(v string) {
+	o.MethodId = &v
+}
 
-    func (o IambackofficeDisableUserMfaRequest) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-    return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
-    }
+func (o IambackofficeDisableUserMfaRequest) MarshalJSON() ([]byte, error) {
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
 
 func (o IambackofficeDisableUserMfaRequest) ToMap() (map[string]interface{}, error) {
-toSerialize := map[string]interface{}{}
-            if !IsNil(o.UserId) {
-            toSerialize["userId"] = o.UserId
-            }
-            if !IsNil(o.Code) {
-            toSerialize["code"] = o.Code
-            }
-            if !IsNil(o.MethodId) {
-            toSerialize["methodId"] = o.MethodId
-            }
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.UserId) {
+		toSerialize["userId"] = o.UserId
+	}
+	if !IsNil(o.Code) {
+		toSerialize["code"] = o.Code
+	}
+	if !IsNil(o.MethodId) {
+		toSerialize["methodId"] = o.MethodId
+	}
 
-    for key, value := range o.AdditionalProperties {
-    toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-return toSerialize, nil
+	return toSerialize, nil
 }
 
-        func (o *IambackofficeDisableUserMfaRequest) UnmarshalJSON(data []byte) (err error) {
-            varIambackofficeDisableUserMfaRequest := _IambackofficeDisableUserMfaRequest{}
+func (o *IambackofficeDisableUserMfaRequest) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeDisableUserMfaRequest := _IambackofficeDisableUserMfaRequest{}
 
-            err = json.Unmarshal(data, &varIambackofficeDisableUserMfaRequest)
+	err = json.Unmarshal(data, &varIambackofficeDisableUserMfaRequest)
 
-            if err != nil {
-            return err
-            }
+	if err != nil {
+		return err
+	}
 
-            *o = IambackofficeDisableUserMfaRequest(varIambackofficeDisableUserMfaRequest)
+	*o = IambackofficeDisableUserMfaRequest(varIambackofficeDisableUserMfaRequest)
 
-            additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-            if err = json.Unmarshal(data, &additionalProperties); err == nil {
-                delete(additionalProperties, "userId")
-                delete(additionalProperties, "code")
-                delete(additionalProperties, "methodId")
-            o.AdditionalProperties = additionalProperties
-            }
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "userId")
+		delete(additionalProperties, "code")
+		delete(additionalProperties, "methodId")
+		o.AdditionalProperties = additionalProperties
+	}
 
-            return err
-        }
+	return err
+}
 
-    // GetValue returns the value of well-known types
-    func (o *IambackofficeDisableUserMfaRequest) GetValue() interface{} {
-    if o == nil || IsNil(o.AdditionalProperties) {
-    return nil
-    }
-    return o.AdditionalProperties["value"]
-    }
-    // SetValue populate the value of well-known types
-    func (o *IambackofficeDisableUserMfaRequest) SetValue(value interface{}) {
-    if o == nil || IsNil(value) {
-    return
-    }
-    if IsNil(o.AdditionalProperties) {
-    o.AdditionalProperties = map[string]interface{}{}
-    }
-    o.AdditionalProperties["value"] = value
-    return
-    }
+// GetValue returns the value of well-known types
+func (o *IambackofficeDisableUserMfaRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+
+// SetValue populate the value of well-known types
+func (o *IambackofficeDisableUserMfaRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(value) {
+		return
+	}
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
+	o.AdditionalProperties["value"] = value
+	return
+}
+
 type NullableIambackofficeDisableUserMfaRequest struct {
 	value *IambackofficeDisableUserMfaRequest
 	isSet bool
@@ -244,4 +246,3 @@ func (v *NullableIambackofficeDisableUserMfaRequest) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

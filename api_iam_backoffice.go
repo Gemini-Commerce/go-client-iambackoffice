@@ -19,14 +19,13 @@ import (
 	"net/url"
 )
 
-
 // IamBackofficeAPIService IamBackofficeAPI service
 type IamBackofficeAPIService service
 
 type ApiIamBackofficeAssignRolesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeAssignRolesRequest
+	body       *IambackofficeAssignRolesRequest
 }
 
 func (r ApiIamBackofficeAssignRolesRequest) Body(body IambackofficeAssignRolesRequest) ApiIamBackofficeAssignRolesRequest {
@@ -41,24 +40,25 @@ func (r ApiIamBackofficeAssignRolesRequest) Execute() (*IambackofficeAssignRoles
 /*
 IamBackofficeAssignRoles AUTHZ
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeAssignRolesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeAssignRolesRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeAssignRoles(ctx context.Context) ApiIamBackofficeAssignRolesRequest {
 	return ApiIamBackofficeAssignRolesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeAssignRolesResponse
+//
+//	@return IambackofficeAssignRolesResponse
 func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r ApiIamBackofficeAssignRolesRequest) (*IambackofficeAssignRolesResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeAssignRolesResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeAssignRolesResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeAssignRoles")
@@ -116,14 +116,14 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r ApiIamBackof
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -140,9 +140,9 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignRolesExecute(r ApiIamBackof
 }
 
 type ApiIamBackofficeAssignUserToGroupRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeAssignUserToGroupRequest
+	body       *IambackofficeAssignUserToGroupRequest
 }
 
 func (r ApiIamBackofficeAssignUserToGroupRequest) Body(body IambackofficeAssignUserToGroupRequest) ApiIamBackofficeAssignUserToGroupRequest {
@@ -157,24 +157,25 @@ func (r ApiIamBackofficeAssignUserToGroupRequest) Execute() (map[string]interfac
 /*
 IamBackofficeAssignUserToGroup Method for IamBackofficeAssignUserToGroup
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeAssignUserToGroupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeAssignUserToGroupRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroup(ctx context.Context) ApiIamBackofficeAssignUserToGroupRequest {
 	return ApiIamBackofficeAssignUserToGroupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r ApiIamBackofficeAssignUserToGroupRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeAssignUserToGroup")
@@ -232,14 +233,14 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r ApiIam
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -256,9 +257,9 @@ func (a *IamBackofficeAPIService) IamBackofficeAssignUserToGroupExecute(r ApiIam
 }
 
 type ApiIamBackofficeCreateGroupRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeCreateGroupRequest
+	body       *IambackofficeCreateGroupRequest
 }
 
 func (r ApiIamBackofficeCreateGroupRequest) Body(body IambackofficeCreateGroupRequest) ApiIamBackofficeCreateGroupRequest {
@@ -273,24 +274,25 @@ func (r ApiIamBackofficeCreateGroupRequest) Execute() (*IambackofficeCreateGroup
 /*
 IamBackofficeCreateGroup GROUPS
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeCreateGroupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeCreateGroupRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeCreateGroup(ctx context.Context) ApiIamBackofficeCreateGroupRequest {
 	return ApiIamBackofficeCreateGroupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeCreateGroupResponse
+//
+//	@return IambackofficeCreateGroupResponse
 func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r ApiIamBackofficeCreateGroupRequest) (*IambackofficeCreateGroupResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeCreateGroupResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeCreateGroupResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeCreateGroup")
@@ -348,14 +350,14 @@ func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r ApiIamBackof
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -372,9 +374,9 @@ func (a *IamBackofficeAPIService) IamBackofficeCreateGroupExecute(r ApiIamBackof
 }
 
 type ApiIamBackofficeDisableUserMfaRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeDisableUserMfaRequest
+	body       *IambackofficeDisableUserMfaRequest
 }
 
 func (r ApiIamBackofficeDisableUserMfaRequest) Body(body IambackofficeDisableUserMfaRequest) ApiIamBackofficeDisableUserMfaRequest {
@@ -389,24 +391,25 @@ func (r ApiIamBackofficeDisableUserMfaRequest) Execute() (*IambackofficeUserMfaR
 /*
 IamBackofficeDisableUserMfa Method for IamBackofficeDisableUserMfa
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeDisableUserMfaRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeDisableUserMfaRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfa(ctx context.Context) ApiIamBackofficeDisableUserMfaRequest {
 	return ApiIamBackofficeDisableUserMfaRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeUserMfaResponse
+//
+//	@return IambackofficeUserMfaResponse
 func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r ApiIamBackofficeDisableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeUserMfaResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeUserMfaResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeDisableUserMfa")
@@ -464,14 +467,14 @@ func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r ApiIamBac
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -488,9 +491,9 @@ func (a *IamBackofficeAPIService) IamBackofficeDisableUserMfaExecute(r ApiIamBac
 }
 
 type ApiIamBackofficeEnableUserMfaRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeEnableUserMfaRequest
+	body       *IambackofficeEnableUserMfaRequest
 }
 
 func (r ApiIamBackofficeEnableUserMfaRequest) Body(body IambackofficeEnableUserMfaRequest) ApiIamBackofficeEnableUserMfaRequest {
@@ -505,24 +508,25 @@ func (r ApiIamBackofficeEnableUserMfaRequest) Execute() (*IambackofficeUserMfaRe
 /*
 IamBackofficeEnableUserMfa Method for IamBackofficeEnableUserMfa
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeEnableUserMfaRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeEnableUserMfaRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfa(ctx context.Context) ApiIamBackofficeEnableUserMfaRequest {
 	return ApiIamBackofficeEnableUserMfaRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeUserMfaResponse
+//
+//	@return IambackofficeUserMfaResponse
 func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r ApiIamBackofficeEnableUserMfaRequest) (*IambackofficeUserMfaResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeUserMfaResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeUserMfaResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeEnableUserMfa")
@@ -580,14 +584,14 @@ func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r ApiIamBack
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -604,9 +608,9 @@ func (a *IamBackofficeAPIService) IamBackofficeEnableUserMfaExecute(r ApiIamBack
 }
 
 type ApiIamBackofficeGenerateSecretForQRRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *map[string]interface{}
+	body       *map[string]interface{}
 }
 
 func (r ApiIamBackofficeGenerateSecretForQRRequest) Body(body map[string]interface{}) ApiIamBackofficeGenerateSecretForQRRequest {
@@ -621,24 +625,25 @@ func (r ApiIamBackofficeGenerateSecretForQRRequest) Execute() (*IambackofficeGen
 /*
 IamBackofficeGenerateSecretForQR MFA
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeGenerateSecretForQRRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeGenerateSecretForQRRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQR(ctx context.Context) ApiIamBackofficeGenerateSecretForQRRequest {
 	return ApiIamBackofficeGenerateSecretForQRRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeGenerateSecretForQRResponse
+//
+//	@return IambackofficeGenerateSecretForQRResponse
 func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r ApiIamBackofficeGenerateSecretForQRRequest) (*IambackofficeGenerateSecretForQRResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeGenerateSecretForQRResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeGenerateSecretForQRResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeGenerateSecretForQR")
@@ -696,14 +701,14 @@ func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r ApiI
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -720,9 +725,9 @@ func (a *IamBackofficeAPIService) IamBackofficeGenerateSecretForQRExecute(r ApiI
 }
 
 type ApiIamBackofficeGetUserRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeGetUserRequest
+	body       *IambackofficeGetUserRequest
 }
 
 func (r ApiIamBackofficeGetUserRequest) Body(body IambackofficeGetUserRequest) ApiIamBackofficeGetUserRequest {
@@ -737,24 +742,25 @@ func (r ApiIamBackofficeGetUserRequest) Execute() (*IambackofficeGetUserResponse
 /*
 IamBackofficeGetUser USER
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeGetUserRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeGetUserRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeGetUser(ctx context.Context) ApiIamBackofficeGetUserRequest {
 	return ApiIamBackofficeGetUserRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeGetUserResponse
+//
+//	@return IambackofficeGetUserResponse
 func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r ApiIamBackofficeGetUserRequest) (*IambackofficeGetUserResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeGetUserResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeGetUserResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeGetUser")
@@ -812,14 +818,14 @@ func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r ApiIamBackoffice
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -836,9 +842,9 @@ func (a *IamBackofficeAPIService) IamBackofficeGetUserExecute(r ApiIamBackoffice
 }
 
 type ApiIamBackofficeLoginRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeLoginRequest
+	body       *IambackofficeLoginRequest
 }
 
 func (r ApiIamBackofficeLoginRequest) Body(body IambackofficeLoginRequest) ApiIamBackofficeLoginRequest {
@@ -853,24 +859,25 @@ func (r ApiIamBackofficeLoginRequest) Execute() (*IambackofficeLoginResponse, *h
 /*
 IamBackofficeLogin LOGIN
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeLoginRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeLoginRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeLogin(ctx context.Context) ApiIamBackofficeLoginRequest {
 	return ApiIamBackofficeLoginRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeLoginResponse
+//
+//	@return IambackofficeLoginResponse
 func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r ApiIamBackofficeLoginRequest) (*IambackofficeLoginResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeLoginResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeLoginResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeLogin")
@@ -928,14 +935,14 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r ApiIamBackofficeLo
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -952,9 +959,9 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginExecute(r ApiIamBackofficeLo
 }
 
 type ApiIamBackofficeLoginMfaRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeLoginMfaRequest
+	body       *IambackofficeLoginMfaRequest
 }
 
 func (r ApiIamBackofficeLoginMfaRequest) Body(body IambackofficeLoginMfaRequest) ApiIamBackofficeLoginMfaRequest {
@@ -969,24 +976,25 @@ func (r ApiIamBackofficeLoginMfaRequest) Execute() (*IambackofficeLoginResponse,
 /*
 IamBackofficeLoginMfa LOGIN MFA
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeLoginMfaRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeLoginMfaRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeLoginMfa(ctx context.Context) ApiIamBackofficeLoginMfaRequest {
 	return ApiIamBackofficeLoginMfaRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeLoginResponse
+//
+//	@return IambackofficeLoginResponse
 func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r ApiIamBackofficeLoginMfaRequest) (*IambackofficeLoginResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeLoginResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeLoginResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeLoginMfa")
@@ -1044,14 +1052,14 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r ApiIamBackoffic
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1068,9 +1076,9 @@ func (a *IamBackofficeAPIService) IamBackofficeLoginMfaExecute(r ApiIamBackoffic
 }
 
 type ApiIamBackofficeLogoutRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeLogoutRequest
+	body       *IambackofficeLogoutRequest
 }
 
 func (r ApiIamBackofficeLogoutRequest) Body(body IambackofficeLogoutRequest) ApiIamBackofficeLogoutRequest {
@@ -1085,24 +1093,25 @@ func (r ApiIamBackofficeLogoutRequest) Execute() (*IambackofficeLogoutResponse, 
 /*
 IamBackofficeLogout Method for IamBackofficeLogout
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeLogoutRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeLogoutRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeLogout(ctx context.Context) ApiIamBackofficeLogoutRequest {
 	return ApiIamBackofficeLogoutRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeLogoutResponse
+//
+//	@return IambackofficeLogoutResponse
 func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r ApiIamBackofficeLogoutRequest) (*IambackofficeLogoutResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeLogoutResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeLogoutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeLogout")
@@ -1160,14 +1169,14 @@ func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r ApiIamBackofficeL
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1184,9 +1193,9 @@ func (a *IamBackofficeAPIService) IamBackofficeLogoutExecute(r ApiIamBackofficeL
 }
 
 type ApiIamBackofficeRegisterRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeRegistrationRequest
+	body       *IambackofficeRegistrationRequest
 }
 
 func (r ApiIamBackofficeRegisterRequest) Body(body IambackofficeRegistrationRequest) ApiIamBackofficeRegisterRequest {
@@ -1201,24 +1210,25 @@ func (r ApiIamBackofficeRegisterRequest) Execute() (*IambackofficeRegistrationRe
 /*
 IamBackofficeRegister REGISTRATION
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeRegisterRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeRegisterRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeRegister(ctx context.Context) ApiIamBackofficeRegisterRequest {
 	return ApiIamBackofficeRegisterRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeRegistrationResponse
+//
+//	@return IambackofficeRegistrationResponse
 func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r ApiIamBackofficeRegisterRequest) (*IambackofficeRegistrationResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeRegistrationResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeRegistrationResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeRegister")
@@ -1276,14 +1286,14 @@ func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r ApiIamBackoffic
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1300,9 +1310,9 @@ func (a *IamBackofficeAPIService) IamBackofficeRegisterExecute(r ApiIamBackoffic
 }
 
 type ApiIamBackofficeSearchGroupsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeSearchGroupsRequest
+	body       *IambackofficeSearchGroupsRequest
 }
 
 func (r ApiIamBackofficeSearchGroupsRequest) Body(body IambackofficeSearchGroupsRequest) ApiIamBackofficeSearchGroupsRequest {
@@ -1317,24 +1327,25 @@ func (r ApiIamBackofficeSearchGroupsRequest) Execute() (*IambackofficeSearchGrou
 /*
 IamBackofficeSearchGroups Method for IamBackofficeSearchGroups
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeSearchGroupsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeSearchGroupsRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeSearchGroups(ctx context.Context) ApiIamBackofficeSearchGroupsRequest {
 	return ApiIamBackofficeSearchGroupsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeSearchGroupsResponse
+//
+//	@return IambackofficeSearchGroupsResponse
 func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r ApiIamBackofficeSearchGroupsRequest) (*IambackofficeSearchGroupsResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeSearchGroupsResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeSearchGroupsResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeSearchGroups")
@@ -1392,14 +1403,14 @@ func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r ApiIamBacko
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1416,9 +1427,9 @@ func (a *IamBackofficeAPIService) IamBackofficeSearchGroupsExecute(r ApiIamBacko
 }
 
 type ApiIamBackofficeUnassignRolesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService *IamBackofficeAPIService
-	body *IambackofficeUnassignRolesRequest
+	body       *IambackofficeUnassignRolesRequest
 }
 
 func (r ApiIamBackofficeUnassignRolesRequest) Body(body IambackofficeUnassignRolesRequest) ApiIamBackofficeUnassignRolesRequest {
@@ -1433,24 +1444,25 @@ func (r ApiIamBackofficeUnassignRolesRequest) Execute() (*IambackofficeUnassignR
 /*
 IamBackofficeUnassignRoles Method for IamBackofficeUnassignRoles
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiIamBackofficeUnassignRolesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiIamBackofficeUnassignRolesRequest
 */
 func (a *IamBackofficeAPIService) IamBackofficeUnassignRoles(ctx context.Context) ApiIamBackofficeUnassignRolesRequest {
 	return ApiIamBackofficeUnassignRolesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return IambackofficeUnassignRolesResponse
+//
+//	@return IambackofficeUnassignRolesResponse
 func (a *IamBackofficeAPIService) IamBackofficeUnassignRolesExecute(r ApiIamBackofficeUnassignRolesRequest) (*IambackofficeUnassignRolesResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *IambackofficeUnassignRolesResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *IambackofficeUnassignRolesResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "IamBackofficeAPIService.IamBackofficeUnassignRoles")
@@ -1508,14 +1520,14 @@ func (a *IamBackofficeAPIService) IamBackofficeUnassignRolesExecute(r ApiIamBack
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 

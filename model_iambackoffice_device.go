@@ -20,195 +20,197 @@ var _ MappedNullable = &IambackofficeDevice{}
 
 // IambackofficeDevice struct for IambackofficeDevice
 type IambackofficeDevice struct {
-    Description *string `json:"description,omitempty"`
-    Name *string `json:"name,omitempty"`
-    DeviceType *string `json:"deviceType,omitempty"`
-    AdditionalProperties map[string]interface{}
+	Description          *string `json:"description,omitempty"`
+	Name                 *string `json:"name,omitempty"`
+	DeviceType           *string `json:"deviceType,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
 
-    type _IambackofficeDevice IambackofficeDevice
+type _IambackofficeDevice IambackofficeDevice
 
 // NewIambackofficeDevice instantiates a new IambackofficeDevice object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIambackofficeDevice() *IambackofficeDevice {
-this := IambackofficeDevice{}
-return &this
+	this := IambackofficeDevice{}
+	return &this
 }
 
 // NewIambackofficeDeviceWithDefaults instantiates a new IambackofficeDevice object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewIambackofficeDeviceWithDefaults() *IambackofficeDevice {
-this := IambackofficeDevice{}
-return &this
+	this := IambackofficeDevice{}
+	return &this
 }
 
-        // GetDescription returns the Description field value if set, zero value otherwise.
-        func (o *IambackofficeDevice) GetDescription() string {
-        if o == nil || IsNil(o.Description) {
-        var ret string
-        return ret
-        }
-            return *o.Description
-        }
+// GetDescription returns the Description field value if set, zero value otherwise.
+func (o *IambackofficeDevice) GetDescription() string {
+	if o == nil || IsNil(o.Description) {
+		var ret string
+		return ret
+	}
+	return *o.Description
+}
 
-        // GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDevice) GetDescriptionOk() (*string, bool) {
-        if o == nil || IsNil(o.Description) {
-            return nil, false
-        }
-            return o.Description, true
-        }
+// GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDevice) GetDescriptionOk() (*string, bool) {
+	if o == nil || IsNil(o.Description) {
+		return nil, false
+	}
+	return o.Description, true
+}
 
-        // HasDescription returns a boolean if a field has been set.
-        func (o *IambackofficeDevice) HasDescription() bool {
-        if o != nil && !IsNil(o.Description) {
-        return true
-        }
+// HasDescription returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasDescription() bool {
+	if o != nil && !IsNil(o.Description) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetDescription gets a reference to the given string and assigns it to the Description field.
-        func (o *IambackofficeDevice) SetDescription(v string) {
-            o.Description = &v
-        }
+// SetDescription gets a reference to the given string and assigns it to the Description field.
+func (o *IambackofficeDevice) SetDescription(v string) {
+	o.Description = &v
+}
 
-        // GetName returns the Name field value if set, zero value otherwise.
-        func (o *IambackofficeDevice) GetName() string {
-        if o == nil || IsNil(o.Name) {
-        var ret string
-        return ret
-        }
-            return *o.Name
-        }
+// GetName returns the Name field value if set, zero value otherwise.
+func (o *IambackofficeDevice) GetName() string {
+	if o == nil || IsNil(o.Name) {
+		var ret string
+		return ret
+	}
+	return *o.Name
+}
 
-        // GetNameOk returns a tuple with the Name field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDevice) GetNameOk() (*string, bool) {
-        if o == nil || IsNil(o.Name) {
-            return nil, false
-        }
-            return o.Name, true
-        }
+// GetNameOk returns a tuple with the Name field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDevice) GetNameOk() (*string, bool) {
+	if o == nil || IsNil(o.Name) {
+		return nil, false
+	}
+	return o.Name, true
+}
 
-        // HasName returns a boolean if a field has been set.
-        func (o *IambackofficeDevice) HasName() bool {
-        if o != nil && !IsNil(o.Name) {
-        return true
-        }
+// HasName returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasName() bool {
+	if o != nil && !IsNil(o.Name) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetName gets a reference to the given string and assigns it to the Name field.
-        func (o *IambackofficeDevice) SetName(v string) {
-            o.Name = &v
-        }
+// SetName gets a reference to the given string and assigns it to the Name field.
+func (o *IambackofficeDevice) SetName(v string) {
+	o.Name = &v
+}
 
-        // GetDeviceType returns the DeviceType field value if set, zero value otherwise.
-        func (o *IambackofficeDevice) GetDeviceType() string {
-        if o == nil || IsNil(o.DeviceType) {
-        var ret string
-        return ret
-        }
-            return *o.DeviceType
-        }
+// GetDeviceType returns the DeviceType field value if set, zero value otherwise.
+func (o *IambackofficeDevice) GetDeviceType() string {
+	if o == nil || IsNil(o.DeviceType) {
+		var ret string
+		return ret
+	}
+	return *o.DeviceType
+}
 
-        // GetDeviceTypeOk returns a tuple with the DeviceType field value if set, nil otherwise
-        // and a boolean to check if the value has been set.
-        func (o *IambackofficeDevice) GetDeviceTypeOk() (*string, bool) {
-        if o == nil || IsNil(o.DeviceType) {
-            return nil, false
-        }
-            return o.DeviceType, true
-        }
+// GetDeviceTypeOk returns a tuple with the DeviceType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *IambackofficeDevice) GetDeviceTypeOk() (*string, bool) {
+	if o == nil || IsNil(o.DeviceType) {
+		return nil, false
+	}
+	return o.DeviceType, true
+}
 
-        // HasDeviceType returns a boolean if a field has been set.
-        func (o *IambackofficeDevice) HasDeviceType() bool {
-        if o != nil && !IsNil(o.DeviceType) {
-        return true
-        }
+// HasDeviceType returns a boolean if a field has been set.
+func (o *IambackofficeDevice) HasDeviceType() bool {
+	if o != nil && !IsNil(o.DeviceType) {
+		return true
+	}
 
-        return false
-        }
+	return false
+}
 
-        // SetDeviceType gets a reference to the given string and assigns it to the DeviceType field.
-        func (o *IambackofficeDevice) SetDeviceType(v string) {
-            o.DeviceType = &v
-        }
+// SetDeviceType gets a reference to the given string and assigns it to the DeviceType field.
+func (o *IambackofficeDevice) SetDeviceType(v string) {
+	o.DeviceType = &v
+}
 
-    func (o IambackofficeDevice) MarshalJSON() ([]byte, error) {
-    toSerialize,err := o.ToMap()
-    if err != nil {
-    return []byte{}, err
-    }
-    return json.Marshal(toSerialize)
-    }
+func (o IambackofficeDevice) MarshalJSON() ([]byte, error) {
+	toSerialize, err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
+	}
+	return json.Marshal(toSerialize)
+}
 
 func (o IambackofficeDevice) ToMap() (map[string]interface{}, error) {
-toSerialize := map[string]interface{}{}
-            if !IsNil(o.Description) {
-            toSerialize["description"] = o.Description
-            }
-            if !IsNil(o.Name) {
-            toSerialize["name"] = o.Name
-            }
-            if !IsNil(o.DeviceType) {
-            toSerialize["deviceType"] = o.DeviceType
-            }
+	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Description) {
+		toSerialize["description"] = o.Description
+	}
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.DeviceType) {
+		toSerialize["deviceType"] = o.DeviceType
+	}
 
-    for key, value := range o.AdditionalProperties {
-    toSerialize[key] = value
-    }
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
 
-return toSerialize, nil
+	return toSerialize, nil
 }
 
-        func (o *IambackofficeDevice) UnmarshalJSON(data []byte) (err error) {
-            varIambackofficeDevice := _IambackofficeDevice{}
+func (o *IambackofficeDevice) UnmarshalJSON(data []byte) (err error) {
+	varIambackofficeDevice := _IambackofficeDevice{}
 
-            err = json.Unmarshal(data, &varIambackofficeDevice)
+	err = json.Unmarshal(data, &varIambackofficeDevice)
 
-            if err != nil {
-            return err
-            }
+	if err != nil {
+		return err
+	}
 
-            *o = IambackofficeDevice(varIambackofficeDevice)
+	*o = IambackofficeDevice(varIambackofficeDevice)
 
-            additionalProperties := make(map[string]interface{})
+	additionalProperties := make(map[string]interface{})
 
-            if err = json.Unmarshal(data, &additionalProperties); err == nil {
-                delete(additionalProperties, "description")
-                delete(additionalProperties, "name")
-                delete(additionalProperties, "deviceType")
-            o.AdditionalProperties = additionalProperties
-            }
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "description")
+		delete(additionalProperties, "name")
+		delete(additionalProperties, "deviceType")
+		o.AdditionalProperties = additionalProperties
+	}
 
-            return err
-        }
+	return err
+}
 
-    // GetValue returns the value of well-known types
-    func (o *IambackofficeDevice) GetValue() interface{} {
-    if o == nil || IsNil(o.AdditionalProperties) {
-    return nil
-    }
-    return o.AdditionalProperties["value"]
-    }
-    // SetValue populate the value of well-known types
-    func (o *IambackofficeDevice) SetValue(value interface{}) {
-    if o == nil || IsNil(value) {
-    return
-    }
-    if IsNil(o.AdditionalProperties) {
-    o.AdditionalProperties = map[string]interface{}{}
-    }
-    o.AdditionalProperties["value"] = value
-    return
-    }
+// GetValue returns the value of well-known types
+func (o *IambackofficeDevice) GetValue() interface{} {
+	if o == nil || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+
+// SetValue populate the value of well-known types
+func (o *IambackofficeDevice) SetValue(value interface{}) {
+	if o == nil || IsNil(value) {
+		return
+	}
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
+	o.AdditionalProperties["value"] = value
+	return
+}
+
 type NullableIambackofficeDevice struct {
 	value *IambackofficeDevice
 	isSet bool
@@ -244,4 +246,3 @@ func (v *NullableIambackofficeDevice) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
